@@ -137,6 +137,10 @@ window.supported_currencies = "{{ settings.mlvedaACS_supportedCurrencies }}";
       {% section 'newsletter' %}
     {% endunless %}
 
+    {% unless template contains 'index' or settings.block-static-info == false %}
+      {% section 'block-static-info' %}
+    {% endunless %}
+
     {% section 'footer' %}
 
     {% if settings.size_chart != blank %}
