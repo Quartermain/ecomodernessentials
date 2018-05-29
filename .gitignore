@@ -1,0 +1,8 @@
+.git
+node_modules/
+theme.lock
+package.json
+deploy.log
+dist/
+upload/
+.idea/
