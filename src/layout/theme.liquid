@@ -133,10 +133,6 @@ window.supported_currencies = "{{ settings.mlvedaACS_supportedCurrencies }}";
       {{ content_for_layout }}
     </div>
     
-    {% unless template contains 'index' or settings.block-static-info == false %}
-      {% section 'block-static-info' %}
-    {% endunless %}
-
     {% unless template contains 'index' or settings.secondary_newsletter_banner == false %}
       {% section 'newsletter' %}
     {% endunless %}

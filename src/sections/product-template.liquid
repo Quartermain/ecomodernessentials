@@ -250,9 +250,15 @@
 
     {% else %}
 
+
+
           </div>
         </div>
       </div>
+
+      {% unless template contains 'index' or settings.block-static-info == false %}
+        {% include 'block-static-infor' %}
+      {% endunless %}
 
       {% if section.settings.display_related_products %}
         {% include 'related-products' %}
@@ -262,6 +268,7 @@
       {% endif %}
 
     {% endif %}
+
 
 {% schema %}
 
