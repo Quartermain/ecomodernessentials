@@ -5,6 +5,7 @@
 - Must be enabled through general settings
 {% endcomment %}
 
+
 {% if section.blocks.size > 0 %}
   <div class="dropdown_container mega-menu mega-menu-2" data-dropdown="{{ section.settings.parent | handleize }}">
     <div class="dropdown menu">
@@ -48,7 +49,7 @@
                     <ul>
                       {% for sublink in linklists[block.settings.menu_1].links %}
                         <li>
-                          <a href="{{ sublink.url }}">{{ sublink.title }}</a>
+                          <a  data-no-instant href="{{ sublink.url }}">{{ sublink.title }}</a>
                         </li>
                       {% endfor %}
                     </ul>
@@ -68,7 +69,7 @@
                     <ul>
                       {% for sublink in linklists[block.settings.menu_2].links %}
                         <li>
-                          <a href="{{ sublink.url }}">{{ sublink.title }}</a>
+                          <a  data-no-instant href="{{ sublink.url }}"  data-no-instant>{{ sublink.title }}</a>
                         </li>
                       {% endfor %}
                     </ul>
@@ -88,7 +89,7 @@
                     <ul>
                       {% for sublink in linklists[block.settings.menu_3].links %}
                         <li>
-                          <a href="{{ sublink.url }}">{{ sublink.title }}</a>
+                          <a href="{{ sublink.url }}"  data-no-instant>{{ sublink.title }}</a>
                         </li>
                       {% endfor %}
                     </ul>
@@ -101,14 +102,14 @@
                 <div class="dropdown_column__menu">
                   <ul class="dropdown_title">
                     <li>
-                      <a {% if block.settings.menu_4_link %}href="{{ block.settings.menu_4_link }}"{% endif %}>{{ linklists[block.settings.menu_4].title }}</a>
+                      <a  data-no-instant {% if block.settings.menu_4_link %}href="{{ block.settings.menu_4_link }}"{% endif %}>{{ linklists[block.settings.menu_4].title }}</a>
                     </li>
                   </ul>
                   {% if linklists[block.settings.menu_4] != empty %}
                     <ul>
                       {% for sublink in linklists[block.settings.menu_4].links %}
                         <li>
-                          <a href="{{ sublink.url }}">{{ sublink.title }}</a>
+                          <a  data-no-instant href="{{ sublink.url }}">{{ sublink.title }}</a>
                         </li>
                       {% endfor %}
                     </ul>
