@@ -9821,6 +9821,7 @@ $delay: 0;
 /* #Custom Styles
 ================================================== */
 
+
 .product-list .thumbnail .thumbnail-overlay{
     background-color: transparent;
 }
@@ -9830,5 +9831,20 @@ $delay: 0;
 
   p {
     color: white;
+  }
+}
+
+
+@media (max-width: $medium) {
+
+  .element-static-infor {
+    .three.columns {
+      width: 48%;
+      display: inline-block;
+      margin: 20px 0;
+      &.non-mobile {
+        display: none;
+      }
+    }
   }
 }
