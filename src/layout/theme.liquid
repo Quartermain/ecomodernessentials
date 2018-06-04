@@ -136,6 +136,10 @@ window.supported_currencies = "{{ settings.mlvedaACS_supportedCurrencies }}";
     {% unless template contains 'index' or settings.secondary_newsletter_banner == false %}
       {% section 'newsletter' %}
     {% endunless %}
+    
+    {% if template contains 'index' %}
+      {% include 'block-static-infor' %}
+    {% endif %}
 
     {% section 'footer' %}
 
@@ -148,6 +152,7 @@ window.supported_currencies = "{{ settings.mlvedaACS_supportedCurrencies }}";
     {% if settings.quick_shop_enabled %}
       {% include 'popup-quick-shop' %}
     {% endif %}
+
     {% if settings.disqus_enabled %}
       {% if template contains "blog" or template contains "article" or template contains "index" %}
         <script id="dsq-count-scr" src="//{{ settings.disqus_shortname }}.disqus.com/count.js" async></script>
@@ -158,6 +163,7 @@ window.supported_currencies = "{{ settings.mlvedaACS_supportedCurrencies }}";
     {% if settings.show_multiple_currencies %}
       {% include 'currencies' %}
     {% endif %}
+
     {% if settings.show_shipping_calculator and template contains "cart" %}
       {% include 'cart-shipping-scripts' %}
     {% endif %}

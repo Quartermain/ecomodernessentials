@@ -9848,3 +9848,31 @@ $delay: 0;
     }
   }
 }
+
+@media (max-width: $small) {
+  .caption-content {
+   .headline,
+   .subtitle {
+    color: #9D9FA2;
+   } 
+  }
+}
+
+.page-shopbypurpose {
+  .image-tag {
+    line-height: 100%;
+    img {
+      max-width: 100%;
+    }
+  }
+  .txt-description {
+    text-align: center;
+    margin: 20px 0;
+    a {
+      color: {{ settings.regular_color }};
+      &:hover {
+        color: {{ settings.headline_color }};
+      }
+    }
+  }
+}
