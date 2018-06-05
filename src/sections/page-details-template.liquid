@@ -176,6 +176,13 @@
 
         {% include 'include-featured-text', type: 'block' %}
 
+      {% elsif block.type == 'static-block' %}
+
+        <div class="static-block-html">
+          {{ block.settings.text_area }}
+        </div>
+
+
       <!-- Divider -->
       {% elsif block.type == 'divider' %}
 
@@ -185,6 +192,7 @@
       {% elsif block.type == "featured_collection" %}
 
         {% include 'include-featured-collection', type: 'block' %}
+
 
       <!-- Image with text overlay -->
       {% elsif block.type == "image_with_text_overlay" %}
@@ -930,8 +938,20 @@
           "label": "Link"
         }
       ]
+    },
+    {
+      "type": "static-block",
+      "name": "Static Block HTML",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "text_area",
+          "label": "Input textarea html",
+          "default": "Add default text"
+        }
+      ]
     }
-  ],
+  ],  
   "default": {
     "blocks": [
       {
