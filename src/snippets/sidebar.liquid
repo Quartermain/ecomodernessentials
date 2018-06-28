@@ -114,6 +114,7 @@
                     <a {% unless current_tags %}class="active--default"{% endunless %} href="{% if collection.handle == "all" %}/collections/all{% else %}{{ collection.url }}{% endif %}">All {{ collection.title }}</a>
                   </li>
                   {% for tag in collection.all_tags %}
+{%- if tag contains '_HIDDEN_PRODUCT' -%}{%- continue -%}{%- endif -%}
                     {% unless tag contains 'meta-' %}
                       <li>
                         <a {% if current_tags contains tag %}class="active"{% endif %} href="/collections/{% if collection.handle != blank %}{{ collection.handle }}{% else %}all{% endif %}/{{ tag | handleize }}">{{ tag }}</a>
@@ -159,6 +160,7 @@
 
             {%- capture headlines -%}
               {%- for collection_tag in collection.all_tags -%}
+{%- if collection_tag contains '_HIDDEN_PRODUCT' -%}{%- continue -%}{%- endif -%}
                 {%- for tag in filter_tags -%}
                   {%- capture formatted_tag -%}{{- tag | replace: filter_name, '' | downcase -}}{%- endcapture -%}
                   {%- capture formatted_collection_tag -%}{{- collection_tag | downcase -}}{%- endcapture -%}
@@ -182,6 +184,7 @@
                     <div class="filter-all-tags color-filter--{{ block.settings.enable_filter_swatches }}">
                       {% for tag in filter_tags %}
                         {% for collection_tag in collection.all_tags %}
+{%- if collection_tag contains '_HIDDEN_PRODUCT' -%}{%- continue -%}{%- endif -%}
                           {% capture formatted_tag %}{{- tag | replace: filter_name, '' | downcase -}}{% endcapture %}
                           {% capture formatted_collection_tag %}{{ collection_tag | downcase }}{% endcapture %}
 

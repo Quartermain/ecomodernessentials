@@ -94,6 +94,7 @@
 
       <div class="search-matrix">
         {% for item in search.results %}
+{%- include 'bold-product' with item, hide_action: 'skip' -%}
           <div class="product_row clearfix">
             {% assign featured_image = false %}
 

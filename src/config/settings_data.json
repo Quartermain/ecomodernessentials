@@ -69,7 +69,7 @@
       "headline_typeface_method": "google_webfonts",
       "snapchat_link": "",
       "nav_font": "Google_Dosis",
-      "newsletter_bg": "shopify://shop_images/NL-popup2.jpg",
+      "newsletter_bg": "shopify:\/\/shop_images\/NL-popup2.jpg",
       "bg_stretched": false,
       "promo_banner_global": false,
       "feature2_title": "Promo 2",
@@ -332,7 +332,7 @@
       "image_1_text_align": "center",
       "feature3_link": "",
       "image_2_subtitle": "",
-      "feature2_link": "http://help.outofthesandbox.com/",
+      "feature2_link": "http:\/\/help.outofthesandbox.com\/",
       "newsletter_popup_form": true,
       "description_words": "25",
       "content_3_position": "10",
@@ -561,7 +561,7 @@
       "collection_sidebar_page": "",
       "read_more_style": "button",
       "slide6_button2_link": "",
-      "newsletter_popup_text": "<p></p>",
+      "newsletter_popup_text": "<p><\/p>",
       "image_1_button_text": "",
       "pagination_limit": "24",
       "sections": {
@@ -572,12 +572,12 @@
             "button1_link": "",
             "button2": "",
             "image": "",
-            "pretext": "<p>Introducing the</p>",
+            "pretext": "<p>Introducing the<\/p>",
             "button1_highlight": false,
             "button2_highlight": false,
             "title": "Turbo Shopify Theme",
             "button2_link": "",
-            "subtitle": "<p>From Out of the Sandbox</p>",
+            "subtitle": "<p>From Out of the Sandbox<\/p>",
             "caption_background_transparency": false,
             "caption_background": false,
             "button1": ""
@@ -689,7 +689,7 @@
                 "enable_image": true,
                 "link": "",
                 "name": "",
-                "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. </p>",
+                "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. <\/p>",
                 "image": "",
                 "store_name": ""
               },
@@ -704,7 +704,7 @@
                 "enable_image": true,
                 "link": "",
                 "name": "",
-                "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. </p>",
+                "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. <\/p>",
                 "image": "",
                 "store_name": ""
               },
@@ -719,7 +719,7 @@
                 "enable_image": true,
                 "link": "",
                 "name": "",
-                "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. </p>",
+                "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. <\/p>",
                 "image": "",
                 "store_name": ""
               },
@@ -813,7 +813,7 @@
           "blocks": {
             "footer-3": {
               "settings": {
-                "content": "<p>Use this text to share information about your brand with your customers.</p>",
+                "content": "<p>Use this text to share information about your brand with your customers.<\/p>",
                 "title": "Title",
                 "social_icons_footer": true
               },
@@ -850,7 +850,7 @@
             "display_last_name": false,
             "image": "",
             "newsletter_section_text_align": "center",
-            "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more &hellip;</p>",
+            "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more &hellip;<\/p>",
             "newsletter_title": "Subscribe"
           },
           "type": "newsletter"
@@ -872,7 +872,7 @@
           "blocks": {
             "1489283737905-0": {
               "settings": {
-                "text": "<p>Promotion description details.</p>",
+                "text": "<p>Promotion description details.<\/p>",
                 "title": "Feature",
                 "link": "",
                 "image": "",
@@ -882,7 +882,7 @@
             },
             "1489283737905-1": {
               "settings": {
-                "text": "<p>Promotion description details.</p>",
+                "text": "<p>Promotion description details.<\/p>",
                 "title": "Feature",
                 "link": "",
                 "image": "",
@@ -892,7 +892,7 @@
             },
             "1489283737905-2": {
               "settings": {
-                "text": "<p>Promotion description details.</p>",
+                "text": "<p>Promotion description details.<\/p>",
                 "title": "Feature",
                 "link": "",
                 "image": "",
@@ -902,7 +902,7 @@
             },
             "1489283758712": {
               "settings": {
-                "text": "<p>Promotion description details.</p>",
+                "text": "<p>Promotion description details.<\/p>",
                 "title": "Feature",
                 "link": "",
                 "image": "",
@@ -930,12 +930,12 @@
                 "button1_link": "",
                 "button2": "",
                 "image": "",
-                "pretext": "<p>Short text that precedes the headline</p>",
+                "pretext": "<p>Short text that precedes the headline<\/p>",
                 "button1_highlight": false,
                 "button2_highlight": false,
                 "title": "Your headline here",
                 "button2_link": "",
-                "subtitle": "<p>This is a short subheading for your slideshow image</p>",
+                "subtitle": "<p>This is a short subheading for your slideshow image<\/p>",
                 "caption_background_transparency": false,
                 "caption_background": false,
                 "button1": ""
@@ -976,7 +976,7 @@
           "blocks": {
             "1489284503681-1": {
               "settings": {
-                "text": "<p>Promotion description appears here.</p>",
+                "text": "<p>Promotion description appears here.<\/p>",
                 "title": "Your headline",
                 "link": "",
                 "image": "",
@@ -986,7 +986,7 @@
             },
             "1489284503681-0": {
               "settings": {
-                "text": "<p>Promotion description appears here.</p>",
+                "text": "<p>Promotion description appears here.<\/p>",
                 "title": "Your headline",
                 "link": "",
                 "image": "",
@@ -999,7 +999,7 @@
         },
         "1489283660007": {
           "settings": {
-            "content": "<p>Use this text to share information about your brand with your customers.</p>\r\n<p>Describe a product, share announcements, or welcome customers to your store.</p>",
+            "content": "<p>Use this text to share information about your brand with your customers.<\/p>\r\n<p>Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "text_size": "featured_text",
             "title": "Talk about your brand",
             "image": "",
@@ -1410,12 +1410,12 @@
             "button1_link": "",
             "button2": "",
             "image": "",
-            "pretext": "<p>Introducing the</p>",
+            "pretext": "<p>Introducing the<\/p>",
             "button1_highlight": false,
             "button2_highlight": false,
             "title": "Turbo Shopify Theme",
             "button2_link": "",
-            "subtitle": "<p>From Out of the Sandbox</p>",
+            "subtitle": "<p>From Out of the Sandbox<\/p>",
             "caption_background_transparency": false,
             "caption_background": false,
             "button1": ""
@@ -1527,7 +1527,7 @@
                 "enable_image": true,
                 "link": "",
                 "name": "",
-                "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. </p>",
+                "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. <\/p>",
                 "image": "",
                 "store_name": ""
               },
@@ -1542,7 +1542,7 @@
                 "enable_image": true,
                 "link": "",
                 "name": "",
-                "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. </p>",
+                "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. <\/p>",
                 "image": "",
                 "store_name": ""
               },
@@ -1557,7 +1557,7 @@
                 "enable_image": true,
                 "link": "",
                 "name": "",
-                "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. </p>",
+                "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. <\/p>",
                 "image": "",
                 "store_name": ""
               },
@@ -1649,7 +1649,7 @@
           "blocks": {
             "footer-3": {
               "settings": {
-                "content": "<p>Use this text to share information about your brand with your customers.</p>",
+                "content": "<p>Use this text to share information about your brand with your customers.<\/p>",
                 "title": "Title",
                 "social_icons_footer": true
               },
@@ -1686,7 +1686,7 @@
             "display_last_name": false,
             "image": "",
             "newsletter_section_text_align": "center",
-            "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more &hellip;</p>",
+            "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more &hellip;<\/p>",
             "newsletter_title": "Subscribe"
           },
           "type": "newsletter"
@@ -1708,7 +1708,7 @@
           "blocks": {
             "1489283737905-0": {
               "settings": {
-                "text": "<p>Promotion description details.</p>",
+                "text": "<p>Promotion description details.<\/p>",
                 "title": "Feature",
                 "link": "",
                 "image": "",
@@ -1718,7 +1718,7 @@
             },
             "1489283737905-1": {
               "settings": {
-                "text": "<p>Promotion description details.</p>",
+                "text": "<p>Promotion description details.<\/p>",
                 "title": "Feature",
                 "link": "",
                 "image": "",
@@ -1728,7 +1728,7 @@
             },
             "1489283737905-2": {
               "settings": {
-                "text": "<p>Promotion description details.</p>",
+                "text": "<p>Promotion description details.<\/p>",
                 "title": "Feature",
                 "link": "",
                 "image": "",
@@ -1738,7 +1738,7 @@
             },
             "1489283758712": {
               "settings": {
-                "text": "<p>Promotion description details.</p>",
+                "text": "<p>Promotion description details.<\/p>",
                 "title": "Feature",
                 "link": "",
                 "image": "",
@@ -1766,12 +1766,12 @@
                 "button1_link": "",
                 "button2": "",
                 "image": "",
-                "pretext": "<p>Short text that precedes the headline</p>",
+                "pretext": "<p>Short text that precedes the headline<\/p>",
                 "button1_highlight": false,
                 "button2_highlight": false,
                 "title": "Your headline here",
                 "button2_link": "",
-                "subtitle": "<p>This is a short subheading for your slideshow image</p>",
+                "subtitle": "<p>This is a short subheading for your slideshow image<\/p>",
                 "caption_background_transparency": false,
                 "caption_background": false,
                 "button1": ""
@@ -1812,7 +1812,7 @@
           "blocks": {
             "1489284503681-1": {
               "settings": {
-                "text": "<p>Promotion description appears here.</p>",
+                "text": "<p>Promotion description appears here.<\/p>",
                 "title": "Your headline",
                 "link": "",
                 "image": "",
@@ -1822,7 +1822,7 @@
             },
             "1489284503681-0": {
               "settings": {
-                "text": "<p>Promotion description appears here.</p>",
+                "text": "<p>Promotion description appears here.<\/p>",
                 "title": "Your headline",
                 "link": "",
                 "image": "",
@@ -1835,7 +1835,7 @@
         },
         "1489283660007": {
           "settings": {
-            "content": "<p>Use this text to share information about your brand with your customers.</p>\r\n<p>Describe a product, share announcements, or welcome customers to your store.</p>",
+            "content": "<p>Use this text to share information about your brand with your customers.<\/p>\r\n<p>Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "text_size": "featured_text",
             "title": "Talk about your brand",
             "image": "",
@@ -2339,12 +2339,12 @@
             "button1_link": "",
             "button2": "",
             "image": "",
-            "pretext": "<p>Introducing the</p>",
+            "pretext": "<p>Introducing the<\/p>",
             "button1_highlight": false,
             "button2_highlight": false,
             "title": "Turbo Shopify Theme",
             "button2_link": "",
-            "subtitle": "<p>From Out of the Sandbox</p>",
+            "subtitle": "<p>From Out of the Sandbox<\/p>",
             "caption_background_transparency": false,
             "caption_background": false,
             "button1": ""
@@ -2456,7 +2456,7 @@
                 "enable_image": true,
                 "link": "",
                 "name": "",
-                "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. </p>",
+                "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. <\/p>",
                 "image": "",
                 "store_name": ""
               },
@@ -2471,7 +2471,7 @@
                 "enable_image": true,
                 "link": "",
                 "name": "",
-                "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. </p>",
+                "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. <\/p>",
                 "image": "",
                 "store_name": ""
               },
@@ -2486,7 +2486,7 @@
                 "enable_image": true,
                 "link": "",
                 "name": "",
-                "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. </p>",
+                "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. <\/p>",
                 "image": "",
                 "store_name": ""
               },
@@ -2580,7 +2580,7 @@
           "blocks": {
             "footer-3": {
               "settings": {
-                "content": "<p>Use this text to share information about your brand with your customers.</p>",
+                "content": "<p>Use this text to share information about your brand with your customers.<\/p>",
                 "title": "Title",
                 "social_icons_footer": true
               },
@@ -2617,7 +2617,7 @@
             "display_last_name": false,
             "image": "",
             "newsletter_section_text_align": "center",
-            "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more &hellip;</p>",
+            "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more &hellip;<\/p>",
             "newsletter_title": "Subscribe"
           },
           "type": "newsletter"
@@ -2639,7 +2639,7 @@
           "blocks": {
             "1489283737905-0": {
               "settings": {
-                "text": "<p>Promotion description details.</p>",
+                "text": "<p>Promotion description details.<\/p>",
                 "title": "Feature",
                 "link": "",
                 "image": "",
@@ -2649,7 +2649,7 @@
             },
             "1489283737905-1": {
               "settings": {
-                "text": "<p>Promotion description details.</p>",
+                "text": "<p>Promotion description details.<\/p>",
                 "title": "Feature",
                 "link": "",
                 "image": "",
@@ -2659,7 +2659,7 @@
             },
             "1489283737905-2": {
               "settings": {
-                "text": "<p>Promotion description details.</p>",
+                "text": "<p>Promotion description details.<\/p>",
                 "title": "Feature",
                 "link": "",
                 "image": "",
@@ -2669,7 +2669,7 @@
             },
             "1489283758712": {
               "settings": {
-                "text": "<p>Promotion description details.</p>",
+                "text": "<p>Promotion description details.<\/p>",
                 "title": "Feature",
                 "link": "",
                 "image": "",
@@ -2697,12 +2697,12 @@
                 "button1_link": "",
                 "button2": "",
                 "image": "",
-                "pretext": "<p>Short text that precedes the headline</p>",
+                "pretext": "<p>Short text that precedes the headline<\/p>",
                 "button1_highlight": false,
                 "button2_highlight": false,
                 "title": "Your headline here",
                 "button2_link": "",
-                "subtitle": "<p>This is a short subheading for your slideshow image</p>",
+                "subtitle": "<p>This is a short subheading for your slideshow image<\/p>",
                 "caption_background_transparency": false,
                 "caption_background": false,
                 "button1": ""
@@ -2743,7 +2743,7 @@
           "blocks": {
             "1489284503681-1": {
               "settings": {
-                "text": "<p>Promotion description appears here.</p>",
+                "text": "<p>Promotion description appears here.<\/p>",
                 "title": "Your headline",
                 "link": "",
                 "image": "",
@@ -2753,7 +2753,7 @@
             },
             "1489284503681-0": {
               "settings": {
-                "text": "<p>Promotion description appears here.</p>",
+                "text": "<p>Promotion description appears here.<\/p>",
                 "title": "Your headline",
                 "link": "",
                 "image": "",
@@ -2766,7 +2766,7 @@
         },
         "1489283660007": {
           "settings": {
-            "content": "<p>Use this text to share information about your brand with your customers.</p>\r\n<p>Describe a product, share announcements, or welcome customers to your store.</p>",
+            "content": "<p>Use this text to share information about your brand with your customers.<\/p>\r\n<p>Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "text_size": "featured_text",
             "title": "Talk about your brand",
             "image": "",
@@ -2861,7 +2861,7 @@
       "collection_breadcrumb": true,
       "gallery_arrows": true,
       "shop_home_page_content_bg_color": "#202020",
-      "password-page-background": "shopify://shop_images/hat_366c6fe3-ebb2-4e80-a86e-ca45d3739c19.jpg",
+      "password-page-background": "shopify:\/\/shop_images\/hat_366c6fe3-ebb2-4e80-a86e-ca45d3739c19.jpg",
       "show_multiple_currencies": true,
       "password_page_text_color": "#ffffff",
       "sale_banner_enabled": true
@@ -3196,7 +3196,7 @@
       "image_1_text_align": "center",
       "feature3_link": "",
       "image_2_subtitle": "",
-      "feature2_link": "http://help.outofthesandbox.com/",
+      "feature2_link": "http:\/\/help.outofthesandbox.com\/",
       "newsletter_popup_form": true,
       "description_words": "25",
       "content_3_position": "10",
@@ -3423,7 +3423,7 @@
       "collection_sidebar_page": "",
       "read_more_style": "button",
       "slide6_button2_link": "",
-      "newsletter_popup_text": "<p></p>",
+      "newsletter_popup_text": "<p><\/p>",
       "image_1_button_text": "",
       "pagination_limit": "24",
       "sections": {
@@ -3434,12 +3434,12 @@
             "button1_link": "",
             "button2": "",
             "image": "",
-            "pretext": "<p>Introducing the</p>",
+            "pretext": "<p>Introducing the<\/p>",
             "button1_highlight": false,
             "button2_highlight": false,
             "title": "Turbo Shopify Theme",
             "button2_link": "",
-            "subtitle": "<p>From Out of the Sandbox</p>",
+            "subtitle": "<p>From Out of the Sandbox<\/p>",
             "caption_background_transparency": false,
             "caption_background": false,
             "button1": ""
@@ -3551,7 +3551,7 @@
                 "enable_image": true,
                 "link": "",
                 "name": "",
-                "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. </p>",
+                "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. <\/p>",
                 "image": "",
                 "store_name": ""
               },
@@ -3566,7 +3566,7 @@
                 "enable_image": true,
                 "link": "",
                 "name": "",
-                "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. </p>",
+                "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. <\/p>",
                 "image": "",
                 "store_name": ""
               },
@@ -3581,7 +3581,7 @@
                 "enable_image": true,
                 "link": "",
                 "name": "",
-                "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. </p>",
+                "testimonial": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam enim, fringilla ut purus ut, pretium ullamcorper sem. In sit amet vestibulum tellus. Aenean gravida dolor eget mi bibendum semper. <\/p>",
                 "image": "",
                 "store_name": ""
               },
@@ -3673,7 +3673,7 @@
           "blocks": {
             "footer-3": {
               "settings": {
-                "content": "<p>Use this text to share information about your brand with your customers.</p>",
+                "content": "<p>Use this text to share information about your brand with your customers.<\/p>",
                 "title": "Title",
                 "social_icons_footer": true
               },
@@ -3710,7 +3710,7 @@
             "display_last_name": false,
             "image": "",
             "newsletter_section_text_align": "center",
-            "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more &hellip;</p>",
+            "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more &hellip;<\/p>",
             "newsletter_title": "Subscribe"
           },
           "type": "newsletter"
@@ -3732,7 +3732,7 @@
           "blocks": {
             "1489283737905-0": {
               "settings": {
-                "text": "<p>Promotion description details.</p>",
+                "text": "<p>Promotion description details.<\/p>",
                 "title": "Feature",
                 "link": "",
                 "image": "",
@@ -3742,7 +3742,7 @@
             },
             "1489283737905-1": {
               "settings": {
-                "text": "<p>Promotion description details.</p>",
+                "text": "<p>Promotion description details.<\/p>",
                 "title": "Feature",
                 "link": "",
                 "image": "",
@@ -3752,7 +3752,7 @@
             },
             "1489283737905-2": {
               "settings": {
-                "text": "<p>Promotion description details.</p>",
+                "text": "<p>Promotion description details.<\/p>",
                 "title": "Feature",
                 "link": "",
                 "image": "",
@@ -3762,7 +3762,7 @@
             },
             "1489283758712": {
               "settings": {
-                "text": "<p>Promotion description details.</p>",
+                "text": "<p>Promotion description details.<\/p>",
                 "title": "Feature",
                 "link": "",
                 "image": "",
@@ -3790,12 +3790,12 @@
                 "button1_link": "",
                 "button2": "",
                 "image": "",
-                "pretext": "<p>Short text that precedes the headline</p>",
+                "pretext": "<p>Short text that precedes the headline<\/p>",
                 "button1_highlight": false,
                 "button2_highlight": false,
                 "title": "Your headline here",
                 "button2_link": "",
-                "subtitle": "<p>This is a short subheading for your slideshow image</p>",
+                "subtitle": "<p>This is a short subheading for your slideshow image<\/p>",
                 "caption_background_transparency": false,
                 "caption_background": false,
                 "button1": ""
@@ -3836,7 +3836,7 @@
           "blocks": {
             "1489284503681-1": {
               "settings": {
-                "text": "<p>Promotion description appears here.</p>",
+                "text": "<p>Promotion description appears here.<\/p>",
                 "title": "Your headline",
                 "link": "",
                 "image": "",
@@ -3846,7 +3846,7 @@
             },
             "1489284503681-0": {
               "settings": {
-                "text": "<p>Promotion description appears here.</p>",
+                "text": "<p>Promotion description appears here.<\/p>",
                 "title": "Your headline",
                 "link": "",
                 "image": "",
@@ -3859,7 +3859,7 @@
         },
         "1489283660007": {
           "settings": {
-            "content": "<p>Use this text to share information about your brand with your customers.</p>\r\n<p>Describe a product, share announcements, or welcome customers to your store.</p>",
+            "content": "<p>Use this text to share information about your brand with your customers.<\/p>\r\n<p>Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "text_size": "featured_text",
             "title": "Talk about your brand",
             "image": "",
@@ -3993,7 +3993,7 @@
     }
   },
   "current": {
-    "performance": "ludicrous",
+    "performance": "sport",
     "image_loading_style": "fade-in",
     "custom_scripts": "",
     "logo_color": "#ffffff",
@@ -4015,7 +4015,7 @@
     "nav_color": "#333333",
     "nav_color_home": "#333333",
     "nav_color_hover": "#333333",
-    "link_color": "#333333",
+    "link_color": "#c7a7e2",
     "link_hover_color": "#7f8c8d",
     "sidebar_nav_color": "#363636",
     "sidebar_nav_color_hover": "#c7a7e2",
@@ -4135,7 +4135,7 @@
     "thumbnail_hover_enabled": false,
     "display_vendor": false,
     "collection_secondary_image": true,
-    "sale_banner_enabled": true,
+    "sale_banner_enabled": false,
     "collection_swatches": false,
     "notify_me_form": true,
     "product_form_style": "dropdown",
@@ -4152,7 +4152,7 @@
     "quick_shop_enabled": true,
     "quick_shop_display_vendor": false,
     "quick_shop_display_savings": true,
-    "show_payment_button": false,
+    "show_payment_button": true,
     "quick_shop_zoom": false,
     "quick_shop_full_description": false,
     "description_words": 25,
@@ -4187,7 +4187,7 @@
     "newsletter_bg": "",
     "newsletter_popup_image_align": "left",
     "newsletter_popup_title": "Sign up today",
-    "newsletter_popup_text": "<p></p>",
+    "newsletter_popup_text": "<p><\/p>",
     "newsletter_popup_text_align": "center",
     "popup_button1": "",
     "popup_button1_link": "",
@@ -4197,23 +4197,23 @@
     "popup_button2_highlight": false,
     "newsletter_popup_seconds": 4,
     "newsletter_popup_days": "14",
-    "twitter_link": "https://mobile.twitter.com/Eco_modern",
-    "facebook_link": "https://www.facebook.com/ECO.modernessentials",
+    "twitter_link": "https:\/\/mobile.twitter.com\/Eco_modern",
+    "facebook_link": "https:\/\/www.facebook.com\/ECO.modernessentials",
     "google_link": "",
     "youtube_link": "",
     "vimeo_link": "",
     "pinterest_link": "",
     "tumblr_link": "",
-    "instagram_link": "https://www.instagram.com/ECOmodernessentials/",
+    "instagram_link": "https:\/\/www.instagram.com\/ECOmodernessentials\/",
     "snapchat_link": "",
     "houzz_link": "",
-    "linkedin_link": "https://www.linkedin.com/company/natalie-group/",
+    "linkedin_link": "https:\/\/www.linkedin.com\/company\/natalie-group\/",
     "email_link": "",
-    "favicon": "shopify://shop_images/ECO_FavIcon_64x64_fbc291e1-963b-49d3-8de7-a5410119d297.png",
+    "favicon": "shopify:\/\/shop_images\/ECO_FavIcon_64x64_fbc291e1-963b-49d3-8de7-a5410119d297.png",
     "disqus_enabled": false,
     "disqus_shortname": "",
-    "checkout_header_image": "shopify://shop_images/Checkout_EcoModern_1000x400_1_320b2be0-d035-4e83-908b-c0fb95a09105.jpg",
-    "checkout_logo_image": "shopify://shop_images/ECOModernEssentials_Light_logo.png",
+    "checkout_header_image": "shopify:\/\/shop_images\/Checkout_EcoModern_1000x400_1_320b2be0-d035-4e83-908b-c0fb95a09105.jpg",
+    "checkout_logo_image": "shopify:\/\/shop_images\/ECOModernEssentials_Light_logo.png",
     "checkout_logo_position": "left",
     "checkout_logo_size": "medium",
     "checkout_body_background_image": "",
@@ -4466,7 +4466,7 @@
     "image_1_text_align": "center",
     "feature3_link": "",
     "image_2_subtitle": "",
-    "feature2_link": "http://help.outofthesandbox.com/",
+    "feature2_link": "http:\/\/help.outofthesandbox.com\/",
     "content_3_position": "10",
     "image_6_headline": "",
     "image_4_position": "7",
@@ -4720,19 +4720,19 @@
       "1489283389016": {
         "type": "image-with-text-overlay",
         "settings": {
-          "image": "shopify://shop_images/HomeSlider_ECOmodern-RozaliaRussian-_1800x800_08c95b47-51b3-41e1-9386-cec416a64e2e.jpg",
-          "pretext": "",
-          "title": "Spoil Mum this<br>Mothers Day!",
-          "subtitle": "<p><strong>Purchase any of our beautiful Vaporizers &amp; receive a Top 3 Aroma Trio Free.</strong></p>",
+          "image": "shopify:\/\/shop_images\/HomeSlider_ECOmodern-RozaliaRussian-_1800x800_08c95b47-51b3-41e1-9386-cec416a64e2e.jpg",
+          "pretext": "<p><strong>&nbsp;<\/strong><\/p>",
+          "title": "Live your healthiest and most vibrant life.",
+          "subtitle": "<p><strong>We&nbsp;create wellbeing products&nbsp;that&nbsp; are simple,&nbsp;<br><\/strong><strong>effective and easy to tie into your&nbsp;daily&nbsp;routine.<\/strong><\/p>\n<p><\/p>\n<p><strong>\"Let's look after you...\"<\/strong><\/p>",
           "caption_background": false,
           "caption_background_transparency": false,
           "text_position": "center",
           "text_align": "center",
-          "button1": "SHOP NOW",
-          "button1_link": "shopify://collections/all",
-          "button1_highlight": false,
-          "button2": "",
-          "button2_link": "",
+          "button1": "Shop by purpose",
+          "button1_link": "shopify:\/\/pages\/shop-by-purpose",
+          "button1_highlight": true,
+          "button2": "SHOP COLLECTIONS",
+          "button2_link": "shopify:\/\/collections",
           "button2_highlight": false
         }
       },
@@ -4751,7 +4751,7 @@
         "type": "featured-blog",
         "settings": {
           "title": "Blog posts",
-          "blog_widget_select": "",
+          "blog_widget_select": "eco-modern-essentials-blog",
           "home_page_articles": 2,
           "blog_tags": false,
           "blog_author": false,
@@ -4763,21 +4763,21 @@
       "header": {
         "type": "header",
         "settings": {
-          "promo_text": "<p>FREE SHIPPING WORLD-WIDE</p>",
+          "promo_text": "",
           "social_icons_header": true,
           "phone_number": "",
-          "top_bar_menu": "",
+          "top_bar_menu": "top-menu",
           "cart_icon": "cart",
           "show_cart": true,
           "logo_display_width": 175,
-          "logo": "shopify://shop_images/ECOModernEssentials_Light_logo.png",
+          "logo": "shopify:\/\/shop_images\/ECOModernEssentials_Light_logo.png",
           "logo_home": "",
-          "logo_mobile": "shopify://shop_images/ECO_MenuLogo.png",
+          "logo_mobile": "shopify:\/\/shop_images\/ECO_MenuLogo.png",
           "main_linklist": "main-menu",
           "main_linklist2": "footer",
           "vertical_menu": false,
           "search_enabled": true,
-          "fixed_header": true,
+          "fixed_header": false,
           "logo_position": "center",
           "logo_alignment": "center",
           "menu_position": "inline",
@@ -4792,7 +4792,7 @@
           "footer-0": {
             "type": "logo",
             "settings": {
-              "image": "shopify://shop_images/ECOModernEssentials_Light_logo.png",
+              "image": "shopify:\/\/shop_images\/ECOModernEssentials_Light_logo.png",
               "text_align": "left",
               "social_icons_footer": true
             }
@@ -4800,22 +4800,22 @@
           "footer-1": {
             "type": "link_list",
             "settings": {
-              "menu": "footer",
+              "menu": "navigation",
               "social_icons_footer": false
             }
           },
           "footer-2": {
             "type": "link_list",
             "settings": {
-              "menu": "",
+              "menu": "other",
               "social_icons_footer": false
             }
           },
           "1525651287992": {
             "type": "newsletter",
             "settings": {
-              "title": "Connect",
-              "newsletter_text": "<p>Join our mailing list.</p>",
+              "title": "CONNECT",
+              "newsletter_text": "<p>Join our mailing list.<\/p>",
               "show_firstname": false,
               "show_lastname": false,
               "show_social": false
@@ -4840,38 +4840,38 @@
           "1489283737905-0": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/Calming_Catagories_Banners_850x1100_85add007-3c3d-4114-96a0-d054a9de1af4.jpg",
-              "link": "https://eco-modern-essentials.myshopify.com/collections/all/flu",
-              "title": "Flu.",
-              "text": "<p>Promotion description details.</p>",
-              "button_label": ""
-            }
-          },
-          "1489283737905-1": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/Energy_Catagories_Banners_850x1100_dfc7ebcd-f006-4133-9539-854a0a3119f0.jpg",
-              "link": "https://eco-modern-essentials.myshopify.com/collections/all/energy",
-              "title": "Energy.",
-              "text": "<p>Promotion description details.</p>",
+              "image": "shopify:\/\/shop_images\/Calming_Catagories_Banners_850x1100_85add007-3c3d-4114-96a0-d054a9de1af4.jpg",
+              "link": "https:\/\/eco-modern-essentials.myshopify.com\/collections\/gift-packs",
+              "title": "Value Kits.",
+              "text": "<p><strong>A range of kits that&nbsp;combine our most popular sellers.<\/strong><\/p>",
               "button_label": ""
             }
           },
           "1489283737905-2": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/Sleep_Catagories_Banners_850x1100_a1821c7c-14ea-4752-853f-33ca31e921ad.jpg",
-              "link": "https://eco-modern-essentials.myshopify.com/collections/all/sleep",
+              "image": "shopify:\/\/shop_images\/Sleep_Catagories_Banners_850x1100_a1821c7c-14ea-4752-853f-33ca31e921ad.jpg",
+              "link": "https:\/\/eco-modern-essentials.myshopify.com\/collections\/all\/sleep",
               "title": "Sleep.",
-              "text": "<p>Promotion description details.</p>",
+              "text": "<p><strong>The perfect oils to help relax and encourage a peaceful night sleep.<\/strong><\/p>",
+              "button_label": ""
+            }
+          },
+          "1489283737905-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Energy_Catagories_Banners_850x1100_dfc7ebcd-f006-4133-9539-854a0a3119f0.jpg",
+              "link": "https:\/\/eco-modern-essentials.myshopify.com\/collections\/all\/energy",
+              "title": "Energy.",
+              "text": "<p><strong>Be your best YOU and lift your spirits with this collection.<\/strong><\/p>",
               "button_label": ""
             }
           }
         },
         "block_order": [
           "1489283737905-0",
-          "1489283737905-1",
-          "1489283737905-2"
+          "1489283737905-2",
+          "1489283737905-1"
         ],
         "settings": {
           "featured_promos_per_row": 3,
@@ -4887,7 +4887,7 @@
           "1489284011497-0": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/AllProducts_1800x500_29e3b9aa-b5d1-4af8-957d-f4f692dc36e8.jpg",
+              "image": "shopify:\/\/shop_images\/AllProducts_1800x500_29e3b9aa-b5d1-4af8-957d-f4f692dc36e8.jpg",
               "pretext": "",
               "title": "All Products.",
               "subtitle": "",
@@ -4896,10 +4896,10 @@
               "caption_background": false,
               "caption_background_transparency": false,
               "button1": "View Collections",
-              "button1_link": "https://eco-modern-essentials.myshopify.com/collections",
+              "button1_link": "https:\/\/eco-modern-essentials.myshopify.com\/collections",
               "button1_highlight": true,
               "button2": "View Products",
-              "button2_link": "https://eco-modern-essentials.myshopify.com/collections/all",
+              "button2_link": "https:\/\/eco-modern-essentials.myshopify.com\/collections\/all",
               "button2_highlight": false
             }
           }
@@ -4916,7 +4916,7 @@
       "1525651079214": {
         "type": "image-with-text-overlay",
         "settings": {
-          "image": "shopify://shop_images/ShopOurInsta_1800x650_6af296e2-5c07-4725-93aa-b916cf2793c3.jpg",
+          "image": "shopify:\/\/shop_images\/ShopOurInsta_1800x650_6af296e2-5c07-4725-93aa-b916cf2793c3.jpg",
           "pretext": "",
           "title": "Shop Our Insta.",
           "subtitle": "",
@@ -4925,7 +4925,7 @@
           "text_position": "center",
           "text_align": "center",
           "button1": "SHOP NOW",
-          "button1_link": "shopify://pages/shop-our-insta",
+          "button1_link": "https:\/\/eco-modern-essentials.myshopify.com\/pages\/shop-our-insta",
           "button1_highlight": false,
           "button2": "",
           "button2_link": "",
@@ -4943,7 +4943,7 @@
               "image_caption_top": "",
               "image_link_top": "",
               "menu_1": "shop-by-purpose",
-              "menu_1_link": "",
+              "menu_1_link": "https:\/\/eco-modern-essentials.myshopify.com\/pages\/shop-by-purpose",
               "menu_2": "",
               "menu_2_link": "",
               "menu_3": "",
@@ -4964,7 +4964,7 @@
               "image_caption_top": "",
               "image_link_top": "",
               "menu_1": "pure-essential-oils",
-              "menu_1_link": "shopify://collections/aromatherapy-oils",
+              "menu_1_link": "shopify:\/\/collections\/aromatherapy-oils",
               "menu_2": "",
               "menu_2_link": "",
               "menu_3": "",
@@ -4985,7 +4985,7 @@
               "image_caption_top": "",
               "image_link_top": "",
               "menu_1": "other",
-              "menu_1_link": "shopify://collections",
+              "menu_1_link": "shopify:\/\/collections",
               "menu_2": "",
               "menu_2_link": "",
               "menu_3": "",
@@ -5002,9 +5002,9 @@
             "type": "column",
             "settings": {
               "richtext_top": "",
-              "image_top": "shopify://shop_images/SpecialMenuOffer_800x800_ec424cd5-2eca-4cb2-821f-c0d0b9dd0219.jpg",
-              "image_caption_top": "Spoil Mum this Mother's Day",
-              "image_link_top": "",
+              "image_top": "shopify:\/\/shop_images\/Mistique-Ceramic-Mist-Diffuser_MegaMenu.png",
+              "image_caption_top": "Mistique Ceramic Mist Diffuser<br><font color=\"B995D6\">$85.00<\/font>",
+              "image_link_top": "shopify:\/\/products\/mistique-ceramic-mist-diffuser",
               "menu_1": "",
               "menu_1_link": "",
               "menu_2": "",
@@ -5023,9 +5023,9 @@
             "type": "column",
             "settings": {
               "richtext_top": "",
-              "image_top": "shopify://shop_images/Indigenous_Collection_800x800_23c80b2d-5399-48f5-a5c9-f9d4dc25424e.jpg",
-              "image_caption_top": "Indigenous Collection",
-              "image_link_top": "shopify://collections/indigenous-aroma-trios",
+              "image_top": "shopify:\/\/shop_images\/ECO.-Bestselling-Blends-Collection_MenuImagery.jpg",
+              "image_caption_top": "ECO. Best-selling Blends Collection<br><font color=\"B995D6\">$76.00<\/font>",
+              "image_link_top": "shopify:\/\/products\/eco-bestselling-blends-collection",
               "menu_1": "",
               "menu_1_link": "",
               "menu_2": "",
@@ -5055,7 +5055,7 @@
       "blog-template": {
         "type": "blog-template",
         "settings": {
-          "image": "shopify://shop_images/BlogPageHeader_1800x800_0faacd05-66a5-478e-b4f7-f2b6be072ed0.jpg",
+          "image": "shopify:\/\/shop_images\/BlogPageHeader_1800x800_0faacd05-66a5-478e-b4f7-f2b6be072ed0.jpg",
           "image_darken": false,
           "subtitle": "Inspiring everyone to live an eco life.",
           "blog_posts_per_row": 3,
@@ -5072,11 +5072,11 @@
         "type": "newsletter",
         "settings": {
           "newsletter_title": "Subscribe",
-          "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more …</p>",
+          "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more …<\/p>",
           "display_first_name": false,
           "display_last_name": false,
           "newsletter_section_text_align": "center",
-          "image": "shopify://shop_images/Signup_Background_1.jpg"
+          "image": "shopify:\/\/shop_images\/Signup_Background_1.jpg"
         }
       },
       "article-template": {
@@ -5092,30 +5092,22 @@
               "blog_post_count": "10"
             }
           },
-          "1525757134278": {
-            "type": "text",
-            "settings": {
-              "title": "Spoil Mum this Mother's Day",
-              "text": "<p>Purchase any of our beautiful new vaporizers &amp; receive a Top 3 Aroma Trio Free!&nbsp; <a href=\"/collections\" title=\"All Collections\">Offer Here.</a></p>"
-            }
-          },
           "1525829067345": {
             "type": "newsletter",
             "settings": {
               "newsletter_title": "Subscribe",
-              "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more …</p>"
+              "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more …<\/p>"
             }
           }
         },
         "block_order": [
           "1525757166334",
           "1525757190215",
-          "1525757134278",
           "1525829067345"
         ],
         "settings": {
           "banner_enabled": true,
-          "image_darken": false,
+          "image_darken": true,
           "blog_breadcrumb": true,
           "blog_pagination": true,
           "blog_tags": false,
@@ -5139,7 +5131,7 @@
               "image_caption_top": "",
               "image_link_top": "",
               "menu_1": "about-eco",
-              "menu_1_link": "https://eco-modern-essentials.myshopify.com/pages/about-eco",
+              "menu_1_link": "https:\/\/eco-modern-essentials.myshopify.com\/pages\/about-eco",
               "menu_2": "",
               "menu_2_link": "",
               "menu_3": "",
@@ -5210,7 +5202,7 @@
           "mega-menu-3-0": {
             "type": "column",
             "settings": {
-              "richtext_top": "<p>Add description, images, menus and links to your mega menu</p>",
+              "richtext_top": "<p>Add description, images, menus and links to your mega menu<\/p>",
               "image_top": "",
               "image_caption_top": "",
               "image_link_top": "",
@@ -5231,7 +5223,7 @@
           "mega-menu-3-1": {
             "type": "column",
             "settings": {
-              "richtext_top": "<p>A column with no settings can be used as a spacer</p>",
+              "richtext_top": "<p>A column with no settings can be used as a spacer<\/p>",
               "image_top": "",
               "image_caption_top": "",
               "image_link_top": "",
@@ -5273,7 +5265,7 @@
           "mega-menu-3-3": {
             "type": "column",
             "settings": {
-              "richtext_top": "<p>Link to your collections, sales and even external links</p>",
+              "richtext_top": "<p>Link to your collections, sales and even external links<\/p>",
               "image_top": "",
               "image_caption_top": "",
               "image_link_top": "",
@@ -5294,7 +5286,7 @@
           "mega-menu-3-4": {
             "type": "column",
             "settings": {
-              "richtext_top": "<p>Add up to five columns</p>",
+              "richtext_top": "<p>Add up to five columns<\/p>",
               "image_top": "",
               "image_caption_top": "",
               "image_link_top": "",
@@ -5344,7 +5336,7 @@
           "display_type": false,
           "display_tags": false,
           "display_social_buttons": true,
-          "product_description_position": "top",
+          "product_description_position": "bottom",
           "display_related_products": true,
           "related_products_style": "grid",
           "related_products_limit": 3,
@@ -5363,16 +5355,24 @@
           "1526341662301": {
             "type": "filter",
             "settings": {
-              "filter_name": "Shop By Purpose",
-              "filter_tags": "Sleep,Flu,Energy,Muscle Recovery,Anti-ageing,Dry Skin",
+              "filter_name": "Shop By Purpose:",
+              "filter_tags": "Sleep,Flu,Energy,Muscle Recovery,Anti-ageing,Dry Skin,Calming,Acne and Oily Skin,Stretch Marks and Cellulite",
               "enable_filter_swatches": true
             }
           },
           "1525737918469": {
             "type": "filter",
             "settings": {
-              "filter_name": "Pricing",
-              "filter_tags": "Under $20, Under $40, Under $60",
+              "filter_name": "Pricing:",
+              "filter_tags": "Under $20, Under $40, Under $60, $60+",
+              "enable_filter_swatches": false
+            }
+          },
+          "1528946183281": {
+            "type": "filter",
+            "settings": {
+              "filter_name": "Sort By:",
+              "filter_tags": "Herbal,Woody,Floral,Citrus,Fruits,Blends,Rollerballs",
               "enable_filter_swatches": false
             }
           },
@@ -5384,6 +5384,7 @@
         "block_order": [
           "1526341662301",
           "1525737918469",
+          "1528946183281",
           "1526342162441"
         ],
         "settings": {
@@ -5394,7 +5395,7 @@
           "collection_tags": false,
           "collection_sort": true,
           "featured_collection_image": true,
-          "image": "shopify://shop_images/Product_EcoModern_1800x600_1.jpg",
+          "image": "shopify:\/\/shop_images\/Product_EcoModern_1800x600_1.jpg",
           "image_darken": false,
           "toggle": false
         }
@@ -5423,6 +5424,19 @@
       "page-faq-template": {
         "type": "page-faq-template",
         "blocks": {
+          "page-faq-template-4": {
+            "type": "heading",
+            "settings": {
+              "heading": "Privacy Policy"
+            }
+          },
+          "1527577033996": {
+            "type": "Content",
+            "settings": {
+              "title": "Does your website collect my personally identifiable information?",
+              "subtitle": "<p>ECO. Modern Essentials works with&nbsp;<span style=\"text-decoration: underline;\"><a href=\"http:\/\/www.adroll.com\/\">AdRoll retargeting<\/a><\/span>, who uses technology including web beacons and cookies to collect data about our website usage and to improve the effectiveness of our marketing. Data recorded through the use of this technology is aggregated and shared with us.<br><br>No personally identifiable information about you is collected or shared by AdRoll with ECO. Modern Essentials<\/p>\n<p>You can opt-out of AdRoll and their partners by visiting&nbsp;<span style=\"text-decoration: underline;\"><a href=\"http:\/\/www.adroll.com\/about\/privacy\">this link<\/a>.<\/span><\/p>"
+            }
+          },
           "page-faq-template-0": {
             "type": "heading",
             "settings": {
@@ -5433,125 +5447,112 @@
             "type": "Content",
             "settings": {
               "title": "Are your products tested on animals?",
-              "subtitle": "<p>ECO is a cruelty free company. We do not test our ingredients, product protoypes or finished products on animals and we work closely with our ingredient suppliers to ensure they are aware of our company value &amp; policies &amp; are certified for ethical sourcing code compliance.</p>"
+              "subtitle": "<p>ECO is a cruelty free company. We do not test our ingredients, product protoypes or finished products on animals and we work closely with our ingredient suppliers to ensure they are aware of our company value &amp; policies &amp; are certified for ethical sourcing code compliance.<\/p>"
             }
           },
           "page-faq-template-2": {
             "type": "Content",
             "settings": {
               "title": "Do ECO. products contain parabens?",
-              "subtitle": "<p>No, ECO. products do not contain parabens.</p>"
+              "subtitle": "<p>No, ECO. products do not contain parabens.<\/p>"
             }
           },
           "page-faq-template-3": {
             "type": "Content",
             "settings": {
               "title": "Are your products vegan?",
-              "subtitle": "<p>Our essential oils and face serums are vegan, however we cannot 100% guarantee our cleansers and cream products are, due to the sourcing of the raw material ingredients.</p>"
-            }
-          },
-          "page-faq-template-4": {
-            "type": "heading",
-            "settings": {
-              "heading": "Privacy Policy"
-            }
-          },
-          "page-faq-template-5": {
-            "type": "Content",
-            "settings": {
-              "title": "I have very sensitive skin, can I use ECO. products?",
-              "subtitle": "<p>ECO. is a natural skin care range based on pure essential oils, plant extracts &amp; vitamins. These ingredients are active &amp; promote response in the skin (which is what we want to improve our skin health &amp; appearance!) If you have a sensitive skin, we recommend you slowly introduce new products into your regime, one product at a time. This will give your skin time to adjust. Timing may vary for this; you know your skin better than anyone! You can patch test on your inner elbow or behind the ear beforehand using products. Apply a small amount &amp; leave as long as it normally takes for your skin to respond, or for 24 hours. If you experience any uncomfortable sensations, such as stinging or burning, wash off immediately &amp; contact your store of purchase.</p>"
+              "subtitle": "<p>Our essential oils and face serums are vegan, however we cannot 100% guarantee our cleansers and cream products are, due to the sourcing of the raw material ingredients.<\/p>"
             }
           },
           "page-faq-template-6": {
             "type": "Content",
             "settings": {
               "title": "Are your products certified organic?",
-              "subtitle": "<p>Organic means that chemicals or toxins are not used in the manufacture or production of a product. We have many Certified Organic Face &amp; Body Products, which will be clearly stated in the name or product description. ECO. Certified Organic products are certified organic by the ACO, Australian Certified Organic; Australia&rsquo;s largest certifier for organic &amp; biodynamic product.</p>"
+              "subtitle": "<p>Organic means that chemicals or toxins are not used in the manufacture or production of a product. We have many Certified Organic Face &amp; Body Products, which will be clearly stated in the name or product description. ECO. Certified Organic products are certified organic by the ACO, Australian Certified Organic; Australia&rsquo;s largest certifier for organic &amp; biodynamic product.<\/p>"
+            }
+          },
+          "page-faq-template-5": {
+            "type": "Content",
+            "settings": {
+              "title": "I have very sensitive skin, can I use ECO. products?",
+              "subtitle": "<p>ECO. is a natural skin care range based on pure essential oils, plant extracts &amp; vitamins. These ingredients are active &amp; promote response in the skin (which is what we want to improve our skin health &amp; appearance!) If you have a sensitive skin, we recommend you slowly introduce new products into your regime, one product at a time. This will give your skin time to adjust. Timing may vary for this; you know your skin better than anyone! You can patch test on your inner elbow or behind the ear beforehand using products. Apply a small amount &amp; leave as long as it normally takes for your skin to respond, or for 24 hours. If you experience any uncomfortable sensations, such as stinging or burning, wash off immediately &amp; contact your store of purchase.<\/p>"
             }
           },
           "page-faq-template-7": {
             "type": "Content",
             "settings": {
               "title": "What age group is ECO. suitable for?",
-              "subtitle": "<p>ECO.products are perfectly safe &amp; suitable for all ages! We have certified organic products for baby &amp; suitable products for teenagers, anti-ageing, for mature skins &amp; everyone in between! If you go to the &ldquo;Know your skin&rdquo; tab on the ECO. website, you will find information on all skin types &amp; concerns &amp; recommended ECO. products.</p>"
+              "subtitle": "<p>ECO.products are perfectly safe &amp; suitable for all ages! We have certified organic products for baby &amp; suitable products for teenagers, anti-ageing, for mature skins &amp; everyone in between! If you go to the &ldquo;Know your skin&rdquo; tab on the ECO. website, you will find information on all skin types &amp; concerns &amp; recommended ECO. products.<\/p>"
             }
           },
           "1527576738376": {
             "type": "Content",
             "settings": {
               "title": "Which ECO. products are safe for pregnancy?",
-              "subtitle": "<p>Most ECO. products are safe for pregnancy; one exception is the Vitamin A serum as it contains Retinol, which is not recommended for pregnancy.</p>\n<p>Aromatherapy essential oils should be avoided for the first four months &amp; thereafter can be extremely helpful &amp; provide relief to symptoms (fluid retention, stress, muscle aches), especially in pregnancy massage performed by a certified practitioner or therapist. Do not use essential oils directly on the skin during pregnancy. Essential oils to be avoided during pregnancy are: Bay, Basil, Cedar wood, Clary Sage, Comfrey, Cypress, Fennel, Ginger, Hyssop, Jasmine, Juniper, Lemongrass, Marjoram, Melissa, Myrrh, Peppermint, Rose, Rosemary, Sage &amp; Thyme. It is always advisable to consult your medical, health or certified aromatherapy practitioner for advice on product use in pregnancy.</p>"
+              "subtitle": "<p>Most ECO. products are safe for pregnancy; one exception is the Vitamin A serum as it contains Retinol, which is not recommended for pregnancy.<\/p>\n<p>Aromatherapy essential oils should be avoided for the first four months &amp; thereafter can be extremely helpful &amp; provide relief to symptoms (fluid retention, stress, muscle aches), especially in pregnancy massage performed by a certified practitioner or therapist. Do not use essential oils directly on the skin during pregnancy. Essential oils to be avoided during pregnancy are: Bay, Basil, Cedar wood, Clary Sage, Comfrey, Cypress, Fennel, Ginger, Hyssop, Jasmine, Juniper, Lemongrass, Marjoram, Melissa, Myrrh, Peppermint, Rose, Rosemary, Sage &amp; Thyme. It is always advisable to consult your medical, health or certified aromatherapy practitioner for advice on product use in pregnancy.<\/p>"
             }
           },
           "1527576762111": {
             "type": "Content",
             "settings": {
               "title": "What is the best ECO. face product for rosacea?",
-              "subtitle": "<p>Rosacea is a skin condition that&rsquo;s cause is not completely clear. Symptoms may include redness, visible blood vessels, papules &amp; pustules. Alcohol, caffeine &amp; spicy food consumption may flare this condition. Harsh or chemical products may also aggravate. Recommended ECO. Products are Skin Rescue Serum, Certified Organic Rosehip Oil, Vitamin C serum &amp; the Refresh Range. It is best to slowly introduce your skin to one product at time, &amp; over a period of time for the skin to adjust. Once the skin has adjusted &amp; become healthier, Vitamin A serum may be introduced slowly, at night only.</p>"
+              "subtitle": "<p>Rosacea is a skin condition that&rsquo;s cause is not completely clear. Symptoms may include redness, visible blood vessels, papules &amp; pustules. Alcohol, caffeine &amp; spicy food consumption may flare this condition. Harsh or chemical products may also aggravate. Recommended ECO. Products are Skin Rescue Serum, Certified Organic Rosehip Oil, Vitamin C serum &amp; the Refresh Range. It is best to slowly introduce your skin to one product at time, &amp; over a period of time for the skin to adjust. Once the skin has adjusted &amp; become healthier, Vitamin A serum may be introduced slowly, at night only.<\/p>"
             }
           },
           "1527576805849": {
             "type": "Content",
             "settings": {
               "title": "Can you tell me about the Vitamin C in the C Serum?",
-              "subtitle": "<p>.ECO.Vitamin C Serum contains 2% Vitamin C in the form of Ascorbyl Tetraisopalmitate. An oil soluble form of Vitamin C, able to penetrate oils (or lipids) as well as water for deeper penetration into the skins layers. It also does not sting on application, as it does not require a low pH to penetrate. It is also a stable form of Vitamin C, therefore works as antioxidant long after you apply &amp; has a longer shelf life. Even though the percentage seems low at 2% this form of Vitamin C is active &amp; combines with other effective ingredients in the serum to deliver results.</p>"
+              "subtitle": "<p>.ECO.Vitamin C Serum contains 2% Vitamin C in the form of Ascorbyl Tetraisopalmitate. An oil soluble form of Vitamin C, able to penetrate oils (or lipids) as well as water for deeper penetration into the skins layers. It also does not sting on application, as it does not require a low pH to penetrate. It is also a stable form of Vitamin C, therefore works as antioxidant long after you apply &amp; has a longer shelf life. Even though the percentage seems low at 2% this form of Vitamin C is active &amp; combines with other effective ingredients in the serum to deliver results.<\/p>"
             }
           },
           "1527576831561": {
             "type": "Content",
             "settings": {
               "title": "Can you tell me about the Vitamin A in the A Serum?",
-              "subtitle": "<p>ECO. Vitamin A serum contains .5% Retinol. Retinol is a whole form of the Vitamin A molecule. This is one of the most active forms of Vitamin A obtainable over the counter &amp; a potent antioxidant. Vitamin A is naturally found in our body &amp; contributes to healthy vision, bones, immune function &amp; healthy functioning skin. It is a direct skin cell communicator, so vital to &ldquo;normalize&rdquo; cell function. It communicates to a skin cell to behave like a young, healthy functioning cell &amp; therefore addresses many skin conditions &amp; concerns; pigmentation, fine lines, wrinkles, loss of elasticity &amp; acne. The overall appearance of the skin is improved. It is not advisable to use Retinol in pregnancy.</p>"
+              "subtitle": "<p>ECO. Vitamin A serum contains .5% Retinol. Retinol is a whole form of the Vitamin A molecule. This is one of the most active forms of Vitamin A obtainable over the counter &amp; a potent antioxidant. Vitamin A is naturally found in our body &amp; contributes to healthy vision, bones, immune function &amp; healthy functioning skin. It is a direct skin cell communicator, so vital to &ldquo;normalize&rdquo; cell function. It communicates to a skin cell to behave like a young, healthy functioning cell &amp; therefore addresses many skin conditions &amp; concerns; pigmentation, fine lines, wrinkles, loss of elasticity &amp; acne. The overall appearance of the skin is improved. It is not advisable to use Retinol in pregnancy.<\/p>"
             }
           },
           "1527576844434": {
             "type": "Content",
             "settings": {
               "title": "What quality are the ECO. Aroma essential oils?",
-              "subtitle": "<p>The ECO. essential oils are 100% pure. They are of a very high quality &amp; are used by everyday consumers &amp; professional practioners globally.</p>\n<p>There are only two products in the essential oil range which aren&rsquo;t 100% pure, that is the Australian Shores &amp; Paris blends, which contain pure essential oils &amp; a very small percentage of parfum for enhanced fragrance.</p>"
+              "subtitle": "<p>The ECO. essential oils are 100% pure. They are of a very high quality &amp; are used by everyday consumers &amp; professional practioners globally.<\/p>\n<p>There are only two products in the essential oil range which aren&rsquo;t 100% pure, that is the Australian Shores &amp; Paris blends, which contain pure essential oils &amp; a very small percentage of parfum for enhanced fragrance.<\/p>"
             }
           },
           "1527576859364": {
             "type": "Content",
             "settings": {
               "title": "Can ECO. Aroma essential oils be ingested or used for cooking?",
-              "subtitle": "<p>We are unable to recommend essential oils for ingestion. Their many benefits for health &amp; well being may be enjoyed by vaporizing, adding to massage oil or bath, or sprinkled on the floor of the shower.</p>"
+              "subtitle": "<p>We are unable to recommend essential oils for ingestion. Their many benefits for health &amp; well being may be enjoyed by vaporizing, adding to massage oil or bath, or sprinkled on the floor of the shower.<\/p>"
             }
           },
           "1527576872673": {
             "type": "Content",
             "settings": {
               "title": "Are all the ingredients of the essential oils from Australia?",
-              "subtitle": "<p>All ECO. products are made in Australia, however not all ingredients are sourced from Australia. Due to climatic, geographic &amp; season availability reasons, all ingredients may not be obtained in Australia. Our essential oils are sourced from countries where the plant material grows best climatically &amp; seasonally and that contain the best active constituents to perform accordingly to the high standards we set. The ingredients are sourced from countries aligned with our manufacturing ethical sourcing code compliance &amp; Quality Assurance standards.</p>"
+              "subtitle": "<p>All ECO. products are made in Australia, however not all ingredients are sourced from Australia. Due to climatic, geographic &amp; season availability reasons, all ingredients may not be obtained in Australia. Our essential oils are sourced from countries where the plant material grows best climatically &amp; seasonally and that contain the best active constituents to perform accordingly to the high standards we set. The ingredients are sourced from countries aligned with our manufacturing ethical sourcing code compliance &amp; Quality Assurance standards.<\/p>"
             }
           },
           "1527576966217": {
             "type": "Content",
             "settings": {
               "title": "I live in a cold climate & my peppermint essential oil has crystalised, why?",
-              "subtitle": "<p>ECO. Peppermint oil is a pure oil that contains menthol, which naturally holds inherent therapeutic properties. It will crystalise in cooler temperatures, which is a natural process. To liquefy, run the outside of the bottle under warm water and swirl the contents, which should bring it back to its normal state.</p>"
+              "subtitle": "<p>ECO. Peppermint oil is a pure oil that contains menthol, which naturally holds inherent therapeutic properties. It will crystalise in cooler temperatures, which is a natural process. To liquefy, run the outside of the bottle under warm water and swirl the contents, which should bring it back to its normal state.<\/p>"
             }
           },
           "1527576979188": {
             "type": "Content",
             "settings": {
               "title": "What assurance is there for the quality of ECO. products?",
-              "subtitle": "<p>We often are asked how we can make such high quality products so affordable. We believe in investing in our ingredients &amp; not fancy packaging or expensive advertising. Many of our customers return because they love the quality, results &amp; value of ECO. products &amp; many find us through recommendation! We are TGA, GMP, ACO. Certified Organic approved for quality assurance.</p>"
+              "subtitle": "<p>We often are asked how we can make such high quality products so affordable. We believe in investing in our ingredients &amp; not fancy packaging or expensive advertising. Many of our customers return because they love the quality, results &amp; value of ECO. products &amp; many find us through recommendation! We are TGA, GMP, ACO. Certified Organic approved for quality assurance.<\/p>"
             }
           },
           "1527576991986": {
             "type": "Content",
             "settings": {
               "title": "What is the difference between our Rosehip oil and Rosehip C02 Super Serum?",
-              "subtitle": "<p>he Rosehip Oil is perfect for skin maintenance &amp; skin concerns &amp; those who use wish to use a 100% pure certified organic rosehip oil. For the purists who love Rosehip! The Rosehip C02 Super serum is a serum, as it has a cocktail of ingredients &amp; is for perfect for taking the anti-ageing benefits of Rosehip and other potent ingredients to another level. Some people who are first time users to skin care or have skin conditions may prefer to use 100% Rosehip only as their skin treatment or first before introducing other serums.</p>"
-            }
-          },
-          "1527577033996": {
-            "type": "Content",
-            "settings": {
-              "title": "Does your website collect my personally identifiable information?",
-              "subtitle": "<p>ECO. Modern Essentials works with&nbsp;<span style=\"text-decoration: underline;\"><a href=\"http://www.adroll.com/\">AdRoll retargeting</a></span>, who uses technology including web beacons and cookies to collect data about our website usage and to improve the effectiveness of our marketing. Data recorded through the use of this technology is aggregated and shared with us.<br><br>No personally identifiable information about you is collected or shared by AdRoll with ECO. Modern Essentials</p>\n<p>You can opt-out of AdRoll and their partners by visiting&nbsp;<span style=\"text-decoration: underline;\"><a href=\"http://www.adroll.com/about/privacy\">this link</a>.</span></p>"
+              "subtitle": "<p>he Rosehip Oil is perfect for skin maintenance &amp; skin concerns &amp; those who use wish to use a 100% pure certified organic rosehip oil. For the purists who love Rosehip! The Rosehip C02 Super serum is a serum, as it has a cocktail of ingredients &amp; is for perfect for taking the anti-ageing benefits of Rosehip and other potent ingredients to another level. Some people who are first time users to skin care or have skin conditions may prefer to use 100% Rosehip only as their skin treatment or first before introducing other serums.<\/p>"
             }
           }
         },
@@ -5578,7 +5579,7 @@
         ],
         "settings": {
           "show_banner": true,
-          "image": "shopify://shop_images/FAQ_Headerimage_1800x500_031ca10a-1bc4-49b6-9086-f253d9389a47.jpg",
+          "image": "shopify:\/\/shop_images\/FAQ_Headerimage_1800x500_e369bbfb-753f-4b7b-9675-2cb1bd1fcd33.jpg",
           "pretext": "",
           "title": "FAQ & Privacy Policy",
           "subtitle": "",
@@ -5593,6 +5594,410 @@
           "button2_link": "",
           "button2_highlight": false
         }
+      },
+      "page-details-template": {
+        "type": "page-details-template",
+        "blocks": {
+          "page-details-template-0": {
+            "type": "image_with_text_overlay",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/About_ECOmodern-1800x500_c120d209-7285-49ba-aada-5adeef8cc417.jpg",
+              "pretext": "",
+              "title": "Australia’s Leading Wellbeing Brand.",
+              "subtitle": "",
+              "caption_background": false,
+              "caption_background_transparency": false,
+              "text_position": "center",
+              "text_align": "center",
+              "button1": "",
+              "button1_link": "",
+              "button1_highlight": false,
+              "button2": "",
+              "button2_link": "",
+              "button2_highlight": false
+            }
+          },
+          "page-details-template-1": {
+            "type": "divider",
+            "settings": {
+              "divider_spacing": 20,
+              "divider_border": false
+            }
+          },
+          "page-details-template-2": {
+            "type": "rich_text_and_image",
+            "settings": {
+              "image": "",
+              "title": "About ECO. Modern Essentials",
+              "content": "<p>ECO. Modern Essentials are Australia&rsquo;s leading wellbeing brand, specialising in natural and organic products to help you lead your best, healthiest and most vibrant life. The ECO.&nbsp;woman is active, healthy and loves to look after herself with natural, local products made from nourishing ingredients. We know you're busy, so we&rsquo;ve designed our products to be simple, effective and easy to tie into your busy routine. We combine the highest quality ingredients from around the world to create our innovative blends that address skincare&nbsp;concerns and overall wellbeing.<\/p>",
+              "text_size": "regular_text",
+              "text_alignment": "align_left",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "page-details-template-3": {
+            "type": "divider",
+            "settings": {
+              "divider_spacing": 20,
+              "divider_border": false
+            }
+          },
+          "page-details-template-18": {
+            "type": "quote",
+            "settings": {
+              "quote_text": "Formulated using a powerful combination of natural and organic ingredient.",
+              "quote_link": ""
+            }
+          },
+          "1527587073773": {
+            "type": "divider",
+            "settings": {
+              "divider_spacing": 20,
+              "divider_border": false
+            }
+          },
+          "1527586711636": {
+            "type": "rich_text_and_image",
+            "settings": {
+              "image": "",
+              "title": "The Eco. Team",
+              "content": "<p>The ECO. story began on the beautiful Gold Coast, to the backdrop of turquoise waters and white sandy beaches. Founder Claire Mitchell is passionate about healthy, natural and active living and combined this&nbsp;with her impressive business portfolio to create the ECO. brand.&nbsp;<\/p>\n<p>The ECO. team is made up of passionate women who live and breathe the ECO. lifestyle of&nbsp;active and vibrant living. Since launching in 2009, we have supported and inspired one another to grow ECO. from a start-up to a&nbsp;thriving online business that also exports to 14 countries, including the United States, U.K, Denmark, Canada, Sweden, Japan, Singapore, New Zealand, China and the Middle East. ECO. is&nbsp;committed to constantly innovating and developing new products and formulas that support active, vibrant lifestyles.<\/p>",
+              "text_size": "regular_text",
+              "text_alignment": "align_left",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "1528194134875": {
+            "type": "divider",
+            "settings": {
+              "divider_spacing": 20,
+              "divider_border": false
+            }
+          },
+          "1528194116826": {
+            "type": "rich_text_and_image",
+            "settings": {
+              "image": "",
+              "title": "Eco. Badges",
+              "content": "",
+              "text_size": "featured_text",
+              "text_alignment": "align_left",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "1528193994518": {
+            "type": "static-block",
+            "settings": {
+              "text_area": "<div class=\"element-static-infor\">\n  <div class=\"container\">\n    <div class=\"three columns non-mobile\">\n      <div class=\"center\">\n          <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0012\/8657\/0039\/t\/6\/assets\/Freeshipping_100x60pupur.png\">\n\t\t  <div>\n          <strong>Free Shipping <br> Over $20<\/strong><br><br>\n\t\t  <p style=\"font-size: 14px;\">We provide free shipping worldwide on all retail orders over $20<\/p>\n\t\t\t<\/div>\n      <\/div>\n    <\/div>\t\n\t<div class=\"three columns\">\n      <div class=\"center\">\n          <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0012\/8657\/0039\/t\/6\/assets\/AustraliaMade_100x60pupur.png\">\n\t\t  <div>\n\t\t  <strong>Made in<br>Australia<\/strong><br><br>\n          <p style=\"font-size: 14px;\">All of our products are manufactured right here in Australia. <\/p>\n\t\t  <\/div>\n      <\/div>\n    <\/div>\n    <div class=\"three columns\">\n      <div class=\"center\">\n          <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0012\/8657\/0039\/t\/6\/assets\/Happiness_100x60pupur.png\">\n\t\t  <div>\n\t\t  <strong>100% Happiness <br>Guarantee<\/strong><br><br>\n          <p style=\"font-size: 14px;\">Not happy? Simply return your products to us within 30 days and we will provide you a refund.<br> Items damaged or faulty? We will arrange a free return and replacement or refund for you.<\/p>        \n\t\t  <\/div>\n      <\/div>\n    <\/div>\n\t<div class=\"three columns\">\n      <div class=\"center\">\n          <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0012\/8657\/0039\/t\/6\/assets\/A5Star_100x60pupur.png\">\n\t\t  <div>\n\t\t  <strong>1500+<br>5 star reviews<\/strong><br><br>\n          <p style=\"font-size: 14px;\">Over 1,500 five star rating reviews and counting! Feel confident that you are purchasing great quality products with real customer reviews available for all of our products. <\/p>        \n\t\t  <\/div>\n      <\/div>\n    <\/div>\n    <div class=\"three columns\">\n      <div class=\"center\">\n          <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0012\/8657\/0039\/t\/6\/assets\/AnimalRescue_100x60pupur.png\">\n\t\t  <div>\n          <strong>Animal Rescue<br>Partner<\/strong><br><br>\n\t\t  <p style=\"font-size: 14px;\">Here at ECO. we love giving back, we currently participate in animal rescue programs and donate to both Labrador Rescue and Currumbin Wildlife Sanctuary. <\/p>\n\t\t  <\/div>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/div>"
+            }
+          },
+          "1527586920433": {
+            "type": "image_with_text_overlay",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/FAQ_Headerimage_1800x500_e369bbfb-753f-4b7b-9675-2cb1bd1fcd33.jpg",
+              "pretext": "",
+              "title": "FAQ & Privacy Policy",
+              "subtitle": "",
+              "caption_background": false,
+              "caption_background_transparency": false,
+              "text_position": "center",
+              "text_align": "center",
+              "button1": "View here",
+              "button1_link": "shopify:\/\/pages\/faq",
+              "button1_highlight": false,
+              "button2": "",
+              "button2_link": "",
+              "button2_highlight": false
+            }
+          },
+          "page-details-template-11": {
+            "type": "divider",
+            "settings": {
+              "divider_spacing": 20,
+              "divider_border": false
+            }
+          },
+          "page-details-template-10": {
+            "type": "blog_posts",
+            "settings": {
+              "title": "Blog posts",
+              "blog_widget_select": "eco-modern-essentials-blog",
+              "home_page_articles": 3,
+              "blog_tags": false,
+              "blog_author": false,
+              "blog_date": true,
+              "blog_comment_count": true,
+              "read_more_link": true
+            }
+          },
+          "page-details-template-13": {
+            "type": "divider",
+            "settings": {
+              "divider_spacing": 20,
+              "divider_border": false
+            }
+          },
+          "1528280021087": {
+            "type": "featured_video",
+            "settings": {
+              "source": "youtube",
+              "aspect_ratio": "16:9",
+              "autoplay": false,
+              "autoloop": true,
+              "video_dark_overlay": false,
+              "video": "https:\/\/www.youtube.com\/watch?v=DXOfG_fqg7Q&app=desktop",
+              "mp4": "",
+              "ogv": "",
+              "image": "",
+              "display_text_over_video": false,
+              "pretext": "",
+              "title": "",
+              "subtitle": "",
+              "text_position": "center",
+              "text_align": "center",
+              "caption_background": false,
+              "caption_background_transparency": false,
+              "button1_label": "",
+              "button1_link": "",
+              "button1_highlight": false,
+              "button2_label": "",
+              "button2_link": "",
+              "button2_highlight": false
+            }
+          }
+        },
+        "block_order": [
+          "page-details-template-0",
+          "page-details-template-1",
+          "page-details-template-2",
+          "page-details-template-3",
+          "page-details-template-18",
+          "1527587073773",
+          "1527586711636",
+          "1528194134875",
+          "1528194116826",
+          "1528193994518",
+          "1527586920433",
+          "page-details-template-11",
+          "page-details-template-10",
+          "page-details-template-13",
+          "1528280021087"
+        ],
+        "settings": {}
+      },
+      "block-static-info": {
+        "type": "block-static-info",
+        "settings": {}
+      },
+      "contact-template": {
+        "type": "contact-template",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/ContactUs_ECOmodern-1800x500.jpg",
+          "image_darken": false,
+          "title": "Get in touch",
+          "subtitle": "Contact ECO Modern Essentials today.",
+          "show_map": false,
+          "contact_address": "Unit 4 M1X Energy Centre, 1 Energy Circuit, Robina, Qld 4226, Australia",
+          "zoom_level": 12,
+          "map_height": 400,
+          "map_stretch": true,
+          "map_greyscale": true,
+          "map_scrolling": false
+        }
+      },
+      "page-shopbypurpose": {
+        "type": "page-shopbypurpose",
+        "blocks": {
+          "1528106436130": {
+            "type": "image",
+            "settings": {
+              "image_product": "shopify:\/\/shop_images\/Sleep_9d4b52fb-87e5-4a32-88fc-f8128593d171.jpg",
+              "txtdescription": "Sleep",
+              "link": "\/collections\/all\/sleep"
+            }
+          },
+          "1528106508525": {
+            "type": "image",
+            "settings": {
+              "image_product": "shopify:\/\/shop_images\/Flu_faa302e6-c7a1-40d9-b70d-49902d9fa2ef.JPG",
+              "txtdescription": "Flu",
+              "link": "\/collections\/all\/flu"
+            }
+          },
+          "1528106542135": {
+            "type": "image",
+            "settings": {
+              "image_product": "shopify:\/\/shop_images\/Energy_2770eab5-f4d6-47d3-a1d4-c3cf18400594.JPG",
+              "txtdescription": "Energy",
+              "link": "\/collections\/all\/energy"
+            }
+          },
+          "1528112147467": {
+            "type": "image",
+            "settings": {
+              "image_product": "shopify:\/\/shop_images\/Muscle.jpg",
+              "txtdescription": "Muscle Recovery",
+              "link": "https:\/\/eco-modern-essentials.myshopify.com\/collections\/all\/muscle-recovery"
+            }
+          },
+          "1528112235505": {
+            "type": "image",
+            "settings": {
+              "image_product": "shopify:\/\/shop_images\/Mature-Skin.jpg",
+              "txtdescription": "Anti-Ageing",
+              "link": "https:\/\/eco-modern-essentials.myshopify.com\/collections\/all\/anti-ageing"
+            }
+          },
+          "1528112276196": {
+            "type": "image",
+            "settings": {
+              "image_product": "shopify:\/\/shop_images\/Dry-Skin.jpg",
+              "txtdescription": "Dry Skin",
+              "link": "https:\/\/eco-modern-essentials.myshopify.com\/collections\/all\/dry-skin"
+            }
+          },
+          "1528112330716": {
+            "type": "image",
+            "settings": {
+              "image_product": "shopify:\/\/shop_images\/Calming.JPG",
+              "txtdescription": "Calming",
+              "link": "https:\/\/eco-modern-essentials.myshopify.com\/collections\/all\/calming"
+            }
+          },
+          "1528112377970": {
+            "type": "image",
+            "settings": {
+              "image_product": "shopify:\/\/shop_images\/Acne_Oily.JPG",
+              "txtdescription": "Acne and Oily Skin",
+              "link": "https:\/\/eco-modern-essentials.myshopify.com\/collections\/all\/acne-and-oily-skin"
+            }
+          },
+          "1528112422102": {
+            "type": "image",
+            "settings": {
+              "image_product": "shopify:\/\/shop_images\/Stretch-Marks.jpg",
+              "txtdescription": "Stretch Marks and Cellulite",
+              "link": "https:\/\/eco-modern-essentials.myshopify.com\/collections\/all\/stretch-marks-and-cellulite"
+            }
+          }
+        },
+        "block_order": [
+          "1528106436130",
+          "1528106508525",
+          "1528106542135",
+          "1528112147467",
+          "1528112235505",
+          "1528112276196",
+          "1528112330716",
+          "1528112377970",
+          "1528112422102"
+        ],
+        "settings": {}
+      },
+      "page-details-2-template": {
+        "type": "page-details-2-template",
+        "blocks": {
+          "page-details-2-template-2": {
+            "type": "rich_text_and_image",
+            "settings": {
+              "image": "",
+              "title": "Media & Community",
+              "content": "<p>ECO. are proud to work closely with our wonderful Gold Coast community. In 2013 we launched the ECO. Clean Beach Initiative, a national campaign aimed at educating young people about the issues facing our oceans and how they can be a part of positive solutions. We have since continued to work closely with a number of local grassroots organisations to support environmental conservation efforts. We were one of the sponsors of Byron Bay not-for-profit Clean Coast Collective&rsquo;s 2017 Trash Tribe expedition to Cape York. The team removed over 7 tonnes of rubbish from the beach and we are so proud to have been able to assist in making this happen.<\/p>",
+              "text_size": "regular_text",
+              "text_alignment": "align_left",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "page-details-2-template-3": {
+            "type": "divider",
+            "settings": {
+              "divider_spacing": 15,
+              "divider_border": false
+            }
+          },
+          "page-details-2-template-7": {
+            "type": "image_with_text",
+            "settings": {
+              "layout": true,
+              "frontpage_text_align": "left",
+              "frontpage_image_position": "left",
+              "image": "shopify:\/\/shop_images\/Media_Community_AwardsImage.jpg",
+              "title": "Recent Award Nominations",
+              "text": "<p>- ECO. was recently named the Best Health and Wellbeing Product Manufacturer 2018 in the Australian Enterprise Awards<\/p>\n<p>- Claire Mitchell (Founder &amp; CEO) was one of four finalists in the 2017 Tom Burns Women in International Business Award at the QLD Export Awards<\/p>\n<p>- ECO. Modern Essentials were finalists in the 2017 Premier of QLD&rsquo;s Export Awards in both the E-Commerce and Health &amp; Biotechnology Categories<\/p>\n<p>- Claire Mitchell (Founder &amp; CEO) was awarded the Business Achiever Award at the 2017 Gold Coast Women in Business<\/p>",
+              "link": "",
+              "button_label": ""
+            }
+          },
+          "page-details-2-template-8": {
+            "type": "image_with_text",
+            "settings": {
+              "layout": true,
+              "frontpage_text_align": "left",
+              "frontpage_image_position": "right",
+              "image": "shopify:\/\/shop_images\/Media_Community_ECORozalia-74.jpg",
+              "title": "Partnership with Rozalia Russian",
+              "text": "<p>We are very excited to have just confirmed a 12 month partnership with the incredible Rozalia Russian, a prominent fashion and lifestyle influencer we have been working with over the last three years. This partnership includes content such as social media a co-created product, video content, blog posts, physical appearances by Rozalia, shooting with Rozalia in our quarterly campaigns and access to Rozalia&rsquo;s EDM database. We are so excited to be working with Rozalia who has been a long-term loyal ECO. customer and advocate.&nbsp;<\/p>",
+              "link": "",
+              "button_label": ""
+            }
+          },
+          "page-details-2-template-13": {
+            "type": "divider",
+            "settings": {
+              "divider_spacing": 10,
+              "divider_border": false
+            }
+          },
+          "1528170823058": {
+            "type": "featured_video",
+            "settings": {
+              "source": "youtube",
+              "aspect_ratio": "16:9",
+              "autoplay": false,
+              "autoloop": false,
+              "video_dark_overlay": false,
+              "video": "https:\/\/www.youtube.com\/watch?v=DXOfG_fqg7Q&app=desktop",
+              "mp4": "",
+              "ogv": "",
+              "image": "",
+              "display_text_over_video": false,
+              "pretext": "",
+              "title": "",
+              "subtitle": "",
+              "text_position": "center",
+              "text_align": "center",
+              "caption_background": false,
+              "caption_background_transparency": false,
+              "button1_label": "",
+              "button1_link": "",
+              "button1_highlight": false,
+              "button2_label": "",
+              "button2_link": "",
+              "button2_highlight": false
+            }
+          },
+          "1528171369908": {
+            "type": "divider",
+            "settings": {
+              "divider_spacing": 20,
+              "divider_border": false
+            }
+          }
+        },
+        "block_order": [
+          "page-details-2-template-2",
+          "page-details-2-template-3",
+          "page-details-2-template-7",
+          "page-details-2-template-8",
+          "page-details-2-template-13",
+          "1528170823058",
+          "1528171369908"
+        ],
+        "settings": {}
       }
     },
     "content_for_index": [

@@ -2965,7 +2965,13 @@ $(function() {
       type: 'post',
       data: $cart.serialize(),
       success: function (data) {
-        refreshCart(data);
+        if(typeof updateMotivator == 'function') {
+          updateMotivator(data, refreshCart);
+        }     
+        else {
+          refreshCart(data);
+        }
+
       }
     });
   }
@@ -2978,7 +2984,13 @@ $(function() {
       type: 'post',
       data: { quantity: quantity, line: lineID },
       success: function (data) {
-        refreshCart(data);
+        if(typeof updateMotivator == 'function') {
+          updateMotivator(data, refreshCart);
+        }     
+        else {
+          refreshCart(data);
+        }
+
 
         var lineIDIndex = lineID - 1;
 
@@ -3141,7 +3153,13 @@ $(function() {
             dataType: "json",
             cache: false,
             success: function(cart) {
+              if(typeof updateMotivator == 'function') {
+              updateMotivator(cart, refreshCart);
+            }     
+            else {
               refreshCart(cart);
+            }
+
               if($('html').hasClass("remodal-is-locked")) {
                 $('.remodal-close').click();
               }

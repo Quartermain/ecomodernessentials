@@ -18,7 +18,8 @@
         data-enable-state="{% if template contains 'product' %}true{% else %}false{% endif %}"
         data-product="{{ product | json | escape }}"
         {% if settings.limit_quantity or settings.display_inventory_left %}
-          data-variant-inventory='[{%- for v in product.variants -%}{"id":{{v.id}},"inventory_quantity":{{v.inventory_quantity}},"inventory_management":"{{v.inventory_management}}","inventory_policy":"{{v.inventory_policy}}"}{% if forloop.last == false %},{% endif %}{%- endfor -%}]'
+          data-variant-inventory='[{%- for v in product.variants -%}
+{%- include 'bold-variant' with v, hide_action: 'skip' -%}{"id":{{v.id}},"inventory_quantity":{{v.inventory_quantity}},"inventory_management":"{{v.inventory_management}}","inventory_policy":"{{v.inventory_policy}}"}{% if forloop.last == false %},{% endif %}{%- endfor -%}]'
         {% endif %}
         data-product-id="{{ product.id }}"
         >
@@ -28,6 +29,7 @@
       <div class="select">
         <select id="product-select-{{ product.id }}{{ product-form }}{{ section.id }}{{ block.id }}" name="id" class="multi_select">
           {% for v in product.variants %}
+{%- include 'bold-variant' with v, hide_action: 'skip' -%}
             <option {% if v == variant %}selected="selected"{% endif %} value="{{ v.id }}" data-sku="{{ v.sku }}">{{ v.title }}</option>
           {% endfor %}
         </select>
@@ -37,6 +39,7 @@
         <label>{{ product.options[0] }}</label>
         <select id="product-select-{{ product.id }}{{ product-form }}{{ section.id }}{{ block.id }}" name="id">
           {% for v in product.variants %}
+{%- include 'bold-variant' with v, hide_action: 'skip' -%}
             <option {% if v == variant %}selected="selected"{% endif %} value="{{ v.id }}" data-sku="{{ v.sku }}">{{ v.title }}</option>
           {% endfor %}
         </select>

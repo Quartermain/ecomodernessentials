@@ -71,8 +71,14 @@
         <div class="eight columns section_select {% unless section.settings.display_collection_title and section.settings.featured_collection_image == false %}offset-by-eight{% endunless %}">
         {% if collection.handle != blank and collection.products_count > 0 %}
           {% if section.settings.collection_tags %}
+{%- for tag in collection.all_tags -%}
+{%- if tag contains '_HIDDEN_PRODUCT' -%}{%- continue -%}
+{%- else -%}{%- assign first_visible_index = forloop.index -%}{%- break -%}
+{%- endif -%}
+{%- endfor -%}
             {% for tag in collection.all_tags %}
-              {% if forloop.first %}
+{%- if tag contains '_HIDDEN_PRODUCT' -%}{%- continue -%}{%- endif -%}
+{%- if forloop.index == first_visible_index -%}
                 <select name="tag_filter" id="tag_filter" class="tag_filter first-tag">
                   <option {% unless current_tags %}selected="selected"{% endunless %} value="{% if collection.handle == "all" %}/collections/all{% else %}{{ collection.url }}{% endif %}">{{ 'collections.general.all_collection_title' | t: title: collection.title }}</option>
               {% endif %}

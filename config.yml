@@ -2,3 +2,6 @@ development:
   password: cab52e69ebd86bf3bd21c22979a43190
   theme_id: "16364142647"
   store: eco-modern-essentials.myshopify.com
+  ignore_files:
+    settings_data.json # Uncomment this line to avoid resetting theme settings
+    config.yml # Uncomment this line to avoid resetting theme settings

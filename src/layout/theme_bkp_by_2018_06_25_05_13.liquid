@@ -66,7 +66,7 @@ window.supported_currencies = "{{ settings.mlvedaACS_supportedCurrencies }}";
 {% include 'reamaze-sso' %}
 <!-- REAMAZE INTEGRATION END - DO NOT REMOVE -->
 
-<script src="//staticxx.s3.amazonaws.com/aio_stats_lib_v1.min.js?v=1.0"></script></head>
+</head>
   {% if template contains "index" %}
     {% assign feature_image = true %}
   {% elsif template contains "collection" %}
@@ -229,7 +229,7 @@ window.supported_currencies = "{{ settings.mlvedaACS_supportedCurrencies }}";
 </script>
     
 {% include 'banana-stand-footer' %}
-<input type="hidden" id="656565115116111114101" data-customer-id="{{ customer.id }}" data-customer-email="{{ customer.email }}" data-customer-name="{{ customer.first_name }} {{ customer.last_name }}"/>{% include 'zipify-couponcountdown-theme' %}{% include 'social-login' %}<!-- BEEKETINGSCRIPT CODE START -->{% include 'bk-tracking' %}<!-- BEEKETINGSCRIPT CODE END --></body>
+{% include 'zipify-couponcountdown-theme' %}</body>
 </html>
 {% endcapture %}
 {% assign content = content | replace_first: '<!DOCTYPE', '!DOCTYPE' | split: ' <' %}
