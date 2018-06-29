@@ -9882,3 +9882,81 @@ $delay: 0;
     color: black;
   }
 }
+
+.page-404 {  
+  .container.main.content {
+    width: 100%;
+  }
+  
+  .text-header-404,
+  .form-searh-404 {
+    margin: 0 auto;
+  }
+  
+  @media (min-width: $larger) {
+    .form-searh-404 {
+      max-width: 60%;
+    }
+    
+    .text-header-404 {
+      max-width: 80%;
+    }
+  }
+  
+  @media (max-width: $larger) {
+    .row-button {
+      >a  {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
+  }
+  
+  .text-header-404 {
+    color: #fff;
+    text-align: center;
+    font-size: 33px;
+    line-height: 100%;
+    margin-bottom: 5%;
+  }
+  
+  .header-404 {
+    background: url("{{ 'bg-404.jpg' | asset_url }}") no-repeat left top;
+      background-size: cover;
+      padding: 10% 0;
+  }
+  
+  .block-txt {
+    text-align: center;
+    line-height: 100%;
+    .txt-or {
+      line-height: 100%;
+      text-transform: uppercase;
+      padding: 20px 0;
+      font-size: 33px;
+    }
+  }
+}
+
+a.action_button-black {
+  border: solid 1px #000;
+  background: #000;
+  color: #fff;
+  padding: 10px 30px;
+  display: inline-block;
+  
+  &:hover {
+    background: #fff;
+    color: #000;
+  }
+  
+  &.button-outline {
+    background: #fff;
+    color: #000;
+    &:hover {
+      background: #000;
+      color: #fff;
+    }
+  }
+}
