@@ -4124,7 +4124,7 @@
     "mega_menu_3": false,
     "mega_menu_4": false,
     "mega_menu_5": false,
-    "search_option": "products",
+    "search_option": "everything",
     "search_pagination_type": "basic_pagination",
     "enable_autocomplete": true,
     "search_to_display": 5,
@@ -4149,7 +4149,7 @@
     "review_position": "next_to_gallery",
     "enable_shopify_collection_badges": false,
     "enable_shopify_product_badges": false,
-    "quick_shop_enabled": true,
+    "quick_shop_enabled": false,
     "quick_shop_display_vendor": false,
     "quick_shop_display_savings": true,
     "show_payment_button": true,
@@ -5331,7 +5331,7 @@
           "display_vendor": false,
           "display_sku": false,
           "display_savings": true,
-          "show_payment_button": true,
+          "show_payment_button": false,
           "display_collections": false,
           "display_type": false,
           "display_tags": false,
@@ -5424,19 +5424,6 @@
       "page-faq-template": {
         "type": "page-faq-template",
         "blocks": {
-          "page-faq-template-4": {
-            "type": "heading",
-            "settings": {
-              "heading": "Privacy Policy"
-            }
-          },
-          "1527577033996": {
-            "type": "Content",
-            "settings": {
-              "title": "Does your website collect my personally identifiable information?",
-              "subtitle": "<p>ECO. Modern Essentials works with&nbsp;<span style=\"text-decoration: underline;\"><a href=\"http:\/\/www.adroll.com\/\">AdRoll retargeting<\/a><\/span>, who uses technology including web beacons and cookies to collect data about our website usage and to improve the effectiveness of our marketing. Data recorded through the use of this technology is aggregated and shared with us.<br><br>No personally identifiable information about you is collected or shared by AdRoll with ECO. Modern Essentials<\/p>\n<p>You can opt-out of AdRoll and their partners by visiting&nbsp;<span style=\"text-decoration: underline;\"><a href=\"http:\/\/www.adroll.com\/about\/privacy\">this link<\/a>.<\/span><\/p>"
-            }
-          },
           "page-faq-template-0": {
             "type": "heading",
             "settings": {
@@ -5557,8 +5544,6 @@
           }
         },
         "block_order": [
-          "page-faq-template-4",
-          "1527577033996",
           "page-faq-template-0",
           "page-faq-template-1",
           "page-faq-template-2",

@@ -1,4 +1,3 @@
-{%- include 'bold-product' with product, hide_action: 'break', output: 'none' -%}
 {% comment %}
 ** Product - default view **
 - Product template
@@ -36,6 +35,12 @@
             </span>
             <span class="breadcrumb-divider">/</span>
             {{ product.title }}
+            
+      
+            
+            
+            
+            
           </div>
         {% endif %}
       </div>
@@ -150,6 +155,10 @@
             {% include 'product-notify-me' %}
           {% endif %}
 
+          
+          
+          
+          
           {% if section.settings.product_description_position == "top" %}
             {% if product.description != blank %}
              <div class="description" itemprop="description">
@@ -161,6 +170,12 @@
           {% unless collection_handles contains 'coming-soon' %}
             {% include 'product-form' with 'product' %}
           {% endunless %}
+          
+          
+          
+                
+            
+          
 
           {% if section.settings.product_description_position == "bottom" %}
             {% if product.description != blank %}

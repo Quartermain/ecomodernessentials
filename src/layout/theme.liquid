@@ -6,7 +6,8 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="{{ shop.locale }}"> <![endif]-->
 <!--[if IE 9 ]><html class="ie ie9" lang="{{ shop.locale }}"> <![endif]-->
 <!--[if (gte IE 10)|!(IE)]><!--><html lang="{{ shop.locale }}"> <!--<![endif]-->
-  <head>
+ 
+<head>
     <meta charset="utf-8">
     <meta http-equiv="cleartype" content="on">
     <meta name="robots" content="index,follow">
@@ -66,7 +67,32 @@ window.supported_currencies = "{{ settings.mlvedaACS_supportedCurrencies }}";
 {% include 'reamaze-sso' %}
 <!-- REAMAZE INTEGRATION END - DO NOT REMOVE -->
 
-<script src="//staticxx.s3.amazonaws.com/aio_stats_lib_v1.min.js?v=1.0"></script></head>
+<script src="//staticxx.s3.amazonaws.com/aio_stats_lib_v1.min.js?v=1.0"></script>
+
+
+
+
+
+
+
+<script type="text/javascript">
+(function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/QHUj4LoiQStGQ9w84NpZbdGh22IMH6leH3JxRnMV/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
   {% if template contains "index" %}
     {% assign feature_image = true %}
   {% elsif template contains "collection" %}

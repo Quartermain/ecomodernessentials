@@ -16,7 +16,6 @@
 
 <div itemtype="http://schema.org/ItemList" class="product-list {{ matrixType }} clearfix">
   {% for product in products limit: limit %}
-{%- include 'bold-product' with product, hide_action: 'skip' -%}
     {% if product.id == skip_product.id or skip == true %}
       {% assign product_found = true %}
     {% else %}

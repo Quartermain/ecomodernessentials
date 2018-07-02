@@ -15,15 +15,15 @@
     icon: 'chat',
     size: 60,
     label: {
-      text: 'Let us know if you have any questions! 😊Click here 👇🏼',
+      text: 'Hi and thanks for visiting! 😊. Have a look around and let us know if you have any questions.  We\'re here to help!',
       mode: "notification",
       delay: 3,
-      duration: 40,
+      duration: 20,
       sound: true,
     },
     position: {
-      bottom: '100px',
-      right: '24px'
+      bottom: '30px',
+      right: '30px'
     }
   };
   _support['apps'] = {
@@ -47,6 +47,12 @@
 
 
 
+
+
+
+
+
+
 <!-- reamaze_cue_599_s -->
 <!-- Cue - 25% OFF SITE WIDE -->
 <script type="text/javascript">
@@ -55,17 +61,25 @@
   _support.outbounds.push({
     id: "599",
     name: "25% OFF SITE WIDE",
-    message: "25% OFF SITE WIDE!!\n🔥🔥🔥🔥🔥🔥🔥🔥\nNew Website Opening special!\n(Auto added to checkout)",
+    message: "25% OFF SITE WIDE!!\n🔥🔥🔥🔥🔥🔥🔥🔥\n(Auto added to checkout)",
     sound: true,
     transient: false,
     user: {
-      type: "staff",
-      name: "Natalie",
-      staffName: "Natalie",
+      type: "team"
     },
+    rules: [
+      {
+        type: "timeOnPage",
+        op: "greaterThan",
+        value: "120s",
+      },
+    ],
   });
 </script>
 <!-- reamaze_cue_599_e -->
+
+
+
 
 
 

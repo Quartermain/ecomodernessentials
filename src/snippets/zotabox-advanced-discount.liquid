@@ -1,0 +1,328 @@
+<script type="text/javascript">
+window.zbCheckoutRequire = true;
+window.zbad = [];
+window.zbad = {
+    shop_slug: "{{shop.permanent_domain | remove: '.myshopify.com' }}",
+    defaultCurrency: "{{ settings.default_currency | default: shop.currency }}",
+    money_format: {{ shop.money_format | strip_html | json }},
+    money_with_currency_format: {{ shop.money_with_currency_format | strip_html | json }},
+    shopCurrency: "{{ shop.currency }}",
+    format: "{{ settings.currency_format | default: 'money_with_currency_format' }}",
+    customer: null,
+    cart: null,
+    note: null,
+    timeZoneOffset: null
+}
+var today = new Date();
+var jan = new Date(today.getFullYear(), 0, 1);
+var jul = new Date(today.getFullYear(), 6, 1);
+var dst = today.getTimezoneOffset() < Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
+window.zbad.timeZoneOffset = today.toString().match(/([A-Z]+[\+-][0-9]+)/)[1];
+{% if customer %}
+window.zbad.customer = {
+    id: {{customer.id}},
+    email: "{{customer.email}}",
+    tags: {{customer.tags | json}},
+    first_name: "{{customer.first_name}}",
+    last_name: "{{customer.last_name}}",
+};
+{% endif %}
+{% if cart %}
+window.zbad.cart = {{cart | json}};
+{% endif %}
+function zbGetCookie(name) {
+    var value = "; " + document.cookie;
+    var parts = value.split("; " + name + "=");
+    if (parts.length == 2) return parts.pop().split(";").shift();
+}
+function zbGenerateNewCookie(arguments){
+    if(arguments[0]=="POST" && (arguments[1] == "/cart/change.js" || arguments[1] == "/cart/add.js")){
+        if(window.zbAddingStatus == false){
+            var _ztbAdKey = zbGetCookie("_ZB_STATIC_947438_KEY");
+            if(typeof(_ztbAdKey) != "undefined" && _ztbAdKey != ""){
+                var _ID = parseInt((_ztbAdKey.match(/__(.*)__/g)[0]).replace(/__/g,""));
+                setTimeout(function(){
+                  Zotabox.getWidgetById(_ID).refreshUI(true);
+                },500);
+            }
+        }
+    }
+}
+
+(function() {
+  	var _self = this;
+    var proxied = window.XMLHttpRequest.prototype.open;
+    window.XMLHttpRequest.prototype.open = function() {
+		var xhr = this;
+      	var _arguments = arguments;
+      	this.addEventListener("readystatechange", function(method, url) {
+            if (xhr.readyState == 4) {
+              try{
+               	_self.zbGenerateNewCookie(_arguments); 
+              }
+              catch(err) {
+        		
+              }
+            }
+        }, false);
+        return proxied.apply(this, [].slice.call(arguments));
+    };
+  
+})();</script>
+            <style>
+            .zbprogress-bar-strip {
+                background-size: 32px 32px !important;
+                -webkit-animation: zbprogress 1s linear infinite !important;
+                -moz-animation: zbprogress 1s linear infinite !important;
+                animation: zbprogress 1s linear infinite !important;
+                background-repeat: repeat !important;
+                background-position: center center;
+                background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.35) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0.35) 75%, transparent 75%, transparent) !important;
+                background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.35) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0.35) 75%, transparent 75%, transparent) !important;
+            }
+
+            @-webkit-keyframes zbprogress {
+                from {
+                    background-position: 0px 0
+                }
+                to {
+                    background-position: 30px 0
+                }
+            }
+            @-moz-keyframes zbprogress {
+                from {
+                    background-position: 0px 0
+                }
+                to {
+                    background-position: 30px 0
+                }
+            }
+            @keyframes zbprogress {
+                from {
+                    background-position: 0px 0
+                }
+                to {
+                    background-position: 30px 0
+                }
+            }
+            </style>
+<script type="text/javascript">
+var _scriptTags = document.querySelectorAll("script");
+for(_sNum = 0; _sNum < _scriptTags.length; _sNum++){
+    if(_scriptTags[_sNum].innerHTML.indexOf("static.zotabox.com") != -1){
+	(function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="//static.zotabox.com/e/1/e181e4666816b8405375225d732c22f3/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));
+        
+            window.zbadClickCheckout = function (_currentElement) { //Create Checkout
+                var _ztbAdKey = zbGetCookie("_ZB_STATIC_947438_KEY");
+                if (_ztbAdKey != undefined && typeof (window.localStorage[_ztbAdKey]) != "undefined") {
+                    var _zbStorage = JSON.parse(window.localStorage[_ztbAdKey]);
+                    var _offers = _zbStorage.offers;
+                    var _cartFormChecked = window.checkCartFormChanged();
+                    if (_zbStorage.item_count != window.zbad.cart.item_count && _cartFormChecked == false) { //Cache changed - Get new cart\
+                        console.log("Cache changed - Get new cart");
+                        httpGetAsync("/cart.js", function (_cart) {
+                          window.zbad.cart = JSON.parse(_cart);
+                          httpPostAction(_currentElement);
+                        });
+                    } else { //Cache No Change - Use current cart
+                      	if(typeof(justAdded) != "undefined" && justAdded == true ){
+                          httpGetAsync("/cart.js", function (_cart) {
+                          window.zbad.cart = JSON.parse(_cart);
+                          httpPostAction(_currentElement);
+                        });
+                        }else{
+                          console.log("Cache No Change - Use current cart");
+                          httpPostAction(_currentElement);
+                        }
+                    }
+                }else{ //No cache - Get new cart
+                  var _cartFormChecked = window.checkCartFormChanged();
+                  if (_cartFormChecked != false) { 
+                    if(typeof(justAdded) != "undefined" && justAdded == true ){
+                          httpGetAsync("/cart.js", function (_cart) {
+                          window.zbad.cart = JSON.parse(_cart);
+                          httpPostAction(_currentElement);
+                        });
+                    }else{
+                    	httpPostAction(_currentElement);  
+                    }
+                  }else{ 
+                    console.log("No cache - Get new cart");
+                    httpGetAsync("/cart.js", function (_cart) {
+                      window.zbad.cart = JSON.parse(_cart);
+                      httpPostAction(_currentElement);
+                    });
+                  }  
+                }
+            }
+            window.checkCartFormChanged = function(){
+                if(document.querySelector('textarea[name="note"]') != null){
+                    window.zbad.note = document.querySelector('textarea[name="note"]').value;
+                }
+                var _inputNumber = document.querySelectorAll('input[name^="update"]');
+                if(typeof(_inputNumber) != "undefined"){
+                    var _totalCount = 0;
+                    var _productList = [];
+                    for(_iNum = 0; _iNum < _inputNumber.length; _iNum++){
+                        if(!isNaN(_inputNumber[_iNum].value)){
+                            _totalCount += parseInt(_inputNumber[_iNum].value);
+                            var _inputID = _inputNumber[_iNum].id;
+                            if(_inputID != "" && _inputID != null){
+                                if(_inputID.match(/_(.*):/) != null){
+                                    var _varianID = _inputID.match(/_(.*):/)[1]; 
+                                }else{
+                                    if(_inputID.match(/_(.*)/) != null){
+                                        var _varianID = _inputID.match(/_(.*)/)[1]; 
+                                    }
+                                }
+                            }else{
+                                var _inputID = _inputNumber[_iNum].getAttribute("data-id");
+                                if(_inputID != "" && _inputID != null){
+                                    if(_inputID.match(/(.*):/) != null){
+                                        var _varianID = _inputID.match(/(.*):/)[1]; 
+                                    }else{
+                                        var _varianID = _inputID;
+                                    }
+                                }
+                            }
+                            var _inputValue = _inputNumber[_iNum].value;
+                            if(typeof(_varianID) != "undefined" && !isNaN(_inputValue)){
+                                _productList.push({
+                                    "id": parseInt(_varianID),
+                                    "number": parseInt(_inputNumber[_iNum].value)
+                                });
+                            }
+                        }
+                    }
+                }
+                if(typeof(_totalCount) != "undefined" && _totalCount != window.zbad.cart.item_count){
+                    for(_itemNo = 0; _itemNo < window.zbad.cart.items.length; _itemNo++){
+                        for(var _iProduct = 0; _iProduct < _productList.length; _iProduct++){
+                            if(_productList[_iProduct].id == (window.zbad.cart.items)[_itemNo].id){
+                                (window.zbad.cart.items)[_itemNo].quantity = _productList[_iProduct].number;
+                            }
+                        }
+                    }
+                    window.zbad.cart.item_count = _totalCount;
+                    var _ztbAdKey = zbGetCookie("_ZB_STATIC_947438_KEY");
+                    if(typeof(window.localStorage[_ztbAdKey]) != "undefined"){
+                        var _zbStorage = JSON.parse(window.localStorage[_ztbAdKey]);
+                        _zbStorage.item_count = _totalCount;
+                        window.parent.localStorage[_ztbAdKey] = JSON.stringify(_zbStorage);
+                    }
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+            document.addEventListener("click", function (event) {
+                if (callCheckoutStatus()) { //Checking nút checkout
+                    var searchDepth = 0;
+                    var currentNode = (function _getAnchorTag(targetNode) {
+                        if (searchDepth >= 5)
+                            return
+                        if (!targetNode)
+                            return
+                        if (targetNode != null && typeof targetNode.getAttribute !== "undefined") {
+                            if (targetNode.getAttribute("data-amazon-payments-pay-button") == "true") { //Amazon Checkout
+                                return targetNode;
+                            } else if(targetNode.getAttribute("data-title-trans") == "cart.general.checkout"){ // Theme Custom Button
+                                return targetNode;
+                            } else if (targetNode.tagName.toLowerCase() == "button" || targetNode.tagName.toLowerCase() == "input") {  //Button || input
+                                if (targetNode.getAttribute("name") == "checkout"
+                                        || targetNode.getAttribute("value") == "Checkout"
+                                        || targetNode.getAttribute("name") == "goto_pp"
+                                        || targetNode.getAttribute("name") == "goto_gc"
+                                        ) {
+                                    return targetNode;
+                                }
+                            } else if (targetNode.tagName.toLowerCase() == "a") { //A href tag
+                                if (targetNode.getAttribute("href") == "/checkout") {
+                                    return targetNode;
+                                }
+                            }
+                        }
+                        searchDepth++
+                        return _getAnchorTag(targetNode.parentNode)
+                    }(event.target))
+                    if (currentNode != "undefined" && typeof (currentNode) != "undefined") { //Call checkout function
+                        event.preventDefault();
+                        window.zbadClickCheckout(currentNode);
+                    }
+                }
+            });
+            
+        break;
+    }
+}
+callCheckoutStatus = function () {
+    var _listID = "#agree,#cart_agree";
+    var _button = document.querySelector(_listID);
+    if (_button != null && _button.checked != true){
+        return false;
+    }
+    var _ztbAdKey = zbGetCookie("_ZB_STATIC_947438_KEY");
+    if (_ztbAdKey != undefined && typeof (window.localStorage[_ztbAdKey]) != "undefined") {
+        var _zbStorage = JSON.parse(window.localStorage[_ztbAdKey]);
+        var _offers = _zbStorage.offers;
+        if (_zbStorage.item_count != window.zbad.cart.item_count || _offers.length > 0) { //Cache Changed Or Have Offer
+            return true;
+        } else { //Cache No Changed
+            return false;
+        }
+    }
+  	//None cache
+    return true;
+}
+httpGetAsync = function (theUrl, callback) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onload = function () {
+      if (xmlHttp.status == 200)
+        callback(xmlHttp.responseText);
+    }
+    xmlHttp.open("GET", theUrl, true); // true for asynchronous
+    xmlHttp.send(null);
+}
+httpPostAction = function(_currentElement){
+    var _classAttr = _currentElement.getAttribute("class");
+    _currentElement.setAttribute("class", _classAttr + " zbprogress-bar-strip");
+    var xmlHttp = new XMLHttpRequest();
+    var _draftOrderID = zbGetCookie("zbad_draft_order");
+    var _ztbAdKey = zbGetCookie("_ZB_STATIC_947438_KEY");
+    if (_ztbAdKey != undefined && typeof (window.localStorage[_ztbAdKey]) != "undefined") {
+        var _zbStorage = JSON.parse(window.localStorage[_ztbAdKey]);
+    }
+    var _addedRules = zbGetCookie("_ZB_STATIC_947438_ADDED_RULES");
+    _addedRules = (typeof (_addedRules) == "string") ? JSON.parse(_addedRules) : _addedRules;
+    if(typeof(_addedRules)  == "undefined"){
+        _addedRules = [];
+    }
+    var _params = "draft_order_id="+_draftOrderID+"&advanced_discount_widget_id=947438&zbad=" + encodeURIComponent(JSON.stringify(window.zbad)) + "&addedRules="+ JSON.stringify(_addedRules);
+    xmlHttp.onload = function () {
+        if (xmlHttp.status == 200) {
+            var checkout = JSON.parse(xmlHttp.responseText);
+            if (typeof (checkout) == "string") {
+                checkout = JSON.parse(checkout);
+                if (typeof (checkout.draft_order) != "undefined") {
+                    if (typeof (checkout.draft_order.invoice_url) != "undefined") {
+                        document.cookie = "zbad_draft_order=" + checkout.draft_order.id + "; path=/";
+                        location.href = checkout.draft_order.invoice_url;
+                    } else {
+                        location.href = "/checkout";
+                    }
+                } else {
+                    location.href = "/checkout";
+                }
+            } else if (typeof (checkout) == "object" && checkout.offers == false) {
+                location.href = "/checkout";
+            }
+        } else {
+            location.href = "/checkout";
+        }
+    }
+    xmlHttp.open("POST", "https://actions.zotabox.com/advanceddiscount/createcheckout", true); // true for asynchronous
+    xmlHttp.timeout = 20000;
+    xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xmlHttp.send(_params);
+}
+</script>
