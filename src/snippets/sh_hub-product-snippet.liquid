@@ -1,0 +1,14 @@
+<script>
+	var HUBParams = {
+		"id" : "5e7463dd873f2f0154e2481c06b37f4a",
+		"product" : {{ product | json }}
+	};
+	HUBParams.product.collections = {{ product.collections | json }};
+
+    var i = 0;
+    {% for variant in product.variants %}
+        HUBParams.product.variants[i].inventory_quantity = {{ variant.inventory_quantity }};
+        HUBParams.product.variants[i].inventory_policy = "{{ variant.inventory_policy }}";
+        i++;
+    {% endfor %}
+</script>

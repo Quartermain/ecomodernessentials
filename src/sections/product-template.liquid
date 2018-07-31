@@ -127,6 +127,18 @@
               <link itemprop="availability" href="http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}">
               <meta itemprop="itemCondition" content="New" />
 
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
               <span class="sold_out">{% if variant.available == false %}{{ 'products.product.sold_out' | t }}{% endif %}</span>
               <span itemprop="price" content="{{ variant.price | money_without_currency | remove: "," }}" class="{% if variant.compare_at_price > variant.price %}sale{% endif %}">
                 <span class="current_price {% if product.available == false %}hidden{% endif %}">
@@ -143,6 +155,13 @@
                 {% endif %}
               </span>
 
+              
+              
+              
+              
+              
+              
+              
               {% if section.settings.display_savings %}
                 <span class="sale savings">
                   {% if variant.price < variant.compare_at_price and variant.available %}
@@ -157,13 +176,30 @@
 
           
           
-          
+              
+  <div class="yotpo bottomLine"
+    data-appkey="QHUj4LoiQStGQ9w84NpZbdGh22IMH6leH3JxRnMV"
+    data-domain="{{shop.permanent_domain | escape }}"
+    data-product-id="{{ product.id }}"
+    data-product-models="{{ product.id }}"
+    data-name="{{ product.title | escape }}"
+    data-url="{{ shop.url }}{{ product.url }}"
+    data-image-url="{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&','%26'}}"
+    data-description="{{ product.description | escape }}"
+    data-bread-crumbs="{% for tag in product.tags %}{{ tag | escape }};{% endfor %}">
+</div>
+
+             
           
           {% if section.settings.product_description_position == "top" %}
             {% if product.description != blank %}
              <div class="description" itemprop="description">
+               
+               
                {% if product.description contains '<!-- split -->' %}{{ product.description | split: '<!-- split -->' | first  }}{% else %}{% include 'product-description-tabs' %}{% endif %}
              </div>
+          
+          
            {% endif %}
           {% endif %}
 
@@ -171,10 +207,6 @@
             {% include 'product-form' with 'product' %}
           {% endunless %}
           
-          
-          
-                
-            
           
 
           {% if section.settings.product_description_position == "bottom" %}

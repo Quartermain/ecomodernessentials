@@ -19,7 +19,7 @@
     </p>
   </div>
   <div class="six columns offset-by-five">
-    <form class="search" action="/search">
+    <form class="search" action="/pages/search-results">
       <input type="text" name="q" class="search_box" placeholder="{{ 'general.search.placeholder' | t }}"  value="{{ search.terms }}" />
     </form>
   </div>
@@ -35,7 +35,7 @@
     </div>
 
     <div class="form-searh-404">
-      <form class="search" action="/search" style="position: relative">
+      <form class="search" action="/pages/search-results" style="position: relative">
         <input type="text" name="q" class="search_box" placeholder="{{ 'general.search.placeholder' | t }}"  value="{{ search.terms }}" />
         <span class="icon-search search-submit"></span>
       </form>
@@ -94,3 +94,11 @@
 </div>
 
 
+
+
+<!-- Begin Transportr -->
+{% include 'transportr' %}
+<!-- End Transportr -->
+{% include 'visely-trending-now' %}
+
+{% include 'visely-new-arrivals' %}

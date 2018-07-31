@@ -1,0 +1,41 @@
+<div class="prev-arrow"></div>
+<div class="visely-recommendations-container" data-visely-recommendations-container>
+  <script data-visely-item-template type="text/mustache">
+    <article class="visely-recommendation-item" itemscope itemtype="http://schema.org/Product" data-recommendation-type="[##product.recommendationType##]">
+      <a href="[##product.relUrl##]" title="[##{product.name.en}##]" itemprop="url" data-visely-product-id="[##product.id##]">
+        <section data-visely-item-section="Image">
+          [###includeSaleBadge##]
+            <span class="badge badge--sale sale-item icn product-tag product-tag--absolute">
+              <span class="badge__text">Sale</span>
+            </span>
+          [##/includeSaleBadge##]
+          <div class="product__image">
+            [###truncateMedia##]
+                <img data-src="[###adjustImageUrl##][##url##][##/adjustImageUrl##]" alt="[##{product.name.en}##]" itemprop="image">
+            [##/truncateMedia##]
+          </div>
+        </section>
+        <section data-visely-item-section="Name">
+          <div class="product__title">
+            <p itemprop="name">[##{product.name.en}##]</p>
+          </div>
+        </section>
+        <section data-visely-item-section="Price">
+          <div class="offer product__prices product-card__price notranslate" itemscope="" itemtype="http://schema.org/Offer">
+            [###priceRangeFrom##]
+              <span>From&nbsp;</span><span class="price money" data-currency="[##currency##]" data-currency-[##currency##]="[###applyCurrency##][##currency##][##/applyCurrency##][###formattedPrice##][##value##][##/formattedPrice##]" itemprop="price">[###applyCurrency##][##currency##][##/applyCurrency##][###formattedPrice##][##value##][##/formattedPrice##]</span>
+            [##/priceRangeFrom##]
+            [##^priceRangeFrom##]
+              <div class="price-container">
+                [###reversePrices##]
+                  <span class="price money [###toLowerCase##][##priceType##][##/toLowerCase##]" data-currency="[##currency##]" data-currency-[##currency##]="[###applyCurrency##][##currency##][##/applyCurrency##][###formattedPrice##][##value##][##/formattedPrice##]" itemprop="price">[###applyCurrency##][##currency##][##/applyCurrency##][###formattedPrice##][##value##][##/formattedPrice##]</span>
+                [##/reversePrices##]
+              </div>
+            [##/priceRangeFrom##]
+          </div>
+        </section>
+      </a>
+    </article>
+  </script>
+</div>
+<div class="next-arrow"></div>

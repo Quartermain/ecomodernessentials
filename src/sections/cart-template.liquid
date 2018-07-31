@@ -56,7 +56,10 @@
 
             <div class="seven columns omega cart_content_info">
               <h3>
-                <a href="{{ item.url }}">{{ item.product.title }}</a>
+                <a href="{{ item.url }}">{{ item.product.title }}
+<span class="saso-cart-item-discount-notes" data-key="{{item.key}}"></span>
+<span class="saso-cart-item-upsell-notes" data-key="{{item.key}}"></span>                                
+                                </a>
               </h3>
 
               {% unless item.product.has_only_default_variant or item.variant.title contains "Title" %}
@@ -87,7 +90,9 @@
 
               <p class="modal_price">
                 {% if item.price > 0 %}
-                  <span class="money">{{ item.price | money }}</span>
+                  <span class="">
+<span class="saso-cart-item-price" data-key="{{item.key}}">{{ item.price | money }}</span>
+</span>
                 {% else %}
                   {{ settings.free_price_text }}
                 {% endif %}
@@ -112,16 +117,19 @@
           <div class="subtotal">
             <p class="cart_subtotal js-cart_subtotal">
               <span class="right">
-                <span class="money"><span id="bk-cart-subtotal-price">{{ cart.total_price | money }}</span></span>
+                <span class=""><span id="">
+<span class="saso-cart-original-total"><span id="bk-cart-subtotal-price">{{ cart.total_price | money }}</span></span>
+<span class="saso-cart-total"></span>
+</span></span>
               </span>
-              <span><span id="bk-cart-subtotal-label">{{ 'cart.general.subtotal' | t }}</span></span>
+              <span><span id=""><span id="bk-cart-subtotal-label">{{ 'cart.general.subtotal' | t }}</span></span></span>
             </p>
 
             {% if section.settings.display_savings %}
               <p class="cart_savings sale">
                 {% if total_saving > 0 %}
                   <span class="right">
-                    <span class="money">{{ total_saving | money }}</span>
+                    <span class="">{{ total_saving | money }}</span>
                   </span>
                   <span>{{ 'layout.general.savings' | t }}</span>
                 {% endif %}

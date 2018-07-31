@@ -1,10 +1,15 @@
+
+<!-- sh_hub-added -->
+{% include 'sh_hub-product-snippet' %}
+<!-- /sh_hub-added -->
 {%- include 'bold-product' with product, hide_action: 'break', output: 'none' -%}
 {% comment %}
   The contents of the product.liquid template can be found in /sections/product-template.liquid
 {% endcomment %}
 
 {% section 'product-template' %}
-
+{% include 'visely-recently-viewed' %}
+{% include 'visely-data-layer' %}
 <script text="text/javascript">
   var _learnq = _learnq || [];
 
@@ -19,6 +24,19 @@
     CompareAtPrice: {{ product.compare_at_price_max|money|json }}
   };
 
+  <div class="yotpo bottomLine"
+    data-appkey="QHUj4LoiQStGQ9w84NpZbdGh22IMH6leH3JxRnMV"
+    data-domain="{{shop.permanent_domain | escape }}"
+    data-product-id="{{ product.id }}"
+    data-product-models="{{ product.id }}"
+    data-name="{{ product.title | escape }}"
+    data-url="{{ shop.url }}{{ product.url }}"
+    data-image-url="{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&','%26'}}"
+    data-description="{{ product.description | escape }}"
+    data-bread-crumbs="{% for tag in product.tags %}{{ tag | escape }};{% endfor %}">
+</div>
+
+  
   _learnq.push(['track', 'Viewed Product', item]);
   _learnq.push(['trackViewedItem', {
     Title: item.Name,
@@ -47,3 +65,15 @@
  data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" 
  data-description="{{ product.description | escape }}"> 
 </div>
+
+
+
+<div class="yotpo yotpo-reviews-carousel" 
+ data-background-color="transparent" 
+ data-mode="top_rated" 
+ data-type="product" 
+ data-count="9" 
+ data-show-bottomline="1" 
+ data-autoplay-enabled="1" 
+ data-autoplay-speed="3000" 
+ data-show-navigation="1">&nbsp;</div>

@@ -497,7 +497,7 @@ function itcCheckAccount() {
 }
 
 function itcCheckExclude(arr) {
-    var path = location.host + location.pathname;
+    var path = location.host + location.pathname + location.search;
 
     return !!arr.filter(function(item) {
         var reg, flags = 'gi';
@@ -520,6 +520,7 @@ function itcCheckExclude(arr) {
     })[0];
 }
 
+var testGulp = true;
 var itc_application_url = 'couponcountdown.zipify.com',
     itc_url_css = '{{ "zipify-couponcountdown.css" | asset_url }}',
     itc_url_js = '{{ "zipify-couponcountdown.min.js" | asset_url }}',
@@ -632,23 +633,9 @@ function itcNewValue() {
         }
     });
 
-    window.CouponCountDown = {};
+    function setLocation(res) {
+        var userLocation = JSON.parse(res.target.response);
 
-    function scriptRequest(url, onSuccess) {
-        var callbackName = 'cc' + String(Math.random()).slice(-6),
-            script = document.createElement('script');
-        url += ~url.indexOf('?') ? '&' : '?';
-        url += 'callback=CouponCountDown.' + callbackName;
-
-        CouponCountDown[callbackName] = function(data) {
-            delete CouponCountDown[callbackName];
-            onSuccess(data);
-        };
-        script.src = url;
-        document.body.appendChild(script);
-    }
-
-    function setLocation(userLocation) {
         data.location = {
             country: userLocation.country_name,
             region: userLocation.region_name,
@@ -663,7 +650,7 @@ function itcNewValue() {
         itcIntervalCheckStayCollection = ItcCheckTrigger.setIntervalStayCollection();
     }
 
-    scriptRequest('//freegeoip.net/json/', setLocation);
+    itcAjax('GET', '//geoip.tools/v1/json', setLocation);
 
     console.log('-------------------itcNewValue()-------------------');
 }
