@@ -1,6 +1,13 @@
 development:
+  password: 22d88073a8029da7c62f06082571f953
+  theme_id: "32865550425"
+  store: eco-testing-div.myshopify.com
+  ignore_files:
+    - settings_data.json # Uncomment this line to avoid resetting theme settings
+    
+live:
   password: cab52e69ebd86bf3bd21c22979a43190
-  theme_id: "16364142647"
+  theme_id: "32271204407"
   store: eco-modern-essentials.myshopify.com
   ignore_files:
-    settings_data.json # Uncomment this line to avoid resetting theme settings
+    - settings_data.json # Uncomment this line to avoid resetting theme settings
