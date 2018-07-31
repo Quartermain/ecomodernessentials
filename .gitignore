@@ -1,7 +1,7 @@
 .git
 node_modules/
 theme.lock
-package.json
+package-lock.json
 deploy.log
 dist/
 upload/
