@@ -1,25 +1,65 @@
-{% assign collection_handles = product.collections | map: 'handle' %}
 {% assign variant = product.selected_or_first_available_variant %}
-<span class="quick_shop ss-icon js-quick-shop-link"
-      data-no-instant
-      data-remodal-target="quick-shop"
-      data-id="{{ product.id }}"
-      data-handle="{{ product.handle }}"
-      data-money-format="{{ shop.money_format }}"
-      data-single-variant="{% if product.has_only_default_variant %}true{% else %}false{% endif %}"
-      data-url="{{ product.url | within: collection }}"
-      data-title="{{ product.title | escape }}"
-      data-details-text="{{ 'collections.general.view_product_details_html' | t | escape}}"
-      data-full-description="{{ product.description | split: '<!-- split -->' | first | escape }}"
-      data-regular-description="{{ product.description | strip_html | truncatewords: settings.description_words | replace: 'Description', '' | replace: 'Dimensions', '' | replace: 'Details', '' | replace: 'Specs', '' | replace: 'Shipping', '' | replace: 'Size', '' | escape }}"
-      data-images="{% for image in product.images %}{{ image.id }} || {{ image.alt | escape }} ||{% endfor %}"
-      data-collection-handles="{{ collection_handles | join: ','}}"
->
-  {{ 'collections.general.quick_shop' | t }}
-</span>
-<div class="js-forms form-holder-{{ product.id }}" style="display: none">
-    {% unless collection_handles contains 'coming-soon' %}
-      {% include 'product-notify-me' %}
-      {% include 'product-form', show_payment_button_quickshop: settings.show_payment_button %}
-    {% endunless %}
-</div>
+{% if settings.quick_shop_show_button == 'quickshop' %}
+    {% assign collection_handles = product.collections | map: 'handle' %}
+    <span class="quick_shop ss-icon js-quick-shop-link"
+          data-no-instant
+          data-remodal-target="quick-shop"
+          data-id="{{ product.id }}"
+          data-handle="{{ product.handle }}"
+          data-money-format="{{ shop.money_format }}"
+          data-single-variant="{% if product.has_only_default_variant %}true{% else %}false{% endif %}"
+          data-url="{{ product.url | within: collection }}"
+          data-title="{{ product.title | escape }}"
+          data-details-text="{{ 'collections.general.view_product_details_html' | t | escape}}"
+          data-full-description="{{ product.description | split: '<!-- split -->' | first | escape }}"
+          data-regular-description="{{ product.description | strip_html | truncatewords: settings.description_words | replace: 'Description', '' | replace: 'Dimensions', '' | replace: 'Details', '' | replace: 'Specs', '' | replace: 'Shipping', '' | replace: 'Size', '' | escape }}"
+          data-images="{% for image in product.images %}{{ image.id }} || {{ image.alt | escape }} ||{% endfor %}"
+          data-collection-handles="{{ collection_handles | join: ','}}"
+    >
+      {{ 'collections.general.quick_shop' | t }}
+    </span>
+    <div class="js-forms form-holder-{{ product.id }}" style="display: none">
+        {% unless collection_handles contains 'coming-soon' %}
+        {% include 'product-notify-me' %}
+        {% include 'product-form', show_payment_button_quickshop: settings.show_payment_button %}
+        {% endunless %}
+    </div>
+{% else %}
+    {% capture add_to_cart_label %}{{ 'products.product.add_to_cart' | t }}{% endcapture %}
+    <span class="quick_shop submit-add-to-cart">{{ add_to_cart_label }}</span>
+
+    {% form 'product', product , class: 'hidden', id: 'form_quick_addtocart' %}
+
+    {% if product.options.size > 1 %}
+    <div class="select">
+        <select id="product-select-{{ product.id }}{{ product-form }}{{ section.id }}{{ block.id }}" name="id" class="multi_select">
+            {% for v in product.variants %}
+            {%- include 'bold-variant' with v, hide_action: 'skip' -%}
+            <option {% if v == variant %}selected="selected"{% endif %} value="{{ v.id }}" data-sku="{{ v.sku }}">{{ v.title }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    {% elsif product.options.size == 1 and product.variants.size > 1 or product.options.size == 1 and product.options[0] != "Title" %}
+    <div class="select">
+        <label>{{ product.options[0] }}</label>
+        <select id="product-select-{{ product.id }}{{ product-form }}{{ section.id }}{{ block.id }}" name="id">
+            {% for v in product.variants %}
+            {%- include 'bold-variant' with v, hide_action: 'skip' -%}
+            <option {% if v == variant %}selected="selected"{% endif %} value="{{ v.id }}" data-sku="{{ v.sku }}">{{ v.title }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    {% else %}
+    <input type="hidden" name="id" value="{{ variant.id }}" />
+    {% endif %}
+
+    {% if settings.product_form_style == "swatches" and product.variants.size > 1 or settings.product_form_style == "swatches" and product.options[0] != "Title" %}
+    <div class="swatch_options">
+        {% for option in product.options %}
+        {% include 'product-swatch' with option %}
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% endform %}
+{% endif %}

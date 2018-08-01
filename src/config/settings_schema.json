@@ -4069,6 +4069,22 @@
         "label": "Enable quick shop"
       },
       {
+        "type": "radio",
+        "id": "quick_shop_show_button",
+        "label": "Show button",
+        "options": [
+          {
+            "value": "quickshop",
+            "label": "Quick shop button"
+          },
+          {
+            "value": "addtocart",
+            "label": "Add to cart button"
+          }
+        ],
+        "default" : "quickshop"
+      },
+      {
         "type": "checkbox",
         "id": "quick_shop_display_vendor",
         "label": "Show vendor"
