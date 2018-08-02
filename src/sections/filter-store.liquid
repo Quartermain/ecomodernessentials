@@ -1,0 +1,95 @@
+<ul class="filter-group">
+    {% assign alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' | upcase | split: '' %}
+
+    {% for char in alphabet %}
+    <li>
+        <a href="#" data-filter="{{ char }}">{{ char }}</a>
+    </li>
+    {% endfor %}
+</ul>
+<ul class="gird-filter" id="accordion-collapse">
+    {% for block in section.blocks %}
+        <li data-filter="{{ block.settings.title | slice: 0 | upcase }}">
+            <div>
+                {{ block.settings.image | img_url: 'large' | img_tag }}
+                <span>{{ block.settings.title }}</span>
+                <a href="{{ block.settings.keyword }}">{{ block.settings.button_label }}</a>
+            </div>
+            <div>
+                <h2>{{ block.settings.head_text }}</h2>
+                <span>{{ block.settings.sub_text }}</span>
+
+                {% if block.settings.more_detail != '' %}
+                    <a href="#more-detail-{{ block.id }}" data-toggle="collapse">
+                        <span>{{ block.settings.read_more_text }}</span>
+                    </a>
+                    <div data-collapse id="more-detail-{{ block.id }}">
+                        {{ block.settings.more_detail }}
+                    </div>
+                {% endif %}
+
+            </div>
+        </li>
+    {% endfor %}
+</ul>
+
+{% schema %}
+{
+    "name":"Filter section setting",
+    "class":"filter-section",
+    "blocks":[
+        {
+            "type":"article",
+            "name":"Article",
+            "settings":[
+                {
+                    "type":"image_picker",
+                    "id":"image",
+                    "label":"Image"
+                },
+                {
+                    "type":"text",
+                    "id":"title",
+                    "label":"Title",
+                    "default":"Feature"
+                },
+                {
+                    "type":"text",
+                    "id":"keyword",
+                    "label":"Search keyword"
+                },
+                {
+                    "type":"text",
+                    "id":"button_label",
+                    "label":"Button label",
+                    "default": "Shop"
+                },
+                {
+                    "type":"text",
+                    "id":"head_text",
+                    "label":"Head Title",
+                    "default":"What it does:"
+                },
+                {
+                    "type":"textarea",
+                    "id":"sub_text",
+                    "label":"Sub Text",
+                    "default":"<p>Promotion description details.</p>"
+                },
+                {
+                    "type":"text",
+                    "id":"read_more_text",
+                    "label":"Read more text",
+                    "default":"Read more +"
+                },
+                {
+                    "type":"textarea",
+                    "id":"more_detail",
+                    "label":"More Content",
+                    "default":"Something else"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}
