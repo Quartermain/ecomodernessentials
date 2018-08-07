@@ -1,124 +1,132 @@
-<div class="header-img text-align--center">
-    <div class="header-container">
-        <h2 class="header-heading hidden-phone">{{ section.settings.title }}</h2>        
-    </div>
-    {{ section.settings.image_header | img_url: 'master' | img_tag }}
-    <p class="sub-copy">{{ section.settings.subtitle }}</p>
+<div class="filter-store">
+  <div class="header-img text-align--center">
+      <div class="header-container">
+          <h2 class="header-heading hidden-phone">{{ section.settings.title }}</h2>        
+      </div>
+      {{ section.settings.image_header | img_url: 'master' | img_tag }}
+      <p class="sub-copy">{{ section.settings.subtitle }}</p>
+  </div>
+
+  <ul class="filter-group list-unstyled">
+    {% assign alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' | upcase | split: '' %}
+
+    {% for char in alphabet %}
+    <li>
+        <a href="#" data-filter="{{ char }}">{{ char }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <ul class="gird-filter full-width row list-unstyled" id="accordion-collapse">
+    {% for block in section.blocks %}
+      <li class="clearfix" data-filter="{{ block.settings.title | slice: 0 | upcase }}">
+        <div class="col-xs-12 col-sm-6 tile-img">
+          {{ block.settings.image | img_url: 'large' | img_tag }}
+          <div class="tile-text-container-two-lines">
+            <h2>{{ block.settings.title }}</h2>
+            {%- if block.settings.keyword != '' -%}
+              <a class="button" href="{{ '/search?type=product&q=' | append: block.settings.keyword | url_escape | append: '*' }}">
+                {{ block.settings.button_label }}
+              </a>
+            {%- endif -%}
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6">
+          <h2 class="title">{{ block.settings.head_text }}</h2>
+          <p>{{ block.settings.sub_text }}</p>
+
+          {% if block.settings.more_detail != '' %}            
+            <div data-collapse id="more-detail-{{ block.id }}">
+                {{ block.settings.more_detail }}
+            </div>
+
+            <div class="align_right">
+              <a class="button--link align_right" href="#more-detail-{{ block.id }}" data-toggle="collapse">
+                {{ block.settings.read_more_text }}
+              </a>
+            </div>
+          {% endif %}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
 </div>
 
-<ul class="filter-group">
-  {% assign alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' | upcase | split: '' %}
-
-  {% for char in alphabet %}
-  <li>
-      <a href="#" data-filter="{{ char }}">{{ char }}</a>
-  </li>
-  {% endfor %}
-</ul>
-<ul class="gird-filter" id="accordion-collapse">
-  {% for block in section.blocks %}
-    <li class="container" data-filter="{{ block.settings.title | slice: 0 | upcase }}">
-      <div class="eight columns tile-img">
-        {{ block.settings.image | img_url: 'large' | img_tag }}
-        <span>{{ block.settings.title }}</span>
-        {%- if block.settings.keyword != '' -%}
-            <a href="{{ '/search?type=product&q=' | append: block.settings.keyword | url_escape | append: '*' }}">
-                {{ block.settings.button_label }}
-            </a>
-        {%- endif -%}
-      </div>
-      <div class="eight columns">
-        <h2 class="title">{{ block.settings.head_text }}</h2>
-        <p>{{ block.settings.sub_text }}</p>
-
-        {% if block.settings.more_detail != '' %}
-          <a href="#more-detail-{{ block.id }}" data-toggle="collapse">
-              <span>{{ block.settings.read_more_text }}</span>
-          </a>
-          <div data-collapse id="more-detail-{{ block.id }}">
-              {{ block.settings.more_detail }}
-          </div>
-        {% endif %}
-
-      </div>
-    </li>
-  {% endfor %}
-</ul>
-
 {% schema %}
-{
-  "name":"Filter section setting",
-  "class":"filter-section",
-  "settings": [
-      {
-          "type": "image_picker",
-          "id": "image_header",
-          "label": "Image header"
-      },
-      {
-          "type": "text",
-          "id": "title",
-          "label": "Title"
-      },
-      {
-          "type": "textarea",
-          "id": "subtitle",
-          "label": "Sub title"
-      }
-  ],
-  "blocks":[
-    {
-      "type":"article",
-      "name":"Article",
-      "settings":[
+  {
+    "name":"Filter section setting",
+    "class":"filter-section",
+    "settings": [
         {
-            "type":"image_picker",
-            "id":"image",
-            "label":"Image"
+            "type": "image_picker",
+            "id": "image_header",
+            "label": "Image header"
         },
         {
-            "type":"text",
-            "id":"title",
-            "label":"Title",
-            "default":"Feature"
+            "type": "text",
+            "id": "title",
+            "label": "Title"
         },
         {
-            "type":"text",
-            "id":"keyword",
-            "label":"Search keyword"
-        },
-        {
-            "type":"text",
-            "id":"button_label",
-            "label":"Button label",
-            "default": "Shop"
-        },
-        {
-            "type":"text",
-            "id":"head_text",
-            "label":"Head Title",
-            "default":"What it does:"
-        },
-        {
-            "type":"textarea",
-            "id":"sub_text",
-            "label":"Sub Text",
-            "default":"<p>Promotion description details.</p>"
-        },
-        {
-            "type":"text",
-            "id":"read_more_text",
-            "label":"Read more text",
-            "default":"Read more +"
-        },
-        {
-            "type":"textarea",
-            "id":"more_detail",
-            "label":"More Content",
-            "default":"Something else"
+            "type": "textarea",
+            "id": "subtitle",
+            "label": "Sub title"
         }
-      ]
-    }
-  ]
-}
+    ],
+    "blocks":[
+      {
+        "type":"article",
+        "name":"Article",
+        "settings":[
+          {
+              "type":"image_picker",
+              "id":"image",
+              "label":"Image"
+          },
+          {
+              "type":"text",
+              "id":"title",
+              "label":"Title",
+              "default":"Feature"
+          },
+          {
+              "type":"text",
+              "id":"keyword",
+              "label":"Search keyword"
+          },
+          {
+              "type":"text",
+              "id":"button_label",
+              "label":"Button label",
+              "default": "Shop"
+          },
+          {
+              "type":"text",
+              "id":"head_text",
+              "label":"Head Title",
+              "default":"What it does:"
+          },
+          {
+              "type":"textarea",
+              "id":"sub_text",
+              "label":"Sub Text",
+              "default":"<p>Promotion description details.</p>"
+          },
+          {
+              "type":"text",
+              "id":"read_more_text",
+              "label":"Read more text",
+              "default":"Read more +"
+          },
+          {
+              "type":"textarea",
+              "id":"more_detail",
+              "label":"More Content",
+              "default":"Something else"
+          }
+        ]
+      }
+    ]
+  }
 {% endschema %}

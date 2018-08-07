@@ -3789,24 +3789,24 @@ $(document)
 
 FilterJS = (function($) {
 
-    $('.filter-group').on('click', 'a', function () {
-        var filterValue = $(this).data('filter');
-        $('.gird-filter').isotope({ filter: function () {
-                var value = $(this).data('filter');
-                return value == filterValue;
-            }});
-    });
+  $('.filter-group').on('click', 'a', function () {
+    var filterValue = $(this).data('filter');
+    $('.gird-filter').isotope({ filter: function () {
+        var value = $(this).data('filter');
+        return value == filterValue;
+    }});
+  });
 
 
-    return {
-        init: function () {
-            $(document).ready(function() {
-                $('.gird-filter').isotope({
-                    layoutMode: 'vertical'
-                });
-            })
-        }
+  return {
+    init: function () {
+      $(document).ready(function() {
+          $('.gird-filter').isotope({
+              layoutMode: 'vertical'
+          });
+      })
     }
+  }
 })(jQuery);
 
 FilterJS.init();
