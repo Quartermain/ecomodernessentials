@@ -1,56 +1,59 @@
 <div class="filter-store">
+  
   <div class="header-img text-align--center">
-      <div class="header-container">
-          <h2 class="header-heading hidden-phone">{{ section.settings.title }}</h2>        
-      </div>
-      {{ section.settings.image_header | img_url: 'master' | img_tag }}
-      <p class="sub-copy">{{ section.settings.subtitle }}</p>
+    <div class="container">
+        <h2 class="header-heading hidden-phone">{{ section.settings.title }}</h2>        
+    </div>
+    {{ section.settings.image_header | img_url: 'master' | img_tag }}
   </div>
 
-  <ul class="filter-group list-unstyled">
-    {% assign alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' | upcase | split: '' %}
+  <div class="container">
+    <p class="sub-copy">{{ section.settings.subtitle }}</p>
+    <ul class="filter-group list-unstyled">
+      {% assign alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' | upcase | split: '' %}
 
-    {% for char in alphabet %}
-    <li>
-        <a href="#" data-filter="{{ char }}">{{ char }}</a>
-    </li>
-    {% endfor %}
-  </ul>
-
-  <ul class="gird-filter full-width row list-unstyled" id="accordion-collapse">
-    {% for block in section.blocks %}
-      <li class="clearfix" data-filter="{{ block.settings.title | slice: 0 | upcase }}">
-        <div class="col-xs-12 col-sm-6 tile-img">
-          {{ block.settings.image | img_url: 'large' | img_tag }}
-          <div class="tile-text-container-two-lines">
-            <h2>{{ block.settings.title }}</h2>
-            {%- if block.settings.keyword != '' -%}
-              <a class="button" href="{{ '/search?type=product&q=' | append: block.settings.keyword | url_escape | append: '*' }}">
-                {{ block.settings.button_label }}
-              </a>
-            {%- endif -%}
-          </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-6">
-          <h2 class="title">{{ block.settings.head_text }}</h2>
-          <p>{{ block.settings.sub_text }}</p>
-
-          {% if block.settings.more_detail != '' %}            
-            <div data-collapse id="more-detail-{{ block.id }}">
-                {{ block.settings.more_detail }}
-            </div>
-
-            <div class="align_right">
-              <a class="button--link align_right" href="#more-detail-{{ block.id }}" data-toggle="collapse">
-                {{ block.settings.read_more_text }}
-              </a>
-            </div>
-          {% endif %}
-        </div>
+      {% for char in alphabet %}
+      <li>
+          <a href="#" data-filter="{{ char }}">{{ char }}</a>
       </li>
-    {% endfor %}
-  </ul>
+      {% endfor %}
+    </ul>
+
+    <ul class="gird-filter full-width row list-unstyled" id="accordion-collapse">
+      {% for block in section.blocks %}
+        <li class="clearfix" data-filter="{{ block.settings.title | slice: 0 | upcase }}">
+          <div class="col-xs-12 col-sm-6 tile-img">
+            {{ block.settings.image | img_url: 'large' | img_tag }}
+            <div class="tile-text-container-two-lines">
+              <h2>{{ block.settings.title }}</h2>
+              {%- if block.settings.keyword != '' -%}
+                <a class="button" href="{{ '/search?type=product&q=' | append: block.settings.keyword | url_escape | append: '*' }}">
+                  {{ block.settings.button_label }}
+                </a>
+              {%- endif -%}
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6">
+            <h2 class="title">{{ block.settings.head_text }}</h2>
+            <p>{{ block.settings.sub_text }}</p>
+
+            {% if block.settings.more_detail != '' %}            
+              <div data-collapse id="more-detail-{{ block.id }}">
+                  {{ block.settings.more_detail }}
+              </div>
+
+              <div class="align_right">
+                <a class="button--link align_right" href="#more-detail-{{ block.id }}" data-toggle="collapse">
+                  {{ block.settings.read_more_text }}
+                </a>
+              </div>
+            {% endif %}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
 
 {% schema %}
