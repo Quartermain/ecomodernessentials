@@ -1,15 +1,13 @@
 <div class="filter-store">
   
-  <div class="header-img text-align--center">
-    <div class="container">
-        <h2 class="header-heading hidden-phone">{{ section.settings.title }}</h2>        
-    </div>
+  <div class="header-filter text-align--center">
+    <h2 class="header-filter-text hidden-phone">{{ section.settings.title }}</h2>
     {{ section.settings.image_header | img_url: 'master' | img_tag }}
   </div>
 
   <div class="container">
     <p class="sub-copy">{{ section.settings.subtitle }}</p>
-    <ul class="filter-group list-unstyled">
+    <ul class="filter-group none">
       {% assign alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' | upcase | split: '' %}
 
       {% for char in alphabet %}
@@ -19,25 +17,22 @@
       {% endfor %}
     </ul>
 
-    <ul class="gird-filter full-width row list-unstyled" id="accordion-collapse">
+    <ul class="gird-filter full-width none" id="accordion-collapse">
       {% for block in section.blocks %}
-        <li class="clearfix" data-filter="{{ block.settings.title | slice: 0 | upcase }}">
-          <div class="col-xs-12 col-sm-6 tile-img">
+        <li class="clearfix row" data-filter="{{ block.settings.title | slice: 0 | upcase }}">
+          <div class="eight columns tile-img">
             {{ block.settings.image | img_url: 'large' | img_tag }}
-            <div class="tile-text-container-two-lines">
-              <h2>{{ block.settings.title }}</h2>
-              {%- if block.settings.keyword != '' -%}
-                <a class="button" href="{{ '/search?type=product&q=' | append: block.settings.keyword | url_escape | append: '*' }}">
-                  {{ block.settings.button_label }}
-                </a>
-              {%- endif -%}
-            </div>
+            
           </div>
 
-          <div class="col-xs-12 col-sm-6">
-            <h2 class="title">{{ block.settings.head_text }}</h2>
-            <p>{{ block.settings.sub_text }}</p>
+          <div class="eight columns">
+            
+            <h2 class="title-text-search">{{ block.settings.title }}</h2>
 
+            <div class="txt-content">{{ block.settings.head_text }}</div>
+            {% comment %} <h3 class="title"></h3> {% endcomment %}
+            {% comment %}
+            <p>{{ block.settings.sub_text }}</p><br>
             {% if block.settings.more_detail != '' %}            
               <div data-collapse id="more-detail-{{ block.id }}">
                   {{ block.settings.more_detail }}
@@ -48,7 +43,13 @@
                   {{ block.settings.read_more_text }}
                 </a>
               </div>
-            {% endif %}
+            {% endif %} {% endcomment %}
+
+            {%- if block.settings.keyword != '' -%}
+              <a class="button--outline" href="{{ '/search?type=product&q=' | append: block.settings.keyword | url_escape | append: '*' }}">
+                {{ block.settings.button_label }}
+              </a>
+            {%- endif -%}
           </div>
         </li>
       {% endfor %}
@@ -105,28 +106,9 @@
               "default": "Shop"
           },
           {
-              "type":"text",
+              "type":"richtext",
               "id":"head_text",
-              "label":"Head Title",
-              "default":"What it does:"
-          },
-          {
-              "type":"textarea",
-              "id":"sub_text",
-              "label":"Sub Text",
-              "default":"<p>Promotion description details.</p>"
-          },
-          {
-              "type":"text",
-              "id":"read_more_text",
-              "label":"Read more text",
-              "default":"Read more +"
-          },
-          {
-              "type":"textarea",
-              "id":"more_detail",
-              "label":"More Content",
-              "default":"Something else"
+              "label":"Content"
           }
         ]
       }
