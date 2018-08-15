@@ -152,6 +152,15 @@
             </ul>
 
           {% elsif block.type == 'filter' %}
+            {% assign collection_all_tags = collection.all_tags %}
+            {%- if template == 'search' -%}
+              {%- for item in search.results -%}
+                {%- if item.object_type == 'product' -%}
+                  {% assign collection_all_tags = collection_all_tags | concat: item.tags %}
+                {%- endif -%}
+              {%- endfor -%}
+              {% assign collection_all_tags = collection_all_tags | uniq %}
+            {%- endif -%}
             {% assign initial_filter_tags = block.settings.filter_tags | split: ',' %}
             {% assign filter_name = block.settings.filter_name | replace: ' ', '_' | downcase | append: '__' %}
 
@@ -159,7 +168,7 @@
             {% assign filter_tags = filter_tags | split: "^" %}
 
             {%- capture headlines -%}
-              {%- for collection_tag in collection.all_tags -%}
+              {%- for collection_tag in collection_all_tags -%}
 {%- if collection_tag contains '_HIDDEN_PRODUCT' -%}{%- continue -%}{%- endif -%}
                 {%- for tag in filter_tags -%}
                   {%- capture formatted_tag -%}{{- tag | replace: filter_name, '' | downcase -}}{%- endcapture -%}
@@ -183,7 +192,7 @@
                   <ul class="toggle_list" >
                     <div class="filter-all-tags color-filter--{{ block.settings.enable_filter_swatches }}">
                       {% for tag in filter_tags %}
-                        {% for collection_tag in collection.all_tags %}
+                        {% for collection_tag in collection_all_tags %}
 {%- if collection_tag contains '_HIDDEN_PRODUCT' -%}{%- continue -%}{%- endif -%}
                           {% capture formatted_tag %}{{- tag | replace: filter_name, '' | downcase -}}{% endcapture %}
                           {% capture formatted_collection_tag %}{{ collection_tag | downcase }}{% endcapture %}
