@@ -9854,7 +9854,7 @@ $delay: 0;
    .headline,
    .subtitle {
     color: #9D9FA2;
-   } 
+   }
   }
 }
 
@@ -9883,26 +9883,26 @@ $delay: 0;
   }
 }
 
-.page-404 {  
+.page-404 {
   .container.main.content {
     width: 100%;
   }
-  
+
   .text-header-404,
   .form-searh-404 {
     margin: 0 auto;
   }
-  
+
   @media (min-width: $larger) {
     .form-searh-404 {
       max-width: 60%;
     }
-    
+
     .text-header-404 {
       max-width: 80%;
     }
   }
-  
+
   @media (max-width: $larger) {
     .row-button {
       >a  {
@@ -9912,7 +9912,7 @@ $delay: 0;
       }
     }
   }
-  
+
   .text-header-404 {
     color: #fff;
     text-align: center;
@@ -9920,13 +9920,13 @@ $delay: 0;
     line-height: 100%;
     margin-bottom: 5%;
   }
-  
+
   .header-404 {
     background: url("{{ 'bg-404.jpg' | asset_url }}") no-repeat left top;
       background-size: cover;
       padding: 10% 0;
   }
-  
+
   .block-txt {
     text-align: center;
     line-height: 100%;
@@ -9945,12 +9945,12 @@ a.action_button-black {
   color: #fff;
   padding: 10px 30px;
   display: inline-block;
-  
+
   &:hover {
     background: #fff;
     color: #000;
   }
-  
+
   &.button-outline {
     background: #fff;
     color: #000;
@@ -9981,7 +9981,6 @@ margin: auto !important;
 
 // Issue filter a-z
 
-
 .button--link {
   text-transform: uppercase;
   font-weight: bold;
@@ -9989,8 +9988,13 @@ margin: auto !important;
 }
 
 .filter-store {
+  @include respond-to('medium') {
+    padding-top: 40px;
+  }
+
   img {
     max-width: 100%;
+    width: 100%;
   }
 
   .header-filter {
