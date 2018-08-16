@@ -46,7 +46,7 @@
             {% endif %} {% endcomment %}
 
             {%- if block.settings.keyword != '' -%}
-              <a class="button--outline" href="{{ '/search?type=product&q=' | append: block.settings.keyword | url_escape | append: '*' }}">
+              <a class="button--outline" href="{{ '/collections/all/' | append: block.settings.keyword | replace: ' ', '-' }}">
                 {{ block.settings.button_label }}
               </a>
             {%- endif -%}
