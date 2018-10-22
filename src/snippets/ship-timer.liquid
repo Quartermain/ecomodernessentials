@@ -19,8 +19,14 @@ https://ethercycle.com/shiptimer/support/
   {% else %}
     {% assign total_stock = 0 %}
     {%for variant in product.variants %}
+{% unless variant.metafields.secomapp.freegifts %}
+{% unless variant.title contains '(Freegifts)' %}
+
       {% capture i %}{{ total | plus:variant.inventory_quantity }}{%endcapture%}
       {% assign total_stock = i %}
+      
+{% endunless %}
+{% endunless %}
     {%endfor%}
     {% assign total_stock = total_stock | plus: 0 %}
     {% if total_stock > 0 %}

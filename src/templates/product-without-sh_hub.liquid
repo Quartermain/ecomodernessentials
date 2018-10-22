@@ -1,4 +1,5 @@
-{%- include 'bold-product' with product, hide_action: 'break', output: 'none' -%}
+{% include 'sca_freegift_price' with product %}
+
 {% comment %}
   The contents of the product.liquid template can be found in /sections/product-template.liquid
 {% endcomment %}
@@ -15,8 +16,8 @@
     ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
     URL: "{{ shop.secure_url }}{{ product.url }}",
     Brand: {{ product.vendor|json }},
-    Price: {{ product.price|money|json }},
-    CompareAtPrice: {{ product.compare_at_price_max|money|json }}
+    Price: {{ sca_price|money|json }},
+    CompareAtPrice: {{ sca_compare_at_price_max|money|json }}
   };
 
   _learnq.push(['track', 'Viewed Product', item]);

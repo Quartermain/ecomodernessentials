@@ -12,17 +12,18 @@
 
 {% capture results %}
   {% for item in search.results %}
+  {% include 'sca_freegift_price' with item %}
 
     {% if item.object_type == 'product' %}
       {% assign imgSrc = item.featured_image.src | img_url: '200x'  | json %}
       {% assign collections = item.collections | json %}
-      {% assign price = item.price | money | json %}
-      {% assign rawPrice = item.price | json %}
+      {% assign price = sca_price | money | json %}
+      {% assign rawPrice = sca_price | json %}
       {% assign available = item.available | json %}
-      {% assign compare = item.compare_at_price_max | money | json %}
-      {% assign rawCompare = item.compare_at_price_max | json %}
-      {% assign priceVaries = item.price_varies | json %}
-      {% assign priceMin = item.price_min | json %}
+      {% assign compare = sca_compare_at_price_max | money | json %}
+      {% assign rawCompare = sca_compare_at_price_max | json %}
+      {% assign priceVaries = sca_price_varies | json %}
+      {% assign priceMin = sca_price_min | json %}
     {% elsif item.object_type == 'article' %}
       {% assign imgSrc = item.image.src | img_url: '200x' | json %}
       {% assign textContent = item.excerpt | truncatewords: 5 | json %}

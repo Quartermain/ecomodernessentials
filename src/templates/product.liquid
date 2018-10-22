@@ -1,13 +1,15 @@
+{% include 'sca_freegift_price' with product %}
 
 <!-- sh_hub-added -->
 {% include 'sh_hub-product-snippet' %}
 <!-- /sh_hub-added -->
-{%- include 'bold-product' with product, hide_action: 'break', output: 'none' -%}
+
 {% comment %}
   The contents of the product.liquid template can be found in /sections/product-template.liquid
 {% endcomment %}
 
 {% section 'product-template' %}
+{% include 'visely-you-may-also-like' %}
 {% include 'visely-recently-viewed' %}
 {% include 'visely-data-layer' %}
 <script text="text/javascript">
@@ -20,8 +22,8 @@
     ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
     URL: "{{ shop.secure_url }}{{ product.url }}",
     Brand: {{ product.vendor|json }},
-    Price: {{ product.price|money|json }},
-    CompareAtPrice: {{ product.compare_at_price_max|money|json }}
+    Price: {{ sca_price|money|json }},
+    CompareAtPrice: {{ sca_compare_at_price_max|money|json }}
   };
 
   <div class="yotpo bottomLine"
@@ -77,3 +79,34 @@
  data-autoplay-enabled="1" 
  data-autoplay-speed="3000" 
  data-show-navigation="1">&nbsp;</div>
+
+
+
+<script text="text/javascript">
+  var _learnq = _learnq || [];
+
+  var item = {
+    Name: {{ product.title|json }},
+    ProductID: {{ product.id|json }},
+    Categories: {{ product.collections|map:'title'|json }},
+    ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
+    URL: "{{ shop.secure_url }}{{ product.url }}",
+    Brand: {{ product.vendor|json }},
+    Price: {{ product.price|money|json }},
+    CompareAtPrice: {{ product.compare_at_price_max|money|json }}
+  };
+
+  _learnq.push(['track', 'Viewed Product', item]);
+  _learnq.push(['trackViewedItem', {
+    Title: item.Name,
+    ItemId: item.ProductID,
+    Categories: item.Categories,
+    ImageUrl: item.ImageURL,
+    Url: item.URL,
+    Metadata: {
+      Brand: item.Brand,
+      Price: item.Price,
+      CompareAtPrice: item.CompareAtPrice
+    }
+  }]);
+</script>

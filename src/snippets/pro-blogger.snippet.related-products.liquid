@@ -1,0 +1,543 @@
+{% assign imagesize = 'large' %}
+{% assign header = '<h4>Related Products</h4>' %}
+{% assign titleweight = 5 %}
+{% assign tagweight = 1 %}
+{% assign ProdDisplay = 10 %}
+
+{% assign Prod1Match = 0 %}
+{% assign Prod1URL = '' %}
+{% assign Prod1img = '' %}
+{% assign Prod1title = '' %}
+{% assign Prod1price = 0 %}
+
+{% assign Prod2Match = 0 %}
+{% assign Prod2URL = '' %}
+{% assign Prod2img = '' %}
+{% assign Prod2title = '' %}
+{% assign Prod2price = 0 %}
+
+{% assign Prod3Match = 0 %}
+{% assign Prod3URL = '' %}
+{% assign Prod3img = '' %}
+{% assign Prod3title = '' %}
+{% assign Prod3price = 0 %}
+
+{% assign Prod4Match = 0 %}
+{% assign Prod4URL = '' %}
+{% assign Prod4img = '' %}
+{% assign Prod4title = '' %}
+{% assign Prod4price = 0 %}
+
+{% assign Prod5Match = 0 %}
+{% assign Prod5URL = '' %}
+{% assign Prod5img = '' %}
+{% assign Prod5title = '' %}
+{% assign Prod5price = 0 %}
+
+{% assign Prod6Match = 0 %}
+{% assign Prod6URL = '' %}
+{% assign Prod6img = '' %}
+{% assign Prod6title = '' %}
+{% assign Prod6price = 0 %}
+
+{% assign Prod7Match = 0 %}
+{% assign Prod7URL = '' %}
+{% assign Prod7img = '' %}
+{% assign Prod7title = '' %}
+{% assign Prod7price = 0 %}
+
+{% assign Prod8Match = 0 %}
+{% assign Prod8URL = '' %}
+{% assign Prod8img = '' %}
+{% assign Prod8title = '' %}
+{% assign Prod8price = 0 %}
+
+{% assign Prod9Match = 0 %}
+{% assign Prod9URL = '' %}
+{% assign Prod9img = '' %}
+{% assign Prod9title = '' %}
+{% assign Prod9price = 0 %}
+
+{% assign Prod10Match = 0 %}
+{% assign Prod10URL = '' %}
+{% assign Prod10img = '' %}
+{% assign Prod10title = '' %}
+{% assign Prod10price = 0 %}
+
+
+<!-- Get All available products -->
+{% paginate collections.all.products by 1000000 %}
+{% for prod in collections.all.products %}
+  {% if prod.available %}
+	{% assign TagCount = 0 %}
+
+	<!-- match product title as weighted array -->
+	{% assign titlearr = prod.title | split: ' ' %}
+    {% for t in titlearr %}
+		{% assign t2 = t | strip %}
+		{% assign t3 = t2 | downcase %}
+          {% for arttag in article.tags %}
+			{% assign arttag2 = arttag | downcase %}
+              {% if t3 contains arttag2 %}
+                  {% assign TagCount = TagCount | plus:titleweight %}
+              {% endif %}
+          {% endfor %}
+    {% endfor %}
+	<!-- match product title to tags -->
+	{% assign productdown = prod.title | downcase %}
+        {% for arttag in article.tags %}
+			{% assign arttag2 = arttag | downcase %}
+              {% if productdown contains arttag2 %}
+                 {% assign TagCount = TagCount | plus:titleweight %}
+					{% assign TagCount = TagCount | plus:titleweight %}
+              {% endif %}
+     {% endfor %}
+
+    {% for tag in prod.tags %}
+		{% for arttag in article.tags %}
+			{% assign arttag2 = arttag | downcase %}
+      {% assign tag2 = tag | downcase %}
+			{% if tag2 contains arttag2 %}
+				{% assign TagCount = TagCount | plus:tagweight %}
+			{% endif %}
+		{% endfor %}
+    {% endfor %}
+
+		{% if TagCount >= Prod1Match %}
+
+		{% assign Prod10Match = Prod9Match %}
+                {% assign Prod10URL = Prod9URL %}
+                {% assign Prod10img = Prod9img %}
+                {% assign Prod10title = Prod9title %}
+                {% assign Prod10price = Prod9price %}
+
+		{% assign Prod9Match = Prod8Match %}
+                {% assign Prod9URL = Prod8URL %}
+                {% assign Prod9img = Prod8img %}
+                {% assign Prod9title = Prod8title %}
+                {% assign Prod9price = Prod8price %}
+
+		{% assign Prod8Match = Prod7Match %}
+                {% assign Prod8URL = Prod7URL %}
+                {% assign Prod8img = Prod7img %}
+                {% assign Prod8title = Prod7title %}
+                {% assign Prod8price = Prod7price %}
+
+		{% assign Prod7Match = Prod6Match %}
+                {% assign Prod7URL = Prod6URL %}
+                {% assign Prod7img = Prod6img %}
+                {% assign Prod7title = Prod6title %}
+                {% assign Prod7price = Prod6price %}
+
+		{% assign Prod6Match = Prod5Match %}
+                {% assign Prod6URL = Prod5URL %}
+                {% assign Prod6img = Prod5img %}
+                {% assign Prod6title = Prod5title %}
+                {% assign Prod6price = Prod5price %}
+
+		{% assign Prod5Match = Prod4Match %}
+                {% assign Prod5URL = Prod4URL %}
+                {% assign Prod5img = Prod4img %}
+                {% assign Prod5title = Prod4title %}
+                {% assign Prod5price = Prod4price %}
+
+		{% assign Prod4Match = Prod3Match %}
+                {% assign Prod4URL = Prod3URL %}
+                {% assign Prod4img = Prod3img %}
+                {% assign Prod4title = Prod3title %}
+                {% assign Prod4price = Prod3price %}
+
+		{% assign Prod3Match = Prod2Match %}
+                {% assign Prod3URL = Prod2URL %}
+                {% assign Prod3img = Prod2img %}
+                {% assign Prod3title = Prod2title %}
+                {% assign Prod3price = Prod2price %}
+
+		{% assign Prod2Match = Prod1Match %}
+                {% assign Prod2URL = Prod1URL %}
+                {% assign Prod2img = Prod1img %}
+                {% assign Prod2title = Prod1title %}
+                {% assign Prod2price = Prod1price %}
+
+		{% assign Prod1Match = TagCount %}
+                {% assign Prod1URL = prod.url | within: collections.all %}
+                {% assign Prod1img = prod.featured_image.src | product_img_url: imagesize %}
+                {% assign Prod1title = prod.title | escape %}
+                {% assign Prod1price = prod.price | money %}
+
+		{% elsif TagCount >= Prod2Match %}
+
+		{% assign Prod10Match = Prod9Match %}
+                {% assign Prod10URL = Prod9URL %}
+                {% assign Prod10img = Prod9img %}
+                {% assign Prod10title = Prod9title %}
+                {% assign Prod10price = Prod9price %}
+
+		{% assign Prod9Match = Prod8Match %}
+                {% assign Prod9URL = Prod8URL %}
+                {% assign Prod9img = Prod8img %}
+                {% assign Prod9title = Prod8title %}
+                {% assign Prod9price = Prod8price %}
+
+		{% assign Prod8Match = Prod7Match %}
+                {% assign Prod8URL = Prod7URL %}
+                {% assign Prod8img = Prod7img %}
+                {% assign Prod8title = Prod7title %}
+                {% assign Prod8price = Prod7price %}
+
+		{% assign Prod7Match = Prod6Match %}
+                {% assign Prod7URL = Prod6URL %}
+                {% assign Prod7img = Prod6img %}
+                {% assign Prod7title = Prod6title %}
+                {% assign Prod7price = Prod6price %}
+
+		{% assign Prod6Match = Prod5Match %}
+                {% assign Prod6URL = Prod5URL %}
+                {% assign Prod6img = Prod5img %}
+                {% assign Prod6title = Prod5title %}
+                {% assign Prod6price = Prod5price %}
+
+		{% assign Prod5Match = Prod4Match %}
+                {% assign Prod5URL = Prod4URL %}
+                {% assign Prod5img = Prod4img %}
+                {% assign Prod5title = Prod4title %}
+                {% assign Prod5price = Prod4price %}
+
+		{% assign Prod4Match = Prod3Match %}
+                {% assign Prod4URL = Prod3URL %}
+                {% assign Prod4img = Prod3img %}
+                {% assign Prod4title = Prod3title %}
+                {% assign Prod4price = Prod3price %}
+
+		{% assign Prod3Match = Prod2Match %}
+                {% assign Prod3URL = Prod2URL %}
+                {% assign Prod3img = Prod2img %}
+                {% assign Prod3title = Prod2title %}
+                {% assign Prod3price = Prod2price %}
+
+            	{% assign Prod2Match = TagCount %}
+                {% assign Prod2URL = prod.url | within: collections.all %}
+                {% assign Prod2img = prod.featured_image.src | product_img_url: imagesize %}
+                {% assign Prod2title = prod.title | escape %}
+                {% assign Prod2price = prod.price | money %}
+
+		{% elsif TagCount >= Prod3Match %}
+
+		{% assign Prod10Match = Prod9Match %}
+                {% assign Prod10URL = Prod9URL %}
+                {% assign Prod10img = Prod9img %}
+                {% assign Prod10title = Prod9title %}
+                {% assign Prod10price = Prod9price %}
+
+		{% assign Prod9Match = Prod8Match %}
+                {% assign Prod9URL = Prod8URL %}
+                {% assign Prod9img = Prod8img %}
+                {% assign Prod9title = Prod8title %}
+                {% assign Prod9price = Prod8price %}
+
+		{% assign Prod8Match = Prod7Match %}
+                {% assign Prod8URL = Prod7URL %}
+                {% assign Prod8img = Prod7img %}
+                {% assign Prod8title = Prod7title %}
+                {% assign Prod8price = Prod7price %}
+
+		{% assign Prod7Match = Prod6Match %}
+                {% assign Prod7URL = Prod6URL %}
+                {% assign Prod7img = Prod6img %}
+                {% assign Prod7title = Prod6title %}
+                {% assign Prod7price = Prod6price %}
+
+		{% assign Prod6Match = Prod5Match %}
+                {% assign Prod6URL = Prod5URL %}
+                {% assign Prod6img = Prod5img %}
+                {% assign Prod6title = Prod5title %}
+                {% assign Prod6price = Prod5price %}
+
+		{% assign Prod5Match = Prod4Match %}
+                {% assign Prod5URL = Prod4URL %}
+                {% assign Prod5img = Prod4img %}
+                {% assign Prod5title = Prod4title %}
+                {% assign Prod5price = Prod4price %}
+
+		{% assign Prod4Match = Prod3Match %}
+                {% assign Prod4URL = Prod3URL %}
+                {% assign Prod4img = Prod3img %}
+                {% assign Prod4title = Prod3title %}
+                {% assign Prod4price = Prod3price %}
+
+            	{% assign Prod3Match = TagCount %}
+                {% assign Prod3URL = prod.url | within: collections.all %}
+                {% assign Prod3img = prod.featured_image.src | product_img_url: imagesize %}
+                {% assign Prod3title = prod.title | escape %}
+                {% assign Prod3price = prod.price | money %}
+
+		{% elsif TagCount >= Prod4Match %}
+
+		{% assign Prod10Match = Prod9Match %}
+                {% assign Prod10URL = Prod9URL %}
+                {% assign Prod10img = Prod9img %}
+                {% assign Prod10title = Prod9title %}
+                {% assign Prod10price = Prod9price %}
+
+		{% assign Prod9Match = Prod8Match %}
+                {% assign Prod9URL = Prod8URL %}
+                {% assign Prod9img = Prod8img %}
+                {% assign Prod9title = Prod8title %}
+                {% assign Prod9price = Prod8price %}
+
+		{% assign Prod8Match = Prod7Match %}
+                {% assign Prod8URL = Prod7URL %}
+                {% assign Prod8img = Prod7img %}
+                {% assign Prod8title = Prod7title %}
+                {% assign Prod8price = Prod7price %}
+
+		{% assign Prod7Match = Prod6Match %}
+                {% assign Prod7URL = Prod6URL %}
+                {% assign Prod7img = Prod6img %}
+                {% assign Prod7title = Prod6title %}
+                {% assign Prod7price = Prod6price %}
+
+		{% assign Prod6Match = Prod5Match %}
+                {% assign Prod6URL = Prod5URL %}
+                {% assign Prod6img = Prod5img %}
+                {% assign Prod6title = Prod5title %}
+                {% assign Prod6price = Prod5price %}
+
+		{% assign Prod5Match = Prod4Match %}
+                {% assign Prod5URL = Prod4URL %}
+                {% assign Prod5img = Prod4img %}
+                {% assign Prod5title = Prod4title %}
+                {% assign Prod5price = Prod4price %}
+
+            	{% assign Prod4Match = TagCount %}
+                {% assign Prod4URL = prod.url | within: collections.all %}
+                {% assign Prod4img = prod.featured_image.src | product_img_url: imagesize %}
+                {% assign Prod4title = prod.title | escape %}
+                {% assign Prod4price = prod.price | money %}
+
+		{% elsif TagCount >= Prod5Match %}
+
+		{% assign Prod10Match = Prod9Match %}
+                {% assign Prod10URL = Prod9URL %}
+                {% assign Prod10img = Prod9img %}
+                {% assign Prod10title = Prod9title %}
+                {% assign Prod10price = Prod9price %}
+
+		{% assign Prod9Match = Prod8Match %}
+                {% assign Prod9URL = Prod8URL %}
+                {% assign Prod9img = Prod8img %}
+                {% assign Prod9title = Prod8title %}
+                {% assign Prod9price = Prod8price %}
+
+		{% assign Prod8Match = Prod7Match %}
+                {% assign Prod8URL = Prod7URL %}
+                {% assign Prod8img = Prod7img %}
+                {% assign Prod8title = Prod7title %}
+                {% assign Prod8price = Prod7price %}
+
+		{% assign Prod7Match = Prod6Match %}
+                {% assign Prod7URL = Prod6URL %}
+                {% assign Prod7img = Prod6img %}
+                {% assign Prod7title = Prod6title %}
+                {% assign Prod7price = Prod6price %}
+
+		{% assign Prod6Match = Prod5Match %}
+                {% assign Prod6URL = Prod5URL %}
+                {% assign Prod6img = Prod5img %}
+                {% assign Prod6title = Prod5title %}
+                {% assign Prod6price = Prod5price %}
+
+           	{% assign Prod5Match = TagCount %}
+                {% assign Prod5URL = prod.url | within: collections.all %}
+                {% assign Prod5img = prod.featured_image.src | product_img_url: imagesize %}
+                {% assign Prod5title = prod.title | escape %}
+                {% assign Prod5price = prod.price | money %}
+
+		{% elsif TagCount >= Prod6Match %}
+
+		{% assign Prod10Match = Prod9Match %}
+                {% assign Prod10URL = Prod9URL %}
+                {% assign Prod10img = Prod9img %}
+                {% assign Prod10title = Prod9title %}
+                {% assign Prod10price = Prod9price %}
+
+		{% assign Prod9Match = Prod8Match %}
+                {% assign Prod9URL = Prod8URL %}
+                {% assign Prod9img = Prod8img %}
+                {% assign Prod9title = Prod8title %}
+                {% assign Prod9price = Prod8price %}
+
+		{% assign Prod8Match = Prod7Match %}
+                {% assign Prod8URL = Prod7URL %}
+                {% assign Prod8img = Prod7img %}
+                {% assign Prod8title = Prod7title %}
+                {% assign Prod8price = Prod7price %}
+
+		{% assign Prod7Match = Prod6Match %}
+                {% assign Prod7URL = Prod6URL %}
+                {% assign Prod7img = Prod6img %}
+                {% assign Prod7title = Prod6title %}
+                {% assign Prod7price = Prod6price %}
+
+           	{% assign Prod6Match = TagCount %}
+                {% assign Prod6URL = prod.url | within: collections.all %}
+                {% assign Prod6img = prod.featured_image.src | product_img_url: imagesize %}
+                {% assign Prod6title = prod.title | escape %}
+                {% assign Prod6price = prod.price | money %}
+
+		{% elsif TagCount >= Prod7Match %}
+
+		{% assign Prod10Match = Prod9Match %}
+                {% assign Prod10URL = Prod9URL %}
+                {% assign Prod10img = Prod9img %}
+                {% assign Prod10title = Prod9title %}
+                {% assign Prod10price = Prod9price %}
+
+		{% assign Prod9Match = Prod8Match %}
+                {% assign Prod9URL = Prod8URL %}
+                {% assign Prod9img = Prod8img %}
+                {% assign Prod9title = Prod8title %}
+                {% assign Prod9price = Prod8price %}
+
+		{% assign Prod8Match = Prod7Match %}
+                {% assign Prod8URL = Prod7URL %}
+                {% assign Prod8img = Prod7img %}
+                {% assign Prod8title = Prod7title %}
+                {% assign Prod8price = Prod7price %}
+
+           	{% assign Prod7Match = TagCount %}
+                {% assign Prod7URL = prod.url | within: collections.all %}
+                {% assign Prod7img = prod.featured_image.src | product_img_url: imagesize %}
+                {% assign Prod7title = prod.title | escape %}
+                {% assign Prod7price = prod.price | money %}
+
+		{% elsif TagCount >= Prod8Match %}
+
+		{% assign Prod10Match = Prod9Match %}
+                {% assign Prod10URL = Prod9URL %}
+                {% assign Prod10img = Prod9img %}
+                {% assign Prod10title = Prod9title %}
+                {% assign Prod10price = Prod9price %}
+
+		{% assign Prod9Match = Prod8Match %}
+                {% assign Prod9URL = Prod8URL %}
+                {% assign Prod9img = Prod8img %}
+                {% assign Prod9title = Prod8title %}
+                {% assign Prod9price = Prod8price %}
+
+           	{% assign Prod8Match = TagCount %}
+                {% assign Prod8URL = prod.url | within: collections.all %}
+                {% assign Prod8img = prod.featured_image.src | product_img_url: imagesize %}
+                {% assign Prod8title = prod.title | escape %}
+                {% assign Prod8price = prod.price | money %}
+
+		{% elsif TagCount >= Prod9Match %}
+
+		{% assign Prod10Match = Prod9Match %}
+                {% assign Prod10URL = Prod9URL %}
+                {% assign Prod10img = Prod9img %}
+                {% assign Prod10title = Prod9title %}
+                {% assign Prod10price = Prod9price %}
+
+           	{% assign Prod9Match = TagCount %}
+                {% assign Prod9URL = prod.url | within: collections.all %}
+                {% assign Prod9img = prod.featured_image.src | product_img_url: imagesize %}
+                {% assign Prod9title = prod.title | escape %}
+                {% assign Prod9price = prod.price | money %}
+
+		{% elsif TagCount >= Prod10Match %}
+
+           	{% assign Prod10Match = TagCount %}
+                {% assign Prod10URL = prod.url | within: collections.all %}
+                {% assign Prod10img = prod.featured_image.src | product_img_url: imagesize %}
+                {% assign Prod10title = prod.title | escape %}
+                {% assign Prod10price = prod.price | money %}
+
+		{% endif %}
+	{% endif %}
+
+
+{% endfor %}
+{% endpaginate %}
+
+{% if Prod1Match == 0 and ProdDisplay >= 1 %}
+{% else %}
+
+  <script type="text/javascript">
+
+    var related_products_slider_options = {"enabled": true, "slider_display": 5};
+
+  </script>
+
+  <div id="related_products_header" style="display: none">{{ header }}</div>
+  <div id="related_products_slider" class="owl-carousel">
+    <div>
+      <a style="border : 0px;" href="{{ Prod1URL }}"><img src="{{ Prod1img }}" alt="" nopin="true" /></a>
+      <h4><a style="border : 0px;" href="{{ Prod1URL }}">{{ Prod1title }}</a></h4>
+      <p>{{ Prod1price }}</p>
+     </div>
+	{% if Prod2Match > 0 and ProdDisplay >= 2 %}
+     <div>
+       <a style="border : 0px;" href="{{ Prod2URL }}"><img src="{{ Prod2img }}" alt="" nopin="true" /></a>
+       <h4><a style="border : 0px;" href="{{ Prod2URL }}">{{ Prod2title }}</a></h4>
+       <p>{{ Prod2price }}</p>
+     </div>
+	{% endif %}
+  {% if Prod3Match > 0 and ProdDisplay >= 3 %}
+    <div>
+      <a style="border : 0px;" href="{{ Prod3URL }}"><img src="{{ Prod3img }}" alt="" nopin="true" /></a>
+      <h4><a style="border : 0px;" href="{{ Prod3URL }}">{{ Prod3title }}</a></h4>
+      <p>{{ Prod3price }}</p>
+    </div>
+  {% endif %}
+	    {% if Prod4Match > 0 and ProdDisplay >= 4 %}
+    <div>
+      <a style="border : 0px;" href="{{ Prod4URL }}"><img src="{{ Prod4img }}" alt="" nopin="true" /></a>
+      <h4><a style="border : 0px;" href="{{ Prod4URL }}">{{ Prod4title }}</a></h4>
+      <p>{{ Prod4price }}</p>
+    </div>
+  {% endif %}
+	    {% if Prod5Match > 0 and ProdDisplay >= 5 %}
+    <div>
+      <a style="border : 0px;" href="{{ Prod5URL }}"><img src="{{ Prod5img }}" alt="" nopin="true" /></a>
+      <h4><a style="border : 0px;" href="{{ Prod5URL }}">{{ Prod5title }}</a></h4>
+      <p>{{ Prod5price }}</p>
+    </div>
+  {% endif %}
+	  	    {% if Prod6Match > 0 and ProdDisplay >= 6 %}
+    <div>
+      <a style="border : 0px;" href="{{ Prod6URL }}"><img src="{{ Prod6img }}" alt="" nopin="true" /></a>
+      <h4><a style="border : 0px;" href="{{ Prod6URL }}">{{ Prod6title }}</a></h4>
+      <p>{{ Prod6price }}</p>
+    </div>
+  {% endif %}
+	  	    {% if Prod7Match > 0 and ProdDisplay >= 7 %}
+    <div>
+      <a style="border : 0px;" href="{{ Prod7URL }}"><img src="{{ Prod7img }}" alt="" nopin="true" /></a>
+      <h4><a style="border : 0px;" href="{{ Prod7URL }}">{{ Prod7title }}</a></h4>
+      <p>{{ Prod7price }}</p>
+    </div>
+  {% endif %}
+	  	    {% if Prod8Match > 0 and ProdDisplay >= 8 %}
+    <div>
+      <a style="border : 0px;" href="{{ Prod8URL }}"><img src="{{ Prod8img }}" alt="" nopin="true" /></a>
+      <h4><a style="border : 0px;" href="{{ Prod8URL }}">{{ Prod8title }}</a></h4>
+      <p>{{ Prod8price }}</p>
+    </div>
+  {% endif %}
+	  	    {% if Prod9Match > 0 and ProdDisplay >= 9 %}
+    <div>
+      <a style="border : 0px;" href="{{ Prod9URL }}"><img src="{{ Prod9img }}" alt="" nopin="true" /></a>
+      <h4><a style="border : 0px;" href="{{ Prod9URL }}">{{ Prod9title }}</a></h4>
+      <p>{{ Prod9price }}</p>
+    </div>
+  {% endif %}
+	  	    {% if Prod10Match > 0 and ProdDisplay == 10 %}
+    <div>
+      <a style="border : 0px;" href="{{ Prod10URL }}"><img src="{{ Prod10img }}" alt="" nopin="true" /></a>
+      <h4><a style="border : 0px;" href="{{ Prod10URL }}">{{ Prod10title }}</a></h4>
+      <p>{{ Prod10price }}</p>
+    </div>
+  {% endif %}
+  </div>
+{% endif %}

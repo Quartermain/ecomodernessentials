@@ -1,3 +1,5 @@
+{% include 'sca_freegift_price' with product %}
+
 <script type="text/javascript">
   var viselyProductMedias = [];
   {% for image in product.images %} viselyProductMedias.push({"url" : "{{ image.src | product_img_url: 'large' }}" });{% endfor %}
@@ -12,46 +14,46 @@
     "reversePrices": [{
                   "currency": "{{ shop.currency }}",
                   "priceType": "SALE",
-                  "value": {{ product.price }},
-                  "formattedValue": "{{ product.price | money | strip_html }}"
+                  "value": {{ sca_price }},
+                  "formattedValue": "{{ sca_price | money | strip_html }}"
               }
-              {% if product.compare_at_price > product.price %}
+              {% if sca_compare_at_price > sca_price %}
                ,{
                   "currency": "{{ shop.currency }}",
                   "priceType": "REGULAR",
-                  "value": {{ product.compare_at_price }},
-                  "formattedValue": "{{ product.compare_at_price | money | strip_html}}"
+                  "value": {{ sca_compare_at_price }},
+                  "formattedValue": "{{ sca_compare_at_price | money | strip_html}}"
                }
                {% endif %}
                ],
-      {% if product.price_min < product.price_max %}
+      {% if sca_price_min < sca_price_max %}
       "prices": [
                {
                   "currency": "{{ shop.currency }}",
                   "priceType": "RANGEFROM",
-                  "value": {{ product.price_min }},
-                  "formattedValue": "{{ product.price_min | money | strip_html}}"
+                  "value": {{ sca_price_min }},
+                  "formattedValue": "{{ sca_price_min | money | strip_html}}"
                },
                {
                     "currency": "{{ shop.currency }}",
                     "priceType": "RANGEFROM",
-                    "value": {{ product.price_max }},
-                    "formattedValue": "{{ product.price_max | money | strip_html}}"
+                    "value": {{ sca_price_max }},
+                    "formattedValue": "{{ sca_price_max | money | strip_html}}"
                 }],                                                      
        {% else %} 
-     "prices": [{% if product.compare_at_price > product.price %}
+     "prices": [{% if sca_compare_at_price > sca_price %}
                {
                   "currency": "{{ shop.currency }}",
                   "priceType": "REGULAR",
-                  "value": {{ product.compare_at_price }},
-                  "formattedValue": "{{ product.compare_at_price | money | strip_html}}"
+                  "value": {{ sca_compare_at_price }},
+                  "formattedValue": "{{ sca_compare_at_price | money | strip_html}}"
                },
                {% endif %}
                 {
                     "currency": "{{ shop.currency }}",
                     "priceType": "SALE",
-                    "value": {{ product.price }},
-                    "formattedValue": "{{ product.price | money | strip_html}}"
+                    "value": {{ sca_price }},
+                    "formattedValue": "{{ sca_price | money | strip_html}}"
                 }],                                                            
        {% endif %}
     "recommendationType": "RECENTLY_VIEWED",

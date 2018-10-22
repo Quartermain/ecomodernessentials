@@ -9,6 +9,7 @@
       <div class="clearfix frontpage_product_stagger--{{ section.settings.frontpage_product_stagger }}" itemtype="http://schema.org/ItemList">
       {% for block in section.blocks %}
         {%- assign product = all_products[block.settings.featured_product] -%}
+        {% include 'sca_freegift_price' with product %}
 
         {%- assign collection_handles = product.collections | map: 'handle' -%}
         {% if product.empty? %}
@@ -46,7 +47,7 @@
               <div class="feature_divider"></div>
             {% else %}
 
-              {% if settings.sale_banner_enabled and product.compare_at_price_max > product.price %}
+              {% if settings.sale_banner_enabled and sca_compare_at_price_max > sca_price %}
                 <div class="sale_banner_product">{{ 'collections.general.sale' | t }}</div>
               {% endif %}
               {% if collection_handles contains 'new' %}
@@ -62,7 +63,9 @@
                 </p>
               {% endif %}
               <h1 class="product_name" itemprop="name">
-                <a href="{{ product.url }}">{{ product.title }}</a>
+                <div style="position:relative;">
+                  <a href="{{ product.url }}">{{ product.title }}</a>
+                <div name="secomapp-fg-image-{{ product.id }}" style="display: none;"> {{ "icon-freegift.png" | asset_url | img_tag: "", "sca-fg-img-collect" }} </div> </div>
               </h1>
 
               {% if settings.enable_shopify_product_badges and settings.enable_shopify_review_comments %}
@@ -139,7 +142,7 @@
                 </div>
               {% elsif section.settings.frontpage_display_description and product.description != blank %}
                 <div class="description" itemprop="description">
-                  {{ product.description | split: '<!-- split -->' | first }}
+                  <div data-station-tabs-app>{{ product.description | split: '<!-- split -->' | first }}</div>
                 </div>
 
               {% endif %}
@@ -166,7 +169,7 @@
                 </div>
               {% elsif section.settings.frontpage_display_description and product.description != blank %}
                 <div class="description bottom" itemprop="description">
-                  {{ product.description | split: '<!-- split -->' | first }}
+                  <div data-station-tabs-app>{{ product.description | split: '<!-- split -->' | first }}</div>
                 </div>
 
               {% endif %}

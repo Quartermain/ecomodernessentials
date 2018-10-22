@@ -426,5 +426,30 @@
         "other": "{{ count }} items"
       }
     }
+  },
+  "shopify": {
+    "checkout": {
+      "general": {
+        "continue_to_shipping_method": "PROCEED TO SHIPPING METHOD >",
+        "continue_to_payment_method": "PROCEED TO PAYMENT METHOD"
+      },
+      "contact": {
+        "city_label": "Suburb",
+        "city_placeholder": "Suburb",
+        "address2_label": "Address Line 2 (Optional)",
+        "optional_address2_label": "Address Line 2 (Optional)",
+        "address2_placeholder": "Address Line 2 (Optional)",
+        "optional_address2_placeholder": "Address Line 2 (Optional)"
+      },
+      "order_summary": {
+        "gift_card_and_discount_title": "Gift card or discount code",
+        "discount_placeholder": "Gift card or discount code",
+        "gift_card_and_discount_label": "Gift card or discount code",
+        "gift_card_and_discount_placeholder": "Gift card or discount code",
+        "show_discount_form_link_label": "Gift card or discount code",
+        "discount_label": "Gift card or discount code",
+        "discount_title": "Gift card or discount code"
+      }
+    }
   }
 }

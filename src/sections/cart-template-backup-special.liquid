@@ -32,7 +32,7 @@
       <div class="ten columns">
         {% assign total_saving = 0 %}
         {% for item in cart.items %}
-{%- include 'bold-cart-item' with item -%}
+        {% include 'sca_freegift_price' with item %}        
           {% if item.variant.compare_at_price > item.variant.price %}
             {% assign saving = item.variant.compare_at_price | minus: item.variant.price | times: item.quantity %}
             {% assign total_saving = saving | plus: total_saving %}
@@ -40,9 +40,9 @@
 
           <div class="section clearfix">
             <div class="three columns alpha">
-              <a href="{{ item.url }}" title="{{ item.title | escape }}" class="cart_page_image">
+              <a href="  {%if item.variant.metafields.secomapp.freegifts%}{{ item.product.url }}{%else%}{{ item.url }}{%endif%}" title="{{ item.title | remove: '/ Default Title'| remove: 'Default Title' | remove: '/ Default' | remove: 'Default' | replace: '(Freegifts)', ''  | escape }}" class="cart_page_image">
                 <img  src="{{ item | img_url: '100x' }}"
-                      alt="{{ item.title | escape }}"
+                      alt="{{ item.title | remove: '/ Default Title'| remove: 'Default Title' | remove: '/ Default' | remove: 'Default' | replace: '(Freegifts)', ''  | escape }}"
                       class="lazyload {{ settings.image_loading_style }}"
                       style="max-width: {{- item.image.width -}}px"
                       data-sizes="auto"
@@ -56,7 +56,11 @@
 
             <div class="seven columns omega cart_content_info">
               <h3>
-                <a href="{{ item.url }}">{{ item.product.title }}</a>
+                <a href="  {%if item.variant.metafields.secomapp.freegifts%}{{ item.product.url }}{%else%}{{ item.url }}{%endif%}">{{ item.product.title }}
+                  <span class='booster-cart-item-success-notes' data-key='{{item.key}}'></span><span class='booster-cart-item-upsell-notes' data-key='{{item.key}}'></span>
+                  <span class="saso-cart-item-discount-notes" data-key="{{item.key}}"></span>
+                  <span class="saso-cart-item-upsell-notes" data-key="{{item.key}}"></span>                                
+                </a>
               </h3>
 
               {% unless item.product.has_only_default_variant or item.variant.title contains "Title" %}
@@ -70,6 +74,7 @@
               {% if item.properties %}
                 <p>
                   {% for p in item.properties %}
+				{%- if p.first.first == '_' -%}{%- continue -%}{%- endif -%}
                     {% unless p.last == blank %}
                       {% if p.last contains '/uploads/' %}
                         <div>
@@ -86,20 +91,22 @@
               {% endif %}
 
               <p class="modal_price">
-                {% if item.price > 0 %}
-                  <span class="money">{{ item.price | money }}</span>
+                {% if sca_price > 0 %}
+                <span class="">
+                  <span class="saso-cart-item-price" data-key="{{item.key}}">{{ sca_price | money }}</span>
+                </span>
                 {% else %}
                   {{ settings.free_price_text }}
                 {% endif %}
 
-                {% if item.price < item.variant.compare_at_price %}
+                {% if sca_price < item.variant.compare_at_price %}
                   <span class="money was_price">{{ item.variant.compare_at_price | money }}</span>
                 {% endif %}
               </p>
 
               <div class="product-quantity-box left">
                 <span class="ss-icon product-minus js-change-quantity" data-func="minus"><span class="icon-minus"></span></span>
-                <input type="number" min="0" size="2" class="quantity" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" {{ bold_qty_attr }}  data-line-id="{{ forloop.index }}" {% if settings.limit_quantity and item.variant.inventory_management != blank and item.variant.inventory_quantity > 0 and item.variant.inventory_policy == "deny" %}max="{{ item.variant.inventory_quantity }}"{% endif %} />
+                <input {%if item.variant.metafields.secomapp.freegifts%}readonly{%endif%}   type="number" min="0" size="2" class="quantity" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" data-line-id="{{ forloop.index }}" {% if settings.limit_quantity and item.variant.inventory_management != blank and item.variant.inventory_quantity > 0 and item.variant.inventory_policy == "deny" %}max="{{ item.variant.inventory_quantity }}"{% endif %} />
                 <span class="ss-icon product-plus js-change-quantity" data-func="plus"><span class="icon-plus"></span></span>
               </div>
             </div>
@@ -112,16 +119,19 @@
           <div class="subtotal">
             <p class="cart_subtotal js-cart_subtotal">
               <span class="right">
-                <span class="money"><span id="bk-cart-subtotal-price">{{ cart.total_price | money }}</span></span>
+                <span class=""><span id="">
+                  <span class=""><span id="bk-cart-subtotal-price"><span class="wh-original-cart-total"><span class='wh-original-price'>{{ cart.total_price | money }}</span></span><span class="wh-cart-total"></span><div class="additional-notes"><span class="wh-minimums-note"></span><span class="wh-extra-note"></span></div></span></span>
+                  <span class=""></span>
+                  </span></span>
               </span>
-              <span><span id="bk-cart-subtotal-label">{{ 'cart.general.subtotal' | t }}</span></span>
+              <span><span id=""><span id="bk-cart-subtotal-label">{{ 'cart.general.subtotal' | t }}</span></span></span>
             </p>
 
             {% if section.settings.display_savings %}
               <p class="cart_savings sale">
                 {% if total_saving > 0 %}
                   <span class="right">
-                    <span class="money">{{ total_saving | money }}</span>
+                    <span class="">{{ total_saving | money }}</span>
                   </span>
                   <span>{{ 'layout.general.savings' | t }}</span>
                 {% endif %}

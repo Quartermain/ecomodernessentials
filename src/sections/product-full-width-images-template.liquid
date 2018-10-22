@@ -1,3 +1,5 @@
+{% include 'sca_freegift_price' with product %}
+
 {% comment %}
 ** Product with full-width images below - custom view **
 - Product template
@@ -71,7 +73,7 @@
           {% assign variant = product.selected_or_first_available_variant %}
 
           {% if product.available %}
-            {% if settings.sale_banner_enabled and product.compare_at_price_max > product.price %}
+            {% if settings.sale_banner_enabled and sca_compare_at_price_max > sca_price %}
               <div class="sale_banner_product">{{ 'collections.general.sale' | t }}</div>
             {% endif %}
           {% endif %}
@@ -93,7 +95,7 @@
               <span itemprop="sku">{{ variant.sku }}</span>
             </p>
           {% endif %}
-          <h1 class="product_name" itemprop="name">{{ product.title }}</h1>
+          <h1 class="product_name" itemprop="name"><div style="position:relative;"> {{ product.title }} <div name="secomapp-fg-image-{{ product.id }}" style="display: none;"> {{ "icon-freegift.png" | asset_url | img_tag: "", "sca-fg-img-collect" }} </div> </div></h1>
           {% if settings.enable_shopify_product_badges and settings.enable_shopify_review_comments %}
             <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
           {% endif %}
@@ -152,7 +154,10 @@
           {% if section.settings.product_description_position == "top" %}
             {% if product.description != blank %}
              <div class="description" itemprop="description">
-               {% if product.description contains '<!-- split -->' %}{{ product.description | split: '<!-- split -->' | first  }}{% else %}{% include 'product-description-tabs' %}{% endif %}
+               {% if product.description contains '<!-- split -->' %}<div data-station-tabs-app>{{ product.description | split: '<!-- split -->' | first  }}</div>{% else %}<!-- Station Begin: Description -->
+<div data-station-tabs-app>{{ product.description }}</div>
+{% comment %}{% include 'product-description-tabs' %}{% endcomment %}
+<!-- Station End -->{% endif %}
              </div>
            {% endif %}
           {% endif %}
@@ -164,7 +169,10 @@
           {% if section.settings.product_description_position == "bottom" %}
             {% if product.description != blank %}
              <div class="description bottom" itemprop="description">
-              {% if product.description contains '<!-- split -->' %}{{ product.description | split: '<!-- split -->' | first  }}{% else %}{% include 'product-description-tabs' %}{% endif %}
+              {% if product.description contains '<!-- split -->' %}<div data-station-tabs-app>{{ product.description | split: '<!-- split -->' | first  }}</div>{% else %}<!-- Station Begin: Description -->
+<div data-station-tabs-app>{{ product.description }}</div>
+{% comment %}{% include 'product-description-tabs' %}{% endcomment %}
+<!-- Station End -->{% endif %}
              </div>
             {% endif %}
           {% endif %}
@@ -223,7 +231,7 @@
         <br class="clear" />
         <div class="section clearfix">
           <div class="description">
-            {% capture desctabs %}{{ product.description | split: '<!-- split -->' | last  }}{% endcapture %}{% include 'product-description-tabs' with desctabs %}
+            {% capture desctabs %}<div data-station-tabs-app>{{ product.description | split: '<!-- split -->' | last  }}</div>{% endcapture %}{% include 'product-description-tabs' with desctabs %}
           </div>
         </div>
       {% endif %}

@@ -1,10 +1,16 @@
 
 {% assign scn_min = scn-min-price.price_max %}
 {% for variant in scn-min-price.variants %}
+{% unless variant.metafields.secomapp.freegifts %}
+{% unless variant.title contains '(Freegifts)' %}
+
 {% unless  variant.metafields.brodev_scn.hide == "true" %}
     {% if variant.price < scn_min %}
         {% assign scn_min = variant.price %}
     {% endif %}
 {% endunless %}
+
+{%endunless%}
+{%endunless%}
 {% endfor %}
 {{ scn_min | money }}

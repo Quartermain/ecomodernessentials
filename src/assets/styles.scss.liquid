@@ -3632,10 +3632,10 @@ input[type="button"].get-rates.action_button {
 .newsletter_section {
   -webkit-transform:translate3d(0,0,0);
   background-color: {{ settings.newsletter_section_background_color }};
-  color: {{ settings.newsletter_section_color }};
+  color: #ffffff;
 
   h2 {
-    color: {{ settings.newsletter_section_color }};
+    color: #ffffff;
     margin-top: 0;
   }
 }
@@ -3654,7 +3654,7 @@ input[type="button"].get-rates.action_button {
 }
 
 .section_form {
-  padding: 10px 20px;
+  padding: 20px 20px;
 
   input[type="email"], input[type="text"] {
     border: 0;
@@ -4563,7 +4563,7 @@ span.item-pricing {
   h2 { margin-bottom: 0.25em; }
   h2,
   p { color: {{ settings.search_section_color }}; }
-  .container { padding: 40px 0; }
+  .container { padding: 0px 0; }
 }
 
 .text-align--center .search__container {
@@ -4608,6 +4608,7 @@ span.item-pricing {
   max-width: 650px;
   position: relative;
   @include flex(0 0 auto);
+  padding-top: 10px;
 }
 
 .search__results {
@@ -4653,8 +4654,8 @@ span.item-pricing {
   width: 50px;
   right: 0px;
   padding: 0;
-  background-color: #000;
-  border-color: transparent;
+  background-color: #9d9fa2;
+  border-color: #000;
   color: white;
   font-size: 24px;
   {% if settings.button_style == 'square' %}
@@ -4667,7 +4668,7 @@ span.item-pricing {
   {% endif %}
   &:hover {
     color: white;
-    background-color: darken({{ settings.border_color }}, 20%);
+    background-color: #000({{ settings.border_color }}, 20%);
     border: 1px solid #000;
     border-left: 0px;
   }
@@ -5163,7 +5164,7 @@ a.tag {
 
   .product-list,
   .slider-gallery {
-    .thumbnail img {
+    .thumbnail img:not(.sca-fg-img-collect) {
       height: {{ settings.collection_height }}px;
       width: auto;
     }
@@ -10091,5 +10092,22 @@ margin: auto !important;
   &:hover {
     background: #000000;
     color: #ffffff !important;
+  }
+}
+
+.klaviyo-form-HZ9zKm {
+  .gBGtEz.gBGtEz {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .TextInput__FormStyledTextInput-sc-1o6de9f-0 {
+    height: 50px;
+  }
+  
+  .eDtNtp.eDtNtp {
+    @include respond-to('larger') {
+      width: 50%;
+      margin: 0 auto;
+  	}    
   }
 }

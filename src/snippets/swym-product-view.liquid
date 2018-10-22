@@ -8,7 +8,10 @@
     var o={}, empi={{ product.id | json }},
     piu = {{ product.featured_image | json }};
     {% assign currentVariant = product.variants[0] %}
-    {% for variant in product.variants %}
+    {% for variant in product.variants %}
+{% unless variant.metafields.secomapp.freegifts %}
+{% unless variant.title contains '(Freegifts)' %}
+
     {% if variant.selected %}
     {% assign currentVariant = variant %}
     {% endif %}
@@ -23,6 +26,9 @@
       variants: [{ {{ variant.title | json }} : {{variant.id|json}}}]
     };
     SwymWatchProducts[{{variant.id | json}}] = o[{{variant.id | json}}] = {"id": {{variant.id | json}}, "available": {{variant.available | json}},"inventory_management": {{variant.inventory_management | json}},"inventory_quantity": {{variant.inventory_quantity | json}},"title": {{variant.title | json}}, "inventory_policy": {{variant.inventory_policy | json}}};
+
+{%endunless%}
+{%endunless%}
     {% endfor %}
     var product_data = {
       empi:empi, epi:{{ currentVariant.id }},

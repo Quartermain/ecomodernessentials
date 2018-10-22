@@ -7,8 +7,14 @@
 
     var i = 0;
     {% for variant in product.variants %}
+{% unless variant.metafields.secomapp.freegifts %}
+{% unless variant.title contains '(Freegifts)' %}
+
         HUBParams.product.variants[i].inventory_quantity = {{ variant.inventory_quantity }};
         HUBParams.product.variants[i].inventory_policy = "{{ variant.inventory_policy }}";
         i++;
+
+{%endunless%}
+{%endunless%}
     {% endfor %}
 </script>

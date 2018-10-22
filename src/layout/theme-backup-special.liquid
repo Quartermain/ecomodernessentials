@@ -264,7 +264,8 @@ window.supported_currencies = "{{ settings.mlvedaACS_supportedCurrencies }}";
     
 {% include 'banana-stand-footer' %}
 <input type="hidden" id="656565115116111114101" data-customer-id="{{ customer.id }}" data-customer-email="{{ customer.email }}" data-customer-name="{{ customer.first_name }} {{ customer.last_name }}"/>{% include 'social-login' %}<script src="//cdn.codeblackbelt.com/js/modules/frequently-bought-together/main.min.js?shop=eco-modern-essentials.myshopify.com"></script>
-<!-- BEEKETINGSCRIPT CODE START -->{% include 'bk-tracking' %}<!-- BEEKETINGSCRIPT CODE END -->{% include 'zipify-couponcountdown-theme' %}</body>
+<!-- BEEKETINGSCRIPT CODE START -->{% include 'bk-tracking' %}<!-- BEEKETINGSCRIPT CODE END -->{% include 'booster-discounts' %}
+{% include 'zipify-couponcountdown-theme' %}</body>
 </html>
 {% endcapture %}
 {% assign content = content | replace_first: '<!DOCTYPE', '!DOCTYPE' | split: ' <' %}

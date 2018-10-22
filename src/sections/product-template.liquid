@@ -1,3 +1,5 @@
+{% include 'sca_freegift_price' with product %}
+
 {% comment %}
 ** Product - default view **
 - Product template
@@ -77,7 +79,7 @@
           {% assign variant = product.selected_or_first_available_variant %}
 
           {% if product.available %}
-            {% if settings.sale_banner_enabled and product.compare_at_price_max > product.price %}
+            {% if settings.sale_banner_enabled and sca_compare_at_price_max > sca_price %}
               <div class="sale_banner_product">{{ 'collections.general.sale' | t }}</div>
             {% endif %}
           {% endif %}
@@ -99,7 +101,7 @@
               <span itemprop="sku">{{ variant.sku }}</span>
             </p>
           {% endif %}
-          <h1 class="product_name" itemprop="name">{{ product.title }}</h1>
+          <h1 class="product_name" itemprop="name"><div style="position:relative;"> {{ product.title }} <div name="secomapp-fg-image-{{ product.id }}" style="display: none;"> {{ "icon-freegift.png" | asset_url | img_tag: "", "sca-fg-img-collect" }} </div> </div></h1>
           {% if settings.enable_shopify_product_badges and settings.enable_shopify_review_comments %}
             <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
           {% endif %}
@@ -117,7 +119,22 @@
             <a href="#size-chart" class="size_chart" data-remodal-target="size-chart" data-no-instant>{{ 'products.product.size_chart' | t }} <span class="icon-right-arrow"></span></a>
           {% endif %}
 
+   
+              <div class="yotpo bottomLine"
+    data-appkey="zXCsUlmRyxeh7vGMw9IBUsATX4EoBjRJMBsjrNgX"
+    data-domain="{{shop.permanent_domain | escape }}"
+    data-product-id="{{ product.id }}"
+    data-product-models="{{ product.id }}"
+    data-name="{{ product.title | escape }}"
+    data-url="{{ shop.url }}{{ product.url }}"
+    data-image-url="{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&','%26'}}"
+    data-description="{{ product.description | escape }}"
+    data-bread-crumbs="{% for tag in product.tags %}{{ tag | escape }};{% endfor %}">
+</div>
 
+              
+              
+              
           {% if collection_handles contains 'coming-soon' %}
             <p class="modal_price">{{ 'collections.general.coming_soon' | t }}</p>
           {% else %}
@@ -131,11 +148,7 @@
               
               
               
-              
-              
-              
-              
-              
+           
               
               
               
@@ -143,7 +156,9 @@
               <span itemprop="price" content="{{ variant.price | money_without_currency | remove: "," }}" class="{% if variant.compare_at_price > variant.price %}sale{% endif %}">
                 <span class="current_price {% if product.available == false %}hidden{% endif %}">
                   {% if variant.price > 0 %}
-                    <span class="money">{{ variant.price | money }}</span>
+                    <span class="money"  style="font-size: 20pt; font-weight:bold; color:#baa2cd; "       >{{ variant.price | money }}</span>
+                 
+                  
                   {% else %}
                     {{ settings.free_price_text }}
                   {% endif %}
@@ -184,7 +199,10 @@
              <div class="description" itemprop="description">
                
                
-               {% if product.description contains '<!-- split -->' %}{{ product.description | split: '<!-- split -->' | first  }}{% else %}{% include 'product-description-tabs' %}{% endif %}
+               {% if product.description contains '<!-- split -->' %}<div data-station-tabs-app>{{ product.description | split: '<!-- split -->' | first  }}</div>{% else %}<!-- Station Begin: Description -->
+<div data-station-tabs-app>{{ product.description }}</div>
+{% comment %}{% include 'product-description-tabs' %}{% endcomment %}
+<!-- Station End -->{% endif %}
              </div>
           
           
@@ -200,7 +218,10 @@
           {% if section.settings.product_description_position == "bottom" %}
             {% if product.description != blank %}
              <div class="description bottom" itemprop="description">
-              {% if product.description contains '<!-- split -->' %}{{ product.description | split: '<!-- split -->' | first  }}{% else %}{% include 'product-description-tabs' %}{% endif %}
+              {% if product.description contains '<!-- split -->' %}<div data-station-tabs-app>{{ product.description | split: '<!-- split -->' | first  }}</div>{% else %}<!-- Station Begin: Description -->
+<div data-station-tabs-app>{{ product.description }}</div>
+{% comment %}{% include 'product-description-tabs' %}{% endcomment %}
+<!-- Station End -->{% endif %}
              </div>
             {% endif %}
           {% endif %}
@@ -259,7 +280,7 @@
         <br class="clear" />
         <div class="section clearfix">
           <div class="description">
-            {% capture desctabs %}{{ product.description | split: '<!-- split -->' | last  }}{% endcapture %}{% include 'product-description-tabs' with desctabs %}
+            {% capture desctabs %}<div data-station-tabs-app>{{ product.description | split: '<!-- split -->' | last  }}</div>{% endcapture %}{% include 'product-description-tabs' with desctabs %}
           </div>
         </div>
       {% endif %}
@@ -274,6 +295,7 @@
     {% if sidebar %}
 
             {% if section.settings.display_related_products %}
+      
               {% include 'related-products' %}
             {% endif %}
             {% if section.settings.display_recently_viewed %}
@@ -297,6 +319,7 @@
       {% endunless %}
 
       {% if section.settings.display_related_products %}
+
         {% include 'related-products' %}
       {% endif %}
       {% if section.settings.display_recently_viewed %}

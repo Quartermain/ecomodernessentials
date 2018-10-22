@@ -96,6 +96,7 @@
     {%- paginate collections[pp_synccol].products by pp_paginate -%}
 
         {%- for product in collections[pp_synccol].products -%}
+        {% include 'sca_freegift_price' with product %}
             {%- if pp_variants contains 'on' -%}
                 {%- for variant in product.variants -%}
                     <item>
@@ -171,7 +172,7 @@
                         {%- endif -%}
 
                         <g:product_type>{{ pp_tag | escape }}</g:product_type>
-                        <g:price>{{ product.price | money_without_currency }}{{ shop.currency }}</g:price>
+                        <g:price>{{ sca_price | money_without_currency }}{{ shop.currency }}</g:price>
                     </item>
                 {%- endfor -%}
             {%- else -%}
@@ -297,7 +298,7 @@
                     {%- endif -%}
 
                     <g:product_type>{{ pp_tag | escape }}</g:product_type>
-                    <g:price>{{ product.price | money_without_currency }}{{ shop.currency }}</g:price>
+                    <g:price>{{ sca_price | money_without_currency }}{{ shop.currency }}</g:price>
                 </item>
             {%- endif -%}
         {%- endfor -%}

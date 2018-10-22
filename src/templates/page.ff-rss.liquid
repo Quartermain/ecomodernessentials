@@ -76,10 +76,15 @@
   {% paginate collections.all.products by ff_paginate %}
   
   {% for product in collections.all.products %}
+  {% include 'sca_freegift_price' with product %}
   
   {% if ff_variants contains 'on' %}
  
   {% for variant in product.variants %}
+
+{% unless variant.metafields.secomapp.freegifts %}
+{% unless variant.title contains '(Freegifts)' %}
+
   <item>
 
 {% if ff_shopifypx contains 'on' %}
@@ -123,12 +128,15 @@
    {% assign ff_tag = product.type %}
     
    <g:product_type>{{ff_tag | replace: '&', '&amp;'}}</g:product_type>
-   <g:price>{{product.price | money_without_currency}}{{shop.currency}}</g:price>
+   <g:price>{{sca_price | money_without_currency}}{{shop.currency}}</g:price>
     
        
     
      
   </item>
+
+{%endunless%}
+{%endunless%}
   {% endfor %}
 
   {% else %}
@@ -208,7 +216,7 @@
    {% endif %}
  
    <g:product_type>{{ff_tag | replace: '&', '&amp;'}}</g:product_type>
-   <g:price>{{product.price | money_without_currency}}{{shop.currency}}</g:price>
+   <g:price>{{sca_price | money_without_currency}}{{shop.currency}}</g:price>
         
   </item>
   

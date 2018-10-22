@@ -3,6 +3,9 @@
 {% assign buyx_product_variants_size = 0 %}
 
 {% for variant in buyx-price-min.variants %}
+{% unless variant.metafields.secomapp.freegifts %}
+{% unless variant.title contains '(Freegifts)' %}
+
     {% unless variant.title contains '% Off' %}
     {% unless variant.metafields.shappify_qb.qb_hide == "1" %}
     {% unless variant.metafields.shappify_bundle.is_bundle == "true" %}
@@ -27,6 +30,9 @@
 	{% endunless %}
 	{% endunless %}
 	{% endunless %}
+
+{%endunless%}
+{%endunless%}
 {% endfor %}
 
 

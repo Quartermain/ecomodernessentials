@@ -1,4 +1,5 @@
 {% for product in products %}
+  {% include 'sca_freegift_price' with product %}
   {% assign collection_handles = product.collections | map: 'handle' %}
   {% assign variant = product.selected_or_first_available_variant %}
 
@@ -7,7 +8,7 @@
       <div class="product-images half">
         {% include 'product-images', image_width: 'full' %}
         <div class="banner_holder">
-          {% if settings.sale_banner_enabled and product.compare_at_price_max > product.price %}
+          {% if settings.sale_banner_enabled and sca_compare_at_price_max > sca_price %}
             <div class="sale_banner_product">{{ 'collections.general.sale' | t }}</div>
           {% endif %}
           {% if collection_handles contains 'new' %}
@@ -31,7 +32,11 @@
             <span itemprop="sku">{{ variant.sku }}</span>
           </p>
         {% endif %}
-        <h1 class="product_name" itemprop="name"><a href="{{ product.url }}">{{ product.title }}</a></h1>
+        <h1 class="product_name" itemprop="name">
+          <div style="position:relative;">
+            <a href="{{ product.url }}">{{ product.title }}</a>
+          <div name="secomapp-fg-image-{{ product.id }}" style="display: none;"> {{ "icon-freegift.png" | asset_url | img_tag: "", "sca-fg-img-collect" }} </div> </div>
+        </h1>
         <div class="feature_divider"></div>
 
         {% assign product_tags = product.tags | join: ' ' %}
@@ -78,7 +83,7 @@
         {% if settings.product_description_position == "top" %}
           {% if settings.frontpage_display_description and product.description != blank %}
             <div class="description" itemprop="description">
-              {{ product.description | split: '<!-- split -->' | first }}
+              <div data-station-tabs-app>{{ product.description | split: '<!-- split -->' | first }}</div>
             </div>
           {% endif %}
         {% endif %}
@@ -92,7 +97,7 @@
         {% if settings.product_description_position == "bottom" %}
           {% if settings.frontpage_display_description and product.description != blank %}
            <div class="description bottom" itemprop="description">
-            {{ product.description | split: '<!-- split -->' | first }}
+            <div data-station-tabs-app>{{ product.description | split: '<!-- split -->' | first }}</div>
            </div>
           {% endif %}
         {% endif %}

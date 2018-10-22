@@ -38,7 +38,10 @@
     {% else %}
     {% assign currentVariant = product.variants[0] %}
     {% endif %}
-    {% for variant in product.variants %}
+    {% for variant in product.variants %}
+{% unless variant.metafields.secomapp.freegifts %}
+{% unless variant.title contains '(Freegifts)' %}
+
       {% if variant.selected %}
         {% assign currentVariant = variant %}
       {% endif %}
@@ -52,6 +55,9 @@
         {% if variant.compare_at_price %} op: {{variant.compare_at_price}}/100, {% endif %}
         variants: [{ {{ variant.title | json }} : {{variant.id|json}}}]
       };
+
+{%endunless%}
+{%endunless%}
     {% endfor %}
     window.SwymProductInfo.currentVariant = {{currentVariant.id | json}};
     var product_data = {

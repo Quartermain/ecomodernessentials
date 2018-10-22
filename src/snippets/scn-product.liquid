@@ -6,9 +6,15 @@
 {% assign scn_options = '' %}
 {% assign scn_options_count = 0 %}
 {% for variant in product.variants %}
+{% unless variant.metafields.secomapp.freegifts %}
+{% unless variant.title contains '(Freegifts)' %}
+
     {% if variant.metafields.brodev_scn.hide == "true" %}
         {% assign scn_options_count = scn_options_count|plus:1 %}
     {% endif %}
+
+{%endunless%}
+{%endunless%}
 {% endfor %}
 {% if scn_options_count > 0 %}
     <script type="text/javascript">
@@ -44,6 +50,9 @@
             setTimeout(function() {
                 // Check loop
                 {% for variant in product.variants %}
+{% unless variant.metafields.secomapp.freegifts %}
+{% unless variant.title contains '(Freegifts)' %}
+
                 {% if variant.metafields.brodev_scn.hide == "true" %}
                     // Remove in selection tag
                     jQuery('select option').filter(function() {
@@ -58,6 +67,9 @@
                             || (value && (value.indexOf({{ variant.option1 | json }}) !== -1));
                     }).remove();
                 {% endif %}
+
+{%endunless%}
+{%endunless%}
                 {% endfor %}
 
                 var defaultTitleText = 'Default Title';

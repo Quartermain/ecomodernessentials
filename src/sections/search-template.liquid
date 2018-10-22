@@ -94,7 +94,7 @@
 
       <div class="search-matrix">
         {% for item in search.results %}
-{%- include 'bold-product' with item, hide_action: 'skip' -%}
+        {% include 'sca_freegift_price' with item %}        
           <div class="product_row clearfix">
             {% assign featured_image = false %}
 
@@ -124,23 +124,23 @@
                 <a href="{{ item.url }}" title="{{ item.title | escape }}">{{ item.title }}</a>
               </h5>
 
-              {% if item.price %}
+              {% if sca_price %}
                 <div class="info">
                     <span class="price">
-                      {% if item.compare_at_price_max > item.price %}
-                        <span class="was_price">{{ item.compare_at_price_max | money }}</span>
+                      {% if sca_compare_at_price_max > sca_price %}
+                        <span class="was_price">{{ sca_compare_at_price_max | money }}</span>
                       {% endif %}
 
                       {% if item.available %}
-                        {% if item.price_varies %}
-                          {% if item.compare_at_price_max > item.price %}
+                        {% if sca_price_varies %}
+                          {% if sca_compare_at_price_max > sca_price %}
                             <br />
                           {% endif %}
                           <small><em>{{ 'products.general.from' | t }}</em></small>
                         {% endif %}
-                        {{ item.price_min | money }}
+                        {{ sca_price_min | money }}
                       {% else %}
-                        {{ item.price_min | money }} - {{ 'products.product.sold_out' | t }}
+                        {{ sca_price_min | money }} - {{ 'products.product.sold_out' | t }}
                       {% endif %}
                     </span>
                 </div>
