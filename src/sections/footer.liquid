@@ -6,7 +6,7 @@
 
 <footer class="footer">
 
-  
+
   <div class="container footer-menu-wrap">
       {% for block in section.blocks %}
         <div class="{% if forloop.length >= 5 %}three columns{% elsif forloop.length == 4 %}four columns{% elsif forloop.length == 3 %}one-third column{% elsif forloop.length == 2 %}eight columns{% endif %}" {{ block.shopify_attributes }}>
@@ -41,7 +41,7 @@
             {% if block.settings.newsletter_text != blank %}
               {{ block.settings.newsletter_text }}
             {% endif %}
-
+{% comment %}
             <div class="newsletter">
               <span class="message"></span>
               {% if settings.mailchimp_link != blank %}
@@ -78,8 +78,11 @@
                   <input type='submit' class="action_button sign_up" value="{{ 'general.newsletter_form.submit' | t }}" />
                 {% endform %}
               {% endif %}
-            </div>            
-            
+            </div>
+             {% endcomment %}
+
+             <div class="klaviyo-form-HZ9zKm"></div>
+
           <div class="block-infor-company">
             <strong>Natalie Group Pty Ltd</strong>
 			<p>
@@ -87,12 +90,12 @@
 4/1 Energy Circuit, Robina<br> QLD 4226, Australia
             </p>
           </div>
-            
+
             {% if block.settings.show_social %}
               {% include 'social-icons' %}
             {% endif %}
           </div>
-          
+
 
           {% elsif block.type == 'link_list' %}
             <div class="footer_menu">
