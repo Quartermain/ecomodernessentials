@@ -142,6 +142,9 @@ window.supported_currencies = "{{ settings.mlvedaACS_supportedCurrencies }}";
   
   
 {% include 'sca.freegifts' %}
+  
+
+  <link rel="alternative" hreflang="en-au" href="https://ecomodernessentials.com.au/" />
 </head>
   {% if template contains "index" %}
     {% assign feature_image = true %}
@@ -311,9 +314,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script>
       {{ settings.custom_scripts }}
     </script>
-  {% include 'mlveda-currencies-switcher' %}{% include 'mlveda-currencies' %} {% include 'sweettooth-initializer' %}
+  {% include 'mlveda-currencies-switcher' %}{% include 'mlveda-currencies' %} 
 
- {% include 'sweettooth-tab-widget' %}
+ 
 
     
 <script type="text/javascript">
@@ -331,7 +334,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <input type="hidden" id="656565115116111114101" data-customer-id="{{ customer.id }}" data-customer-email="{{ customer.email }}" data-customer-name="{{ customer.first_name }} {{ customer.last_name }}"/>{% include 'social-login' %}<script src="//cdn.codeblackbelt.com/js/modules/frequently-bought-together/main.min.js?shop=eco-modern-essentials.myshopify.com"></script>
 
-{% include 'special-offers' %}
+{% comment %}{% comment %}{% include 'special-offers' %}{% endcomment %}{% endcomment %}
 
     
 
@@ -373,7 +376,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     
     
-{% include 'zipify-couponcountdown-theme' %}</body>
+{% include 'zipify-couponcountdown-theme' %} {% include 'smile-initializer' %}
+
+</body>
 </html>
 {% endcapture %}
 {% assign content = content | replace_first: '<!DOCTYPE', '!DOCTYPE' | split: ' <' %}

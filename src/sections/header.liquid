@@ -246,6 +246,19 @@
           </li>
         {% endif %}
         {% if shop.customer_accounts_enabled %}
+        
+        {% if customer %}
+        
+       
+<li Style="vertical-align: -webkit-baseline-middle; " ><font color= "ffffff">YOUR REWARDS BALANCE: <span class="sweettooth-points-balance">(loading)</font></span></li>
+{% endif %}
+        
+        
+        
+        
+        
+        
+        
           <li>
             <a href="/account" class="icon-user" title="{{ 'layout.customer.my_account' | t }} {% if customer %}({{ customer.email }}){% endif %}"> <span>{% if customer %}{{ 'layout.customer.my_account' | t }}{% else %}{{ 'layout.customer.log_in' | t }}{% endif %}</span></a>
           </li>

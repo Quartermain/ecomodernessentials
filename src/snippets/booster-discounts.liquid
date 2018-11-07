@@ -1256,12 +1256,11 @@ div#booster-close-notification{
   {% endif %}
 
   {% if template contains 'product' %}
-  {% include 'sca_freegift_price' with product %}
     {% unless product.id == blank %}
       {% assign ba_page = 'product' %}
       window.booster.product = {
         id: {{product.id}},
-        price: {{sca_price}},
+        price: {{product.price}},
       };
       window.booster.product_collections = []
       {% for c in product.collections %}
@@ -1786,7 +1785,7 @@ reqJquery(function($){
     };
     var template = baHandlebars.compile(source);
     var html = template(context);
-    $('div.ba-bundle-wrapper').append(html);
+    $('div.ba-bundle-wrapper').append(html.replace(/undefined/g, ' '));
     var bundle = $('div.ba-bundle-wrapper .ba-product-bundle').last();
     var maxHeight = 0;
     $(bundle).find("div.bundle-name").each(function(i,bn){
@@ -2179,7 +2178,7 @@ reqJquery(function($){
     if (discounts.positive_discount) { displayCartTotals(discounts)}
 
     //WIP for zero discounts
-    if (discounts.zero_discount_only){
+    if (discounts.zero_discount_only || window.booster.cart.total_price == 0){
       $('form[action*="/cart"]').append("<input type='hidden' value='1' name='attributes[ba_identifier]'>");
       return
     }
@@ -2514,12 +2513,17 @@ reqJquery(function($){
     if (typeof ga == "function"){ga(function(tracker) {window.gaclientId = tracker.get("clientId")})}
   }, 1000);
 
-  $(document).on('change', "input.booster-quantity, input[name^='updates['], input[id^='updates_'], input[id^='Updates_'], td.cart-qty span.icon-plus, td.cart-qty span.icon-minus", function(e) {
+  $(document).on('change', "input.booster-quantity, input[name^='updates['], input[id^='updates_'], input[id^='Updates_']", function(e) {
     e.preventDefault();
     $(this).parents('form[action*="/cart"]').submit();
   });
 
   if(window.booster.ba_page == 'cart'){
+
+    $(document).on('click', "td.cart-qty span.icon-plus, td.cart-qty span.icon-minus", function(e) {
+      e.preventDefault();
+      $(this).parents('form[action*="/cart"]').submit();
+    });
 
     $(document).ajaxSuccess(function(evt,xhr,attrs) {
       if (attrs.url == '/cart/change.js'){
@@ -2592,7 +2596,8 @@ reqJquery(function($){
 
   function hideUpsell(offerId){
     var currentSkipIds = getCookie('ba-skip-ids');
-    var allSkipIds = currentSkipIds + ',' + offerId;
+    if (currentSkipIds && currentSkipIds !='') currentSkipIds += ','
+    var allSkipIds = currentSkipIds + offerId;
     
       setCookie('ba-skip-ids', allSkipIds, 14);
     
@@ -2608,7 +2613,7 @@ reqJquery(function($){
 
   $(document).on('click', "button#apply-booster-discount", function(e) {
     e.preventDefault();
-    setCookie('booster_discount_' + window.booster.cart.token, $('#booster-discount-code').val().trim())
+    setCookie('booster_discount_' + window.booster.cart.token, $('input[id=booster-discount-code]:visible').val().trim())
     window.location.reload();
   });
 
